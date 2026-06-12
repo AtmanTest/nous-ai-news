@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode — X light theme */
+    --background: 0 0% 100%;
+    --foreground: 200 10% 8%;          /* #0f1419 */
+    --card: 0 0% 97%;                   /* #f7f9f9 */
+    --card-foreground: 200 10% 8%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 10% 8%;
+    --primary: 203 92% 53%;             /* #1d9bf0 exact X blue */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 10% 94%;           /* #eff3f4 */
+    --secondary-foreground: 200 10% 8%;
+    --muted: 200 5% 94%;
+    --muted-foreground: 200 3% 40%;     /* #536471 */
+    --accent: 200 10% 94%;
+    --accent-foreground: 200 10% 8%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 200 10% 94%;              /* #eff3f4 */
+    --input: 200 10% 94%;
+    --ring: 203 92% 53%;
+    --radius: 0.625rem;
+
+    /* X-specific tokens via CSS custom props */
+    --color-surface: #f7f9f9;
+    --color-surface-2: #eff3f4;
+    --color-surface-offset: #e7e9ea;
+    --color-divider: #eff3f4;
+    --color-like: #f91880;
+    --color-repost: #00ba7c;
+    --color-text-muted: #536471;
+  }
+
+  .dark {
+    --background: 0 0% 0%;              /* #000 — pure black comme X */
+    --foreground: 200 10% 91%;          /* #e7e9ea */
+    --card: 0 0% 4%;                    /* #0a0a0a */
+    --card-foreground: 200 10% 91%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 200 10% 91%;
+    --primary: 203 92% 57%;             /* #1d9bf0 exact */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 200 6% 9%;             /* #16181c */
+    --secondary-foreground: 200 10% 91%;
+    --muted: 200 6% 9%;
+    --muted-foreground: 200 3% 44%;     /* #71767b */
+    --accent: 200 6% 12%;
+    --accent-foreground: 200 10% 91%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 200 3% 18%;               /* #2f3336 */
+    --input: 200 3% 18%;
+    --ring: 203 92% 57%;
+
+    /* X tokens dark */
+    --color-surface: #16181c;
+    --color-surface-2: #1e2128;
+    --color-surface-offset: #272b30;
+    --color-divider: #2f3336;
+    --color-like: #f91880;
+    --color-repost: #00ba7c;
+    --color-text-muted: #71767b;
+  }
+
+  .dim {
+    --background: 220 10% 10%;          /* #17191c — dark gray, not pure black */
+    --foreground: 200 8% 88%;           /* #dde0e2 — slightly dimmer white */
+    --card: 220 8% 13%;                 /* #1e2024 */
+    --card-foreground: 200 8% 88%;
+    --popover: 220 8% 13%;
+    --popover-foreground: 200 8% 88%;
+    --primary: 203 85% 55%;             /* #1d9bf0 slightly subdued */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 6% 16%;            /* #26282c */
+    --secondary-foreground: 200 8% 88%;
+    --muted: 220 6% 16%;
+    --muted-foreground: 200 3% 50%;     /* #7a7f85 */
+    --accent: 220 6% 19%;               /* #2d2f34 */
+    --accent-foreground: 200 8% 88%;
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 6% 20%;               /* #303238 */
+    --input: 220 6% 20%;
+    --ring: 203 85% 55%;
+
+    /* Dim-specific surface tokens */
+    --color-surface: #1e2024;
+    --color-surface-2: #26282c;
+    --color-surface-offset: #2d2f34;
+    --color-divider: #303238;
+    --color-like: #f91880;
+    --color-repost: #00ba7c;
+    --color-text-muted: #7a7f85;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  }
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  h1, h2, h3, h4, h5 {
+    @apply font-semibold tracking-tight;
+  }
+  h1 { line-height: 1.15; }
+  h2 { line-height: 1.2; }
+  h3 { line-height: 1.3; }
+  h4 { line-height: 1.35; }
+  p { line-height: 1.625; }
+  small { font-size: 0.875rem; line-height: 1.5; }
+}
+
+@layer utilities {
+  .reading-width {
+    max-width: var(--reading-width);
+  }
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .line-clamp-4 {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .bg-grid {
+    background-image: linear-gradient(rgba(255,255,255,.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+}

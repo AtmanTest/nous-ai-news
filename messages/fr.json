@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "topStories": "À la Une",
+    "trending": "Tendances",
+    "models": "Modèles",
+    "research": "Recherche",
+    "business": "Business",
+    "policy": "Régulation",
+    "openSource": "Open Source",
+    "startups": "Startups",
+    "hardware": "Hardware",
+    "agents": "Agents",
+    "bookmarks": "Favoris",
+    "iaAutoNews": "IA Auto News",
+    "profile": "Profil",
+    "search": "Rechercher"
+  },
+  "home": {
+    "title": "Le Pouls de l'Intelligence Artificielle",
+    "subtitle": "Aggrégation en temps réel de l'actualité IA depuis 30+ sources mondiales.",
+    "exploreTrending": "Voir les Tendances",
+    "latestResearch": "Dernières Recherches",
+    "latestCoverage": "Dernières Actualités",
+    "viewAll": "Voir tout",
+    "stayInformed": "Restez Informé",
+    "newsletterText": "Recevez les actualités IA les plus importantes dans votre boîte mail."
+  },
+  "article": {
+    "readMore": "Lire la suite",
+    "bookmark": "Favori",
+    "share": "Partager",
+    "published": "Publié",
+    "source": "Source",
+    "related": "Articles Connexes"
+  },
+  "feed": {
+    "dayFilter": {
+      "today": "Aujourd'hui",
+      "yesterday": "Hier",
+      "daysAgo": "il y a {count} jours",
+      "articlesCount": "{count, plural, one {# article} other {# articles}}",
+      "noArticles": "Pas d'articles",
+      "selectDay": "Sélectionner le jour",
+      "emptyState": {
+        "title": "Pas d'articles pour ce jour",
+        "subtitle": "Essaie un autre jour",
+        "goBack": "Jour précédent"
+      }
+    }
+  },
+  "pwa": {
+    "install": {
+      "title": "Installer Nous AI News",
+      "description": "Accès plus rapide, lecture hors ligne et notifications push.",
+      "benefits": "Fonctionne hors ligne • Alertes push • Sans barre navigateur",
+      "install": "Installer",
+      "dismiss": "Ignorer"
+    },
+    "update": {
+      "title": "Mise à jour disponible",
+      "description": "Une nouvelle version est prête. Actualisez pour profiter des dernières fonctionnalités.",
+      "updating": "Application de la mise à jour...",
+      "refresh": "Actualiser maintenant",
+      "dismiss": "Plus tard"
+    }
+  },
+  "push": {
+    "title": "Notifications Push",
+    "subscribed": "Vous êtes abonné aux notifications push",
+    "notSubscribed": "Activez les notifications pour rester informé",
+    "configure": "Configurer",
+    "close": "Fermer",
+    "subscribe": "S'abonner",
+    "subscribing": "Abonnement...",
+    "unsubscribe": "Se désabonner",
+    "unsubscribing": "Désabonnement...",
+    "saveTopics": "Enregistrer les sujets",
+    "saving": "Enregistrement...",
+    "permissionRequired": "Autorisation requise",
+    "enableNotifications": "Autoriser les notifications",
+    "topicsLabel": "Sujets de notification",
+    "topicsDescription": "Choisissez ce dont vous voulez être notifié",
+    "notSupported": "Notifications push non supportées dans ce navigateur",
+    "errors": {
+      "notSupported": "Les notifications push ne sont pas supportées dans ce navigateur",
+      "permissionDenied": "L'autorisation de notification a été refusée",
+      "subscribeFailed": "Échec de l'abonnement aux notifications push",
+      "unsubscribeFailed": "Échec du désabonnement des notifications push",
+      "updateFailed": "Échec de la mise à jour des sujets de notification"
+    },
+    "topics": {
+      "trending": {
+        "label": "Articles Tendances",
+        "description": "Les articles les plus populaires du moment"
+      },
+      "breaking": {
+        "label": "Actualités Urgentes",
+        "description": "Annonces majeures dès leur publication"
+      },
+      "models": {
+        "label": "Nouveaux Modèles",
+        "description": "Sorties et mises à jour de LLM"
+      },
+      "research": {
+        "label": "Papiers de Recherche",
+        "description": "Nouveaux papiers et percées"
+      },
+      "business": {
+        "label": "Business & Financement",
+        "description": "Levées de fonds, acquisitions, IPO"
+      },
+      "policy": {
+        "label": "Politique & Régulation",
+        "description": "Régulation IA et actions gouvernementales"
+      }
+    },
+    "subscribedSince": "Abonné depuis le {date}",
+    "topicsActive": "{count} sujets actifs"
+  },
+  "settings": {
+    "newsletter": {
+      "title": "Newsletter",
+      "emailLabel": "Adresse email",
+      "frequencyLabel": "Fréquence",
+      "daily": "Quotidienne",
+      "weekly": "Hebdomadaire",
+      "subscribe": "S'abonner",
+      "subscribing": "Abonnement...",
+      "confirmSent": "Email de confirmation envoyé ! Vérifiez votre boîte mail.",
+      "invalidEmail": "Veuillez entrer une adresse email valide",
+      "error": "Une erreur est survenue. Veuillez réessayer.",
+      "privacy": "Nous respectons votre vie privée. Désabonnement à tout moment."
+    }
+  },
+  "liveUpdates": {
+    "reconnecting": "Reconnexion...",
+    "retry": "Réessayer",
+    "maxRetriesReached": "Connexion perdue. Cliquez pour réessayer.",
+    "newArticles": "{count, plural, one {# nouvel article} other {# nouveaux articles}}",
+    "refresh": "Actualiser",
+    "connectionError": "Connexion perdue",
+    "connected": "En direct"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "retry": "Réessayer",
+    "noResults": "Aucun résultat",
+    "lastUpdated": "Dernière mise à jour"
+  },
+  "bookmarks": {
+    "title": "Favoris",
+    "subtitle": "Vos articles sauvegardés pour une lecture ultérieure",
+    "signInRequired": {
+      "title": "Connectez-vous pour sauvegarder vos favoris",
+      "description": "Créez un compte pour mettre en favori des articles et y accéder depuis n'importe quel appareil. Vos articles sauvegardés se synchronisent sur tous vos appareils.",
+      "signUp": "Créer un compte",
+      "browse": "Parcourir les articles",
+      "note": "Vous avez déjà un compte ? Connectez-vous pour accéder à vos favoris."
+    },
+    "empty": {
+      "title": "Aucun favori pour l'instant",
+      "description": "Sauvegardez les articles que vous souhaitez lire plus tard en cliquant sur l'icône favori sur n'importe quel article.",
+      "browseTrending": "Voir les tendances"
+    }
+  },
+  "iaAutoNews": {
+    "title": "IA AUTO NEWS",
+    "subtitle": "DeepMind analyse l'actualité mondiale et écrit des articles philosophiques sur l'évolution humaine et le futur.",
+    "sources": {
+      "20minutes": "20 Minutes",
+      "bbc": "BBC News",
+      "google": "Google Actualités"
+    },
+    "poweredBy": "Propulsé par DeepSeek + DALL-E 3",
+    "cronSchedule": "Quotidien à 6h00",
+    "noArticles": "Aucun article pour l'instant. DeepMind va bientôt générer du contenu.",
+    "refresh": "Actualiser",
+    "sourcesAnalyzed": "Sources analysées"
+  }
+}

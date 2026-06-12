@@ -1,0 +1,80 @@
+name: Re-score Articles Cron
+
+on:
+  schedule:
+    # Every 6 hours: 00:00, 06:00, 12:00, 18:00 UTC
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      lookback_hours:
+        description: 'Hours to look back for rescoring'
+        required: false
+        default: '72'
+
+env:
+  VERCEL_URL: https://nous-daily.vercel.app
+
+jobs:
+  rescore:
+    name: Re-score recent articles
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Trigger rescore API
+        id: rescore
+        run: |
+          echo "Triggering rescore at $(date -u)..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" \
+            -X POST "${{ env.VERCEL_URL }}/api/cron/rescore" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            -d '{"lookback_hours": "${{ github.event.inputs.lookback_hours || '72' }}"}')
+          
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n -1)
+          
+          echo "HTTP Code: $HTTP_CODE"
+          echo "Response: $BODY"
+          
+          if [ "$HTTP_CODE" -ne 200 ]; then
+            echo "❌ Rescore failed with status $HTTP_CODE"
+            echo "$BODY"
+            exit 1
+          fi
+          
+          # Extract key metrics
+          TOTAL_ARTICLES=$(echo "$BODY" | jq -r '.total_articles // 0')
+          TOTAL_UPDATED=$(echo "$BODY" | jq -r '.total_updated // 0')
+          AVG_SCORE=$(echo "$BODY" | jq -r '.average_new_score // 0')
+          DURATION_MS=$(echo "$BODY" | jq -r '.total_duration_ms // 0')
+          
+          echo "total_articles=$TOTAL_ARTICLES" >> $GITHUB_OUTPUT
+          echo "total_updated=$TOTAL_UPDATED" >> $GITHUB_OUTPUT
+          echo "average_new_score=$AVG_SCORE" >> $GITHUB_OUTPUT
+          echo "duration_ms=$DURATION_MS" >> $GITHUB_OUTPUT
+          
+          echo "✅ Rescore completed:"
+          echo "  - Articles checked: $TOTAL_ARTICLES"
+          echo "  - Articles updated: $TOTAL_UPDATED"
+          echo "  - Average new score: $AVG_SCORE"
+          echo "  - Duration: ${DURATION_MS}ms"
+
+      - name: Post summary
+        run: |
+          echo "## 📊 Rescore Cron Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Articles checked | ${{ steps.rescore.outputs.total_articles }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Articles updated | ${{ steps.rescore.outputs.total_updated }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Average new score | ${{ steps.rescore.outputs.average_new_score }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Duration | ${{ steps.rescore.outputs.duration_ms }}ms |" >> $GITHUB_STEP_SUMMARY
+          echo "| Triggered at | $(date -u) UTC |" >> $GITHUB_STEP_SUMMARY
+
+      - name: Alert on failure
+        if: failure()
+        run: |
+          echo "::error::Re-score cron failed. Check workflow logs."

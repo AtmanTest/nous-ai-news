@@ -1,0 +1,74 @@
+# Render Blueprint — Nous AI News
+# Schema: https://render.com/schema/render.yaml.json
+
+services:
+  # ── Recipe (develop branch) ──
+  - type: web
+    name: nous-ai-news-recipe
+    runtime: node
+    repo: https://github.com/AtmanTest/nous-ai-news
+    branch: main
+    region: frankfurt
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        value: https://wlxtulibsipesxpwkhyz.supabase.co
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://nous-ai-news-recipe.onrender.com
+
+#  # ── Shield Cron (4h cycle) ──
+#  # NOTE: requires payment info on Render. Setup manually via Dashboard.
+#  # - type: cron
+#  #   name: nous-ai-news-shield
+#  #   runtime: node
+#  #   repo: https://github.com/AtmanTest/nous-ai-news
+#  #   branch: main
+#  #   region: frankfurt
+#  #   plan: starter
+#  #   buildCommand: npm install
+#  #   startCommand: node scripts/cron/shield-cycle.js
+#  #   schedule: 0 */4 * * *
+#  #   envVars:
+#  #     - key: NODE_ENV
+#  #       value: production
+#  #     - key: NEXT_PUBLIC_SUPABASE_URL
+#  #       value: https://wlxtulibsipesxpwkhyz.supabase.co
+#  #     - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+#  #       sync: false
+#  #     - key: SUPABASE_SERVICE_ROLE_KEY
+#  #       sync: false
+#  #     - key: NEXT_PUBLIC_SITE_URL
+#  #       value: https://nous-ai-news-recipe.onrender.com
+
+  # ── Production (main branch — GATED by GitHub Actions) ──
+  - type: web
+    name: nous-ai-news
+    runtime: node
+    repo: https://github.com/AtmanTest/nous-ai-news
+    branch: main
+    region: frankfurt
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_SUPABASE_URL
+        value: https://wlxtulibsipesxpwkhyz.supabase.co
+      - key: NEXT_PUBLIC_SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: NEXT_PUBLIC_SITE_URL
+        value: https://nous-ai-news.com

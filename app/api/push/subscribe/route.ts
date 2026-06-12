@@ -1,0 +1,69 @@
+import { z } from 'zod';
+import { NextRequest, NextResponse } from 'next/server';
+import { createClient } from '@/lib/supabase/server';
+import webpush from 'web-push';
+
+// Configure web-push with VAPID keys
+webpush.setVapidDetails(
+  process.env.VAPID_SUBJECT || 'mailto:thasin@live.com',
+  process.env.VAPID_PUBLIC_KEY!,
+  process.env.VAPID_PRIVATE_KEY!
+);
+
+const subscribeSchema = z.object({
+  endpoint: z.string().url(),
+  keys: z.object({
+    p256dh: z.string().min(1),
+    auth: z.string().min(1),
+  }),
+  topics: z.array(z.string()).default([]),
+  userAgent: z.string().optional(),
+});
+
+export async function POST(request: NextRequest) {
+  try {
+    const supabase = await createClient();
+    const { data: { user }, error: authError } = await supabase.auth.getUser();
+
+    if (authError || !user) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
+    const body = await request.json();
+    const parsed = subscribeSchema.safeParse(body);
+
+    if (!parsed.success) {
+      return NextResponse.json({ error: 'Invalid request', details: parsed.error.flatten() }, { status: 400 });
+    }
+
+    const { endpoint, keys, topics, userAgent } = parsed.data;
+
+    // Upsert subscription (endpoint is unique)
+    const { data, error } = await supabase
+      .from('push_subscriptions')
+      .upsert(
+        {
+          user_id: user.id,
+          endpoint,
+          p256dh: keys.p256dh,
+          auth: keys.auth,
+          topics,
+          user_agent: userAgent,
+          updated_at: new Date().toISOString(),
+        },
+        { onConflict: 'endpoint' }
+      )
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Push subscription error:', error);
+      return NextResponse.json({ error: 'Failed to save subscription' }, { status: 500 });
+    }
+
+    return NextResponse.json({ success: true, subscription: data });
+  } catch (error) {
+    console.error('Push subscribe API error:', error);
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+  }
+}

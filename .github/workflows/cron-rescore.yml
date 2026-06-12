@@ -1,0 +1,18 @@
+name: Cron — Article Re-scoring
+
+on:
+  schedule:
+    # Every hour at minute 30 (offset from ingest)
+    - cron: '30 * * * *'
+  workflow_dispatch:  # manual trigger from Actions tab
+
+jobs:
+  rescore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger cron rescore
+        run: |
+          curl -s -X POST "https://nous-daily.vercel.app/api/cron/rescore" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --max-time 300

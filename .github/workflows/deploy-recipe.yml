@@ -1,0 +1,16 @@
+name: Deploy to Recipe (Staging)
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  deploy-recipe:
+    name: Deploy to Recipe
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Render via webhook
+        run: |
+          curl -X POST "${{ secrets.RENDER_RECIPE_DEPLOY_HOOK }}"

@@ -1,0 +1,114 @@
+[96mtests/unit/hooks/useArticleCountsByDay.test.ts[0m:[93m45[0m:[93m31[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
+  Type 'undefined' is not assignable to type 'string'.
+
+[7m45[0m     const counts = JSON.parse(screen.getByTestId('counts-result').dataset.counts);
+[7m  [0m [91m                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m42[0m:[93m49[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+
+[7m42[0m     React.createElement(NextIntlClientProvider, providerProps, React.createElement(TestComponent))
+[7m  [0m [91m                                                ~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
+    [7m4[0m     children: ReactNode;
+    [7m [0m [96m    ~~~~~~~~[0m
+    'children' is declared here.
+  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
+    [7m562[0m     function createElement<P extends {}>(
+    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
+    The last overload is declared here.
+
+[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m90[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+
+[7m90[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(ButtonComponent))
+[7m  [0m [91m                                                  ~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
+    [7m4[0m     children: ReactNode;
+    [7m [0m [96m    ~~~~~~~~[0m
+    'children' is declared here.
+  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
+    [7m562[0m     function createElement<P extends {}>(
+    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
+    The last overload is declared here.
+
+[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m110[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+
+[7m110[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(CanGoNextComponent))
+[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
+    [7m4[0m     children: ReactNode;
+    [7m [0m [96m    ~~~~~~~~[0m
+    'children' is declared here.
+  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
+    [7m562[0m     function createElement<P extends {}>(
+    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
+    The last overload is declared here.
+
+[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m126[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+
+[7m126[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(CanGoPreviousComponent))
+[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
+    [7m4[0m     children: ReactNode;
+    [7m [0m [96m    ~~~~~~~~[0m
+    'children' is declared here.
+  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
+    [7m562[0m     function createElement<P extends {}>(
+    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
+    The last overload is declared here.
+
+[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m141[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+
+[7m141[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(DayCountComponent))
+[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
+    [7m4[0m     children: ReactNode;
+    [7m [0m [96m    ~~~~~~~~[0m
+    'children' is declared here.
+  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
+    [7m562[0m     function createElement<P extends {}>(
+    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
+    The last overload is declared here.
+
+[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m157[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
+  The last overload gave the following error.
+    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
+      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+
+[7m157[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(IsTodaySelectedComponent))
+[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+
+  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
+    [7m4[0m     children: ReactNode;
+    [7m [0m [96m    ~~~~~~~~[0m
+    'children' is declared here.
+  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
+    [7m562[0m     function createElement<P extends {}>(
+    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
+    The last overload is declared here.
+
+
+Found 7 errors in 2 files.
+
+Errors  Files
+     1  tests/unit/hooks/useArticleCountsByDay.test.ts[90m:45[0m
+     6  tests/unit/hooks/useDayFilter.test.ts[90m:42[0m

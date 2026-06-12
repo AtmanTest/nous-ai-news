@@ -1,0 +1,18 @@
+name: Cron — Article Ingestion
+
+on:
+  schedule:
+    # Every hour at minute 0
+    - cron: '0 * * * *'
+  workflow_dispatch:  # manual trigger from Actions tab
+
+jobs:
+  ingest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger cron ingest
+        run: |
+          curl -s -X POST "https://nous-daily.vercel.app/api/cron/ingest" \
+            -H "Authorization: Bearer ${{ secrets.CRON_SECRET }}" \
+            -H "Content-Type: application/json" \
+            --max-time 300

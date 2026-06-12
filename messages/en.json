@@ -1,0 +1,181 @@
+{
+  "nav": {
+    "topStories": "Top Stories",
+    "trending": "Trending",
+    "models": "Models",
+    "research": "Research",
+    "business": "Business",
+    "policy": "Policy",
+    "openSource": "Open Source",
+    "startups": "Startups",
+    "hardware": "Hardware",
+    "agents": "Agents",
+    "bookmarks": "Bookmarks",
+    "iaAutoNews": "IA Auto News",
+    "profile": "Profile",
+    "search": "Search"
+  },
+  "home": {
+    "title": "The Pulse of Artificial Intelligence",
+    "subtitle": "Real-time AI news aggregation from 30+ global sources.",
+    "exploreTrending": "Explore Trending",
+    "latestResearch": "Latest Research",
+    "latestCoverage": "Latest Coverage",
+    "viewAll": "View all",
+    "stayInformed": "Stay Informed",
+    "newsletterText": "Get the most important AI news delivered to your inbox."
+  },
+  "article": {
+    "readMore": "Read more",
+    "bookmark": "Bookmark",
+    "share": "Share",
+    "published": "Published",
+    "source": "Source",
+    "related": "Related Stories"
+  },
+  "feed": {
+    "dayFilter": {
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "daysAgo": "{count} days ago",
+      "articlesCount": "{count, plural, one {# article} other {# articles}}",
+      "noArticles": "No articles",
+      "selectDay": "Select day",
+      "emptyState": {
+        "title": "No articles for this day",
+        "subtitle": "Try another day",
+        "goBack": "Previous day"
+      }
+    }
+  },
+  "pwa": {
+    "install": {
+      "title": "Install Nous AI News",
+      "description": "Get faster access, offline reading, and push notifications.",
+      "benefits": "Works offline • Push alerts • No browser UI",
+      "install": "Install",
+      "dismiss": "Dismiss"
+    },
+    "update": {
+      "title": "App Update Available",
+      "description": "A new version is ready. Refresh to get the latest features.",
+      "updating": "Applying update...",
+      "refresh": "Refresh Now",
+      "dismiss": "Later"
+    }
+  },
+  "push": {
+    "title": "Push Notifications",
+    "subscribed": "You're subscribed to push notifications",
+    "notSubscribed": "Enable notifications to stay updated",
+    "configure": "Configure",
+    "close": "Close",
+    "subscribe": "Subscribe",
+    "subscribing": "Subscribing...",
+    "unsubscribe": "Unsubscribe",
+    "unsubscribing": "Unsubscribing...",
+    "saveTopics": "Save Topics",
+    "saving": "Saving...",
+    "permissionRequired": "Permission required",
+    "enableNotifications": "Enable Notifications",
+    "topicsLabel": "Notification Topics",
+    "topicsDescription": "Choose what you want to be notified about",
+    "notSupported": "Push notifications not supported in this browser",
+    "errors": {
+      "notSupported": "Push notifications are not supported in this browser",
+      "permissionDenied": "Notification permission was denied",
+      "subscribeFailed": "Failed to subscribe to push notifications",
+      "unsubscribeFailed": "Failed to unsubscribe from push notifications",
+      "updateFailed": "Failed to update notification topics"
+    },
+    "topics": {
+      "trending": {
+        "label": "Trending Articles",
+        "description": "Most popular articles right now"
+      },
+      "breaking": {
+        "label": "Breaking News",
+        "description": "Major announcements as they happen"
+      },
+      "models": {
+        "label": "New Models",
+        "description": "New LLM releases and updates"
+      },
+      "research": {
+        "label": "Research Papers",
+        "description": "New papers and breakthroughs"
+      },
+      "business": {
+        "label": "Business & Funding",
+        "description": "Funding rounds, acquisitions, IPOs"
+      },
+      "policy": {
+        "label": "Policy & Regulation",
+        "description": "AI regulation and government actions"
+      }
+    },
+    "subscribedSince": "Subscribed since {date}",
+    "topicsActive": "{count} topics active"
+  },
+  "settings": {
+    "newsletter": {
+      "title": "Newsletter",
+      "emailLabel": "Email address",
+      "frequencyLabel": "Frequency",
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "subscribe": "Subscribe",
+      "subscribing": "Subscribing...",
+      "confirmSent": "Confirmation email sent! Check your inbox.",
+      "invalidEmail": "Please enter a valid email address",
+      "error": "Something went wrong. Please try again.",
+      "privacy": "We respect your privacy. Unsubscribe anytime."
+    }
+  },
+  "liveUpdates": {
+    "reconnecting": "Reconnecting...",
+    "retry": "Retry",
+    "maxRetriesReached": "Connection lost. Click to retry.",
+    "newArticles": "{count, plural, one {# new article} other {# new articles}}",
+    "refresh": "Refresh",
+    "connectionError": "Connection lost",
+    "connected": "Live"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Something went wrong",
+    "retry": "Retry",
+    "noResults": "No results found",
+    "lastUpdated": "Last updated"
+  },
+  "bookmarks": {
+    "title": "Bookmarks",
+    "subtitle": "Your saved articles for later reading",
+    "signInRequired": {
+      "title": "Sign in to save bookmarks",
+      "description": "Create an account to bookmark articles and access them from any device. Your saved articles sync across all your devices.",
+      "signUp": "Create Account",
+      "browse": "Browse Articles",
+      "note": "Already have an account? Sign in to access your bookmarks."
+    },
+    "empty": {
+      "title": "No bookmarks yet",
+      "description": "Save articles you want to read later by clicking the bookmark icon on any article.",
+      "browseTrending": "Explore Trending"
+    }
+  },
+  "iaAutoNews": {
+    "title": "IA AUTO NEWS",
+    "subtitle": "DeepMind analyzes world news and writes philosophical articles on human evolution and the future.",
+    "sources": {
+      "20minutes": "20 Minutes",
+      "bbc": "BBC News",
+      "google": "Google Actualités"
+    },
+    "poweredBy": "Powered by DeepSeek + DALL-E 3",
+    "cronSchedule": "Daily at 6:00 AM",
+    "noArticles": "No articles yet. DeepMind will generate content soon.",
+    "refresh": "Refresh",
+    "sourcesAnalyzed": "Sources analyzed"
+  }
+}

@@ -1,0 +1,25 @@
+name: Refresh News Ingestion
+on:
+  schedule:
+    # Every hour at minute 5 (to avoid edge cases with exact hour boundaries)
+    - cron: '5 * * * *'
+  workflow_dispatch: # manual trigger
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger news refresh
+        run: |
+          echo "Fetching news from RSS sources..."
+          response=$(curl -s -o /dev/null -w "%{http_code}" \
+            -X POST "https://nous-daily.vercel.app/api/refresh?key=${{ secrets.REFRESH_KEY }}")
+          
+          echo "HTTP status: $response"
+          
+          if [ "$response" != "200" ]; then
+            echo "::error::Refresh failed with status $response"
+            exit 1
+          fi
+          
+          echo "::notice::News refreshed successfully"

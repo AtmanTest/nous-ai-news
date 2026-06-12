@@ -1,0 +1,24 @@
+name: Deploy to Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: 'Type GO to confirm production deployment'
+        required: true
+        default: ''
+
+jobs:
+  deploy-prod:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    if: github.event.inputs.confirm == 'GO'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Render via webhook
+        run: |
+          curl -X POST "${{ secrets.RENDER_PROD_DEPLOY_HOOK }}"
+
+      - name: Notify
+        run: echo "✅ Production deployment triggered"
