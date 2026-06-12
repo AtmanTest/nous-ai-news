@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { createBrowserClient } from '@supabase/ssr';
-import { Sparkles, Brain, Globe, ExternalLink } from 'lucide-react';
+import { Sparkles, Brain, Globe, ExternalLink, AlertCircle } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -17,6 +17,12 @@ interface IaAutoNewsArticle {
   created_at: string;
 }
 
+// Check for required env vars at module level
+const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const SUPABASE_ANON_KEY = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+const MISSING_ENV = !SUPABASE_URL || !SUPABASE_ANON_KEY;
+
 export default function IaAutoNewsPage() {
   const [articles, setArticles] = useState<IaAutoNewsArticle[]>([]);
   const [loading, setLoading] = useState(true);
@@ -26,10 +32,12 @@ export default function IaAutoNewsPage() {
   useEffect(() => {
     async function fetchArticles() {
       try {
-        const supabase = createBrowserClient(
-          process.env.NEXT_PUBLIC_SUPABASE_URL!,
-          process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-        );
+        // Check env vars before creating client
+        if (MISSING_ENV) {
+          throw new Error('Variables d\'environnement Supabase manquantes (NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_ANON_KEY). Configurez-les dans Vercel.');
+        }
+
+        const supabase = createBrowserClient(SUPABASE_URL!, SUPABASE_ANON_KEY!);
 
         const { data, error: fetchError } = await supabase
           .from('ia_auto_news')
@@ -107,7 +115,14 @@ export default function IaAutoNewsPage() {
       <section className="py-12 bg-gradient-to-br from-indigo-900 via-purple-900 to-black">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <div className="bg-red-900/30 border border-red-700 rounded-xl p-8">
-            <p className="text-red-300 mb-4">⚠️ {error}</p>
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <AlertCircle className="h-6 w-6 text-red-400" />
+              <span className="text-red-200 font-medium">Erreur de configuration</span>
+            </div>
+            <p className="text-red-300 mb-4">{error}</p>
+            <div className="text-xs text-red-500 mb-4">
+              Vérifiez les variables d'environnement dans Vercel : Settings → Environment Variables
+            </div>
             <button 
               onClick={() => window.location.reload()}
               className="px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition"
