@@ -1,11 +1,5 @@
 {
   "experimentalServices": {
-    "nous-ai-news-recipe": {
-      "type": "web",
-      "routePrefix": "/_/nous-ai-news-recipe",
-      "framework": "nextjs",
-      "buildCommand": "npm install && npm run build"
-    },
     "nous-ai-news": {
       "type": "web",
       "routePrefix": "/",

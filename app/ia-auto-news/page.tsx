@@ -10,7 +10,7 @@ interface IaAutoNewsArticle {
   id: string;
   title: string;
   content: string;
-  image_url: string;
+  image_url: string | null;
   published_date: string;
   theme: string;
   sources_analyzed: string[];
@@ -30,6 +30,8 @@ export default function IaAutoNewsPage() {
   const [latestDate, setLatestDate] = useState<string | null>(null);
 
   useEffect(() => {
+    let mounted = true;
+    
     async function fetchArticles() {
       try {
         // Check env vars before creating client
@@ -48,19 +50,27 @@ export default function IaAutoNewsPage() {
 
         if (fetchError) throw fetchError;
         
-        setArticles(data || []);
-        if (data && data.length > 0) {
-          setLatestDate(data[0].published_date);
+        if (mounted) {
+          setArticles(data || []);
+          if (data && data.length > 0) {
+            setLatestDate(data[0].published_date);
+          }
         }
       } catch (err) {
         console.error('Erreur chargement articles:', err);
-        setError('Impossible de charger les articles');
+        if (mounted) {
+          setError('Impossible de charger les articles');
+        }
       } finally {
-        setLoading(false);
+        if (mounted) {
+          setLoading(false);
+        }
       }
     }
 
     fetchArticles();
+    
+    return () => { mounted = false; };
   }, []);
 
   const formatDate = (dateStr: string) => {
@@ -91,7 +101,6 @@ export default function IaAutoNewsPage() {
             <h2 className="text-2xl font-bold text-white mb-2">Chargement des articles IA...</h2>
             <p className="text-purple-300">DeepMind analyse l'actualité mondiale</p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[1, 2, 3, 4].map((n) => (
               <article key={n} className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl">
@@ -166,7 +175,6 @@ export default function IaAutoNewsPage() {
                   </time>
                 </div>
               </div>
-              
               <div className="p-6">
                 <h2 className="text-xl md:text-2xl font-bold text-white mb-3 leading-tight group-hover:text-purple-200 transition-colors">
                   {article.title}
@@ -174,7 +182,6 @@ export default function IaAutoNewsPage() {
                 <p className="text-gray-200 leading-relaxed mb-5 text-sm md:text-base">
                   {article.content}
                 </p>
-                
                 {article.sources_analyzed && article.sources_analyzed.length > 0 && (
                   <div className="pt-4 border-t border-white/10">
                     <p className="text-xs text-purple-300 flex flex-wrap items-center gap-1">
@@ -227,7 +234,6 @@ export default function IaAutoNewsPage() {
               {latestDate ? `Édition du ${formatDate(latestDate)}` : 'Dernière édition'}
             </span>
           </div>
-          
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
             ✨ IA AUTO NEWS
           </h1>
@@ -236,7 +242,6 @@ export default function IaAutoNewsPage() {
             (<span className="text-purple-300">20 Minutes</span>, <span className="text-purple-300">BBC News</span>, <span className="text-purple-300">Google Actualit&eacute;s</span>) 
             et &eacute;crit des articles lumineux sur l&apos;&eacute;volution humaine et le futur.
           </p>
-          
           <div className="flex flex-wrap justify-center gap-3 text-sm text-purple-300">
             <span className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full"><Globe className="h-3 w-3" /> 20 Minutes</span>
             <span className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full"><Globe className="h-3 w-3" /> BBC News</span>

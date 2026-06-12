@@ -107,17 +107,17 @@ export default async function HomePage() {
             {/* Auto Evolve Card */}
             <div className="relative rounded-2xl bg-gradient-to-br from-primary/5 via-purple-500/5 to-pink-500/5 border border-primary/20 p-5 sm:p-6 flex flex-col">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] opacity-20" />
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                <div className="flex items-start gap-3 min-w-0 flex-1">
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-3 min-w-0">
                   <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shrink-0">
                     <Sparkles className="h-5 w-5 text-white" />
                   </div>
                   <div className="min-w-0">
                     <h2 className="text-lg sm:text-xl font-bold text-foreground truncate">Auto Evolve</h2>
-                    <p className="text-xs text-muted-foreground mt-1 hidden sm:block">Self-improving AI platform — tests, fixes, and ships autonomously while you sleep</p>
+                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">Self-improving AI platform — tests, fixes, and ships autonomously while you sleep</p>
                   </div>
                 </div>
-                <div className="shrink-0 w-full sm:w-auto mt-2 sm:mt-0">
+                <div className="w-full sm:w-auto">
                   <Link
                     href="/auto-tune"
                     className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-primary text-primary-foreground font-medium text-sm hover:bg-primary/90 transition-colors w-full sm:w-auto"
@@ -151,17 +151,17 @@ export default async function HomePage() {
             {/* DeepMind Card */}
             <div className="relative rounded-2xl bg-gradient-to-br from-pink-500/5 via-purple-500/5 to-rose-500/5 border border-pink-500/20 p-5 sm:p-6 flex flex-col">
               <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] opacity-20" />
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
-                <div className="flex items-start gap-3 min-w-0 flex-1">
+              <div className="flex flex-col gap-4">
+                <div className="flex items-start gap-3 min-w-0">
                   <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-pink-500 via-purple-500 to-rose-500 flex items-center justify-center shrink-0">
                     <Brain className="h-5 w-5 text-white" />
                   </div>
                   <div className="min-w-0">
                     <h2 className="text-lg sm:text-xl font-bold text-foreground truncate">DeepMind</h2>
-                    <p className="text-xs text-muted-foreground mt-1 hidden sm:block">AI philosopher reads world news (20min, BBC, Google) & writes luminous essays on humanity's future</p>
+                    <p className="text-xs text-muted-foreground mt-1 leading-relaxed">AI philosopher reads world news (20min, BBC, Google) & writes luminous essays on humanity's future</p>
                   </div>
                 </div>
-                <div className="shrink-0 w-full sm:w-auto mt-2 sm:mt-0">
+                <div className="w-full sm:w-auto">
                   <Link
                     href="/ia-auto-news"
                     className="inline-flex items-center justify-center gap-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-pink-500 to-rose-500 text-white font-medium text-sm hover:from-pink-600 hover:to-rose-600 transition-all w-full sm:w-auto"
