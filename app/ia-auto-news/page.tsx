@@ -145,13 +145,17 @@ export default function IaAutoNewsPage() {
               className="group bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl hover:scale-[1.02] transition-all duration-300 border border-white/10"
             >
               <div className="relative h-56 md:h-64 overflow-hidden">
-                <Image
-                  src={article.image_url}
-                  alt={article.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                />
+                {article.image_url ? (
+                  <Image
+                    src={article.image_url}
+                    alt={article.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                ) : (
+                  <div className="w-full h-full bg-gradient-to-br from-indigo-900/50 to-purple-900/50" />
+                )}
                 <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/80 via-transparent to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                   <span className="text-purple-200 text-xs font-medium px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full">
