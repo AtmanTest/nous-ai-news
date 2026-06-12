@@ -25,39 +25,55 @@ interface Article {
   language: string | null;
 }
 
+// AI-relevant categories — EXCLUDE noise categories (general, community, media)
+const AI_CATEGORIES = [
+  'models', 'research', 'business', 'policy', 'hardware', 'agents',
+  'open-source', 'startups', 'safety', 'ethics', 'applications',
+];
+
+// Sources to explicitly exclude (noisy, non-news, or low-signal)
+const EXCLUDED_SOURCES = [
+  'Hacker News',
+  'Product Hunt AI',
+  'Springer AI Research', // academic papers, not news
+];
+
+const EXCLUDED_CATEGORIES = [
+  'general',
+  'community',
+  'media',
+];
+
 async function getArticles() {
   try {
     const supabase = await createAdminClient();
     const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
 
-    // Get articles with images for hero/featured
-    const { data: featured } = await supabase
+    // Base query: AI categories only, exclude noise sources/categories
+    const baseQuery = supabase
       .from('articles')
       .select('id, title, summary, image_url, source_name, category, tags, published_at, score, is_breaking, content, language')
       .eq('status', 'published')
       .gte('published_at', sevenDaysAgo)
+      .in('category', AI_CATEGORIES)
+      .filter('source_name', 'not.in', `(${EXCLUDED_SOURCES.join(',')})`);
+
+    // Get articles with images for hero/featured
+    const { data: featured } = await baseQuery
       .not('image_url', 'is', null)
       .order('score', { ascending: false })
       .order('published_at', { ascending: false })
       .limit(5);
 
-    // Get trending (high score, recent)
-    const { data: trending } = await supabase
-      .from('articles')
-      .select('id, title, summary, image_url, source_name, category, tags, published_at, score, is_breaking, content, language')
-      .eq('status', 'published')
-      .gte('published_at', sevenDaysAgo)
-      .gte('score', 50)
+    // Get trending (high score, recent) - higher threshold for quality
+    const { data: trending } = await baseQuery
+      .gte('score', 40)
       .order('score', { ascending: false })
       .order('published_at', { ascending: false })
       .limit(10);
 
     // Get latest
-    const { data: latest } = await supabase
-      .from('articles')
-      .select('id, title, summary, image_url, source_name, category, tags, published_at, score, is_breaking, content, language')
-      .eq('status', 'published')
-      .gte('published_at', sevenDaysAgo)
+    const { data: latest } = await baseQuery
       .order('published_at', { ascending: false })
       .limit(PAGE_SIZE);
 
@@ -372,7 +388,47 @@ export default async function HomePage() {
           {/* Sidebar */}
           <aside className="hidden lg:block lg:col-span-1">
             <div className="sticky top-20 space-y-8">
-              {/* Topics widget */}
+              {/* Top Stories widget - PROMINENT, FIRST */}
+              {trending.length > 0 && (
+                <div className="bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 border border-primary/20 rounded-2xl p-5">
+                  <div className="flex items-center gap-2 mb-4">
+                    <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+                      <TrendingUp className="h-4 w-4 text-white" />
+                    </div>
+                    <h3 className="text-lg font-bold text-foreground">Top Stories</h3>
+                  </div>
+                  <div className="space-y-3">
+                    {trending.slice(0, 6).map((article, i) => (
+                      <Link
+                        key={article.id}
+                        href={`/article/${article.id}`}
+                        className="group flex items-start gap-3 p-2 rounded-xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/20"
+                      >
+                        <span className="text-base font-bold text-primary/60 shrink-0 w-7 leading-none">
+                          {String(i + 1).padStart(2, '0')}
+                        </span>
+                        <div className="min-w-0">
+                          <h4 className="text-sm font-semibold leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                            {article.title}
+                          </h4>
+                          <div className="flex items-center gap-2 mt-1 text-[11px] text-muted-foreground">
+                            <span className="font-medium">{article.source_name}</span>
+                            <span>·</span>
+                            <span>{article.published_at ? timeAgo(article.published_at) : ''}</span>
+                            {article.score && article.score > 50 && (
+                              <span className="flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] bg-primary/10 text-primary">
+                                {article.score}
+                              </span>
+                            )}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Topics widget - SECOND */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Hash className="h-4 w-4 text-primary" />
@@ -380,37 +436,6 @@ export default async function HomePage() {
                 </div>
                 <TopicPills topics={[]} />
               </div>
-
-              {/* Trending sidebar */}
-              {trending.length > 3 && (
-                <div>
-                  <div className="flex items-center gap-2 mb-3">
-                    <TrendingUp className="h-4 w-4 text-primary" />
-                    <h3 className="text-sm font-semibold">Top Stories</h3>
-                  </div>
-                  <div className="space-y-2">
-                    {trending.slice(0, 5).map((article, i) => (
-                      <Link
-                        key={article.id}
-                        href={`/article/${article.id}`}
-                        className="group flex items-start gap-3"
-                      >
-                        <span className="text-lg font-bold text-muted-foreground/30 shrink-0 w-6 leading-none">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                        <div className="min-w-0">
-                          <h4 className="text-xs font-medium leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                            {article.title}
-                          </h4>
-                          <span className="text-[10px] text-muted-foreground mt-0.5 block">
-                            {article.source_name}
-                          </span>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
 
               {/* Source freshness note */}
               <div className="p-3 rounded-lg bg-muted/30 border border-border/30">
