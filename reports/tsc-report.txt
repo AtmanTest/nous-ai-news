@@ -1,114 +1,973 @@
-[96mtests/unit/hooks/useArticleCountsByDay.test.ts[0m:[93m45[0m:[93m31[0m - [91merror[0m[90m TS2345: [0mArgument of type 'string | undefined' is not assignable to parameter of type 'string'.
-  Type 'undefined' is not assignable to type 'string'.
+[96mapp/page.tsx[0m:[93m1[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-[7m45[0m     const counts = JSON.parse(screen.getByTestId('counts-result').dataset.counts);
-[7m  [0m [91m                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+[7m1[0m 1|import Link from 'next/link';
+[7m [0m [91m  ~~~~~~[0m
 
-[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m42[0m:[93m49[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
-  The last overload gave the following error.
-    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
-      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+[96mapp/page.tsx[0m:[93m2[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-[7m42[0m     React.createElement(NextIntlClientProvider, providerProps, React.createElement(TestComponent))
-[7m  [0m [91m                                                ~~~~~~~~~~~~~[0m
+[7m2[0m 2|import { TrendingUp, Hash, Newspaper, ExternalLink, Sparkles, Zap, Brain, Cpu, Image, Palette, BookOpen } from 'lucide-react';
+[7m [0m [91m  ~~~~~~[0m
 
-  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
-    [7m4[0m     children: ReactNode;
-    [7m [0m [96m    ~~~~~~~~[0m
-    'children' is declared here.
-  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
-    [7m562[0m     function createElement<P extends {}>(
-    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
-    The last overload is declared here.
+[96mapp/page.tsx[0m:[93m3[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m90[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
-  The last overload gave the following error.
-    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
-      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+[7m3[0m 3|import { createAdminClient } from '@/lib/supabase/server';
+[7m [0m [91m  ~~~~~~[0m
 
-[7m90[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(ButtonComponent))
-[7m  [0m [91m                                                  ~~~~~~~~~~~~~[0m
+[96mapp/page.tsx[0m:[93m4[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
-    [7m4[0m     children: ReactNode;
-    [7m [0m [96m    ~~~~~~~~[0m
-    'children' is declared here.
-  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
-    [7m562[0m     function createElement<P extends {}>(
-    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
-    The last overload is declared here.
+[7m4[0m 4|import { TopicPills } from '@/components/news/TopicPills';
+[7m [0m [91m  ~~~~~~[0m
 
-[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m110[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
-  The last overload gave the following error.
-    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
-      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+[96mapp/page.tsx[0m:[93m5[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-[7m110[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(CanGoNextComponent))
-[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+[7m5[0m 5|import { Badge } from '@/components/ui/badge';
+[7m [0m [91m  ~~~~~~[0m
 
-  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
-    [7m4[0m     children: ReactNode;
-    [7m [0m [96m    ~~~~~~~~[0m
-    'children' is declared here.
-  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
-    [7m562[0m     function createElement<P extends {}>(
-    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
-    The last overload is declared here.
+[96mapp/page.tsx[0m:[93m6[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m126[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
-  The last overload gave the following error.
-    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
-      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+[7m6[0m 6|import { timeAgo, readingTime } from '@/lib/utils';
+[7m [0m [91m  ~~~~~~[0m
 
-[7m126[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(CanGoPreviousComponent))
-[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+[96mapp/page.tsx[0m:[93m7[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
-    [7m4[0m     children: ReactNode;
-    [7m [0m [96m    ~~~~~~~~[0m
-    'children' is declared here.
-  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
-    [7m562[0m     function createElement<P extends {}>(
-    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
-    The last overload is declared here.
+[7m7[0m 7|import { LiveUpdateBar } from '@/components/news/LiveUpdateBar';
+[7m [0m [91m  ~~~~~~[0m
 
-[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m141[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
-  The last overload gave the following error.
-    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
-      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+[96mapp/page.tsx[0m:[93m8[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-[7m141[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(DayCountComponent))
-[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+[7m8[0m 8|import { RefreshButton } from '@/components/news/RefreshButton';
+[7m [0m [91m  ~~~~~~[0m
 
-  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
-    [7m4[0m     children: ReactNode;
-    [7m [0m [96m    ~~~~~~~~[0m
-    'children' is declared here.
-  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
-    [7m562[0m     function createElement<P extends {}>(
-    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
-    The last overload is declared here.
+[96mapp/page.tsx[0m:[93m9[0m:[93m3[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-[96mtests/unit/hooks/useDayFilter.test.ts[0m:[93m157[0m:[93m51[0m - [91merror[0m[90m TS2769: [0mNo overload matches this call.
-  The last overload gave the following error.
-    Argument of type '{ messages: {}; locale: string; }' is not assignable to parameter of type 'Attributes & Omit<IntlConfig & { children: ReactNode; }, "locale"> & { locale?: string | undefined; }'.
-      Property 'children' is missing in type '{ messages: {}; locale: string; }' but required in type 'Omit<IntlConfig & { children: ReactNode; }, "locale">'.
+[7m9[0m 9|import { FilteredFeed } from '@/components/news/FilteredFeed';
+[7m [0m [91m  ~~~~~~[0m
 
-[7m157[0m       React.createElement(NextIntlClientProvider, providerProps, React.createElement(IsTodaySelectedComponent))
-[7m   [0m [91m                                                  ~~~~~~~~~~~~~[0m
+[96mapp/page.tsx[0m:[93m11[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
 
-  [96mnode_modules/use-intl/dist/types/react/IntlProvider.d.ts[0m:[93m4[0m:[93m5[0m
-    [7m4[0m     children: ReactNode;
-    [7m [0m [96m    ~~~~~~~~[0m
-    'children' is declared here.
-  [96mnode_modules/@types/react/index.d.ts[0m:[93m562[0m:[93m14[0m
-    [7m562[0m     function createElement<P extends {}>(
-    [7m   [0m [96m             ~~~~~~~~~~~~~[0m
-    The last overload is declared here.
+[7m11[0m 11|const PAGE_SIZE = 12;
+[7m  [0m [91m   ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m13[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m13[0m 13|interface Article {
+[7m  [0m [91m             ~~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m14[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m14[0m 14|  id: string;
+[7m  [0m [91m       ~[0m
+
+[96mapp/page.tsx[0m:[93m15[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m15[0m 15|  title: string;
+[7m  [0m [91m          ~[0m
+
+[96mapp/page.tsx[0m:[93m16[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m16[0m 16|  summary: string | null;
+[7m  [0m [91m            ~[0m
+
+[96mapp/page.tsx[0m:[93m17[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m17[0m 17|  image_url: string | null;
+[7m  [0m [91m              ~[0m
+
+[96mapp/page.tsx[0m:[93m18[0m:[93m17[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m18[0m 18|  source_name: string;
+[7m  [0m [91m                ~[0m
+
+[96mapp/page.tsx[0m:[93m19[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m19[0m 19|  category: string | null;
+[7m  [0m [91m             ~[0m
+
+[96mapp/page.tsx[0m:[93m20[0m:[93m10[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m20[0m 20|  tags: string[];
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m20[0m:[93m19[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m20[0m 20|  tags: string[];
+[7m  [0m [91m                  [0m
+
+[96mapp/page.tsx[0m:[93m21[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m21[0m 21|  published_at: string;
+[7m  [0m [91m                 ~[0m
+
+[96mapp/page.tsx[0m:[93m22[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m22[0m 22|  score: number;
+[7m  [0m [91m          ~[0m
+
+[96mapp/page.tsx[0m:[93m23[0m:[93m17[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m23[0m 23|  is_breaking: boolean;
+[7m  [0m [91m                ~[0m
+
+[96mapp/page.tsx[0m:[93m24[0m:[93m13[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m24[0m 24|  content: string | null;
+[7m  [0m [91m            ~[0m
+
+[96mapp/page.tsx[0m:[93m25[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m25[0m 25|  language: string | null;
+[7m  [0m [91m             ~[0m
+
+[96mapp/page.tsx[0m:[93m26[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m26[0m 26|}
+[7m  [0m [91m   ~[0m
+
+[96mapp/page.tsx[0m:[93m29[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m29[0m 29|const AI_CATEGORIES = [
+[7m  [0m [91m   ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m32[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m32[0m 32|];
+[7m  [0m [91m   ~[0m
+
+[96mapp/page.tsx[0m:[93m35[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m35[0m 35|const EXCLUDED_SOURCES = [
+[7m  [0m [91m   ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m39[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m39[0m 39|];
+[7m  [0m [91m   ~[0m
+
+[96mapp/page.tsx[0m:[93m41[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m41[0m 41|const EXCLUDED_CATEGORIES = [
+[7m  [0m [91m   ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m45[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m45[0m 45|];
+[7m  [0m [91m   ~[0m
+
+[96mapp/page.tsx[0m:[93m48[0m:[93m6[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m48[0m 48|  try {
+[7m  [0m [91m     ~~~[0m
+
+[96mapp/page.tsx[0m:[93m49[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m49[0m 49|    const supabase = await createAdminClient();
+[7m  [0m [91m       ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m50[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m50[0m 50|    const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000).toISOString();
+[7m  [0m [91m       ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m53[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m53[0m 53|    const baseQuery = supabase
+[7m  [0m [91m       ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m54[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m54[0m 54|      .from('articles')
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m55[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m55[0m 55|      .select('id, title, summary, image_url, source_name, category, tags, published_at, score, is_breaking, content, language')
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m56[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m56[0m 56|      .eq('status', 'published')
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m57[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m57[0m 57|      .gte('published_at', sevenDaysAgo)
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m58[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m58[0m 58|      .in('category', AI_CATEGORIES)
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m59[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m59[0m 59|      .filter('source_name', 'not.in', `(${EXCLUDED_SOURCES.join(',')})`);
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m62[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m62[0m 62|    const { data: featured } = await baseQuery
+[7m  [0m [91m       ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m63[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m63[0m 63|      .not('image_url', 'is', null)
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m64[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m64[0m 64|      .order('score', { ascending: false })
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m65[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m65[0m 65|      .order('published_at', { ascending: false })
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m66[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m66[0m 66|      .limit(5);
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m69[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m69[0m 69|    const { data: trending } = await baseQuery
+[7m  [0m [91m       ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m70[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m70[0m 70|      .gte('score', 40)
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m71[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m71[0m 71|      .order('score', { ascending: false })
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m72[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m72[0m 72|      .order('published_at', { ascending: false })
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m73[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m73[0m 73|      .limit(10);
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m76[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m76[0m 76|    const { data: latest } = await baseQuery
+[7m  [0m [91m       ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m77[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m77[0m 77|      .order('published_at', { ascending: false })
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m78[0m:[93m10[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m78[0m 78|      .limit(PAGE_SIZE);
+[7m  [0m [91m         ~[0m
+
+[96mapp/page.tsx[0m:[93m80[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m80[0m 80|    return {
+[7m  [0m [91m       ~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m81[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m81[0m 81|      featured: (featured || []) as Article[],
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m81[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m81[0m 81|      featured: (featured || []) as Article[],
+[7m  [0m [91m                 ~[0m
+
+[96mapp/page.tsx[0m:[93m81[0m:[93m20[0m - [91merror[0m[90m TS1136: [0mProperty assignment expected.
+
+[7m81[0m 81|      featured: (featured || []) as Article[],
+[7m  [0m [91m                   ~[0m
+
+[96mapp/page.tsx[0m:[93m82[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m82[0m 82|      trending: (trending || []) as Article[],
+[7m  [0m [91m                 ~[0m
+
+[96mapp/page.tsx[0m:[93m83[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m83[0m 83|      latest: (latest || []) as Article[],
+[7m  [0m [91m               ~[0m
+
+[96mapp/page.tsx[0m:[93m84[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m84[0m 84|    };
+[7m  [0m [91m       ~[0m
+
+[96mapp/page.tsx[0m:[93m84[0m:[93m9[0m - [91merror[0m[90m TS1472: [0m'catch' or 'finally' expected.
+
+[7m84[0m 84|    };
+[7m  [0m [91m        ~[0m
+
+[96mapp/page.tsx[0m:[93m85[0m:[93m6[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m85[0m 85|  } catch (err) {
+[7m  [0m [91m     ~[0m
+
+[96mapp/page.tsx[0m:[93m85[0m:[93m8[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m85[0m 85|  } catch (err) {
+[7m  [0m [91m       ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m87[0m:[93m8[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m87[0m 87|    return { featured: [], trending: [], latest: [] };
+[7m  [0m [91m       ~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m88[0m:[93m6[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m88[0m 88|  }
+[7m  [0m [91m     ~[0m
+
+[96mapp/page.tsx[0m:[93m89[0m:[93m4[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m89[0m 89|}
+[7m  [0m [91m   ~[0m
+
+[96mapp/page.tsx[0m:[93m92[0m:[93m6[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m92[0m 92|  const map: Record<string, string> = {
+[7m  [0m [91m     ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m93[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m93[0m 93|    models: 'AI Models',
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m93[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m93[0m 93|    models: 'AI Models',
+[7m  [0m [91m             ~[0m
+
+[96mapp/page.tsx[0m:[93m93[0m:[93m27[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m93[0m 93|    models: 'AI Models',
+[7m  [0m [91m                          ~[0m
+
+[96mapp/page.tsx[0m:[93m94[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m94[0m 94|    research: 'Research',
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m94[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m94[0m 94|    research: 'Research',
+[7m  [0m [91m               ~[0m
+
+[96mapp/page.tsx[0m:[93m94[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m94[0m 94|    research: 'Research',
+[7m  [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m95[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m95[0m 95|    business: 'Business',
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m95[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m95[0m 95|    business: 'Business',
+[7m  [0m [91m               ~[0m
+
+[96mapp/page.tsx[0m:[93m95[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m95[0m 95|    business: 'Business',
+[7m  [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m96[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m96[0m 96|    policy: 'Policy',
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m96[0m:[93m14[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m96[0m 96|    policy: 'Policy',
+[7m  [0m [91m             ~[0m
+
+[96mapp/page.tsx[0m:[93m96[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m96[0m 96|    policy: 'Policy',
+[7m  [0m [91m                       ~[0m
+
+[96mapp/page.tsx[0m:[93m97[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m97[0m 97|    'open-source': 'Open Source',
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m97[0m:[93m21[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m97[0m 97|    'open-source': 'Open Source',
+[7m  [0m [91m                    ~[0m
+
+[96mapp/page.tsx[0m:[93m97[0m:[93m36[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m97[0m 97|    'open-source': 'Open Source',
+[7m  [0m [91m                                   ~[0m
+
+[96mapp/page.tsx[0m:[93m98[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m98[0m 98|    startups: 'Startups',
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m98[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m98[0m 98|    startups: 'Startups',
+[7m  [0m [91m               ~[0m
+
+[96mapp/page.tsx[0m:[93m98[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m98[0m 98|    startups: 'Startups',
+[7m  [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m99[0m:[93m3[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m99[0m 99|    hardware: 'Hardware',
+[7m  [0m [91m  ~[0m
+
+[96mapp/page.tsx[0m:[93m99[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m99[0m 99|    hardware: 'Hardware',
+[7m  [0m [91m               ~[0m
+
+[96mapp/page.tsx[0m:[93m99[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m99[0m 99|    hardware: 'Hardware',
+[7m  [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m100[0m:[93m4[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m100[0m 100|    agents: 'Agents',
+[7m   [0m [91m   ~[0m
+
+[96mapp/page.tsx[0m:[93m100[0m:[93m15[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m100[0m 100|    agents: 'Agents',
+[7m   [0m [91m              ~[0m
+
+[96mapp/page.tsx[0m:[93m100[0m:[93m25[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m100[0m 100|    agents: 'Agents',
+[7m   [0m [91m                        ~[0m
+
+[96mapp/page.tsx[0m:[93m101[0m:[93m4[0m - [91merror[0m[90m TS1005: [0m':' expected.
+
+[7m101[0m 101|  };
+[7m   [0m [91m   ~[0m
+
+[96mapp/page.tsx[0m:[93m101[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m101[0m 101|  };
+[7m   [0m [91m      ~[0m
+
+[96mapp/page.tsx[0m:[93m102[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m102[0m 102|  return map[slug] || slug;
+[7m   [0m [91m      ~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m103[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m103[0m 103|}
+[7m   [0m [91m    ~[0m
+
+[96mapp/page.tsx[0m:[93m105[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m105[0m 105|export default async function HomePage() {
+[7m   [0m [91m    ~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m106[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m106[0m 106|  let featured: Article[] = [];
+[7m   [0m [91m          ~~~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m106[0m:[93m29[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m106[0m 106|  let featured: Article[] = [];
+[7m   [0m [91m                            [0m
+
+[96mapp/page.tsx[0m:[93m107[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m107[0m 107|  let trending: Article[] = [];
+[7m   [0m [91m          ~~~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m107[0m:[93m29[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m107[0m 107|  let trending: Article[] = [];
+[7m   [0m [91m                            [0m
+
+[96mapp/page.tsx[0m:[93m108[0m:[93m11[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m108[0m 108|  let latest: Article[] = [];
+[7m   [0m [91m          ~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m108[0m:[93m27[0m - [91merror[0m[90m TS1011: [0mAn element access expression should take an argument.
+
+[7m108[0m 108|  let latest: Article[] = [];
+[7m   [0m [91m                          [0m
+
+[96mapp/page.tsx[0m:[93m109[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m109[0m 109|  try {
+[7m   [0m [91m      ~~~[0m
+
+[96mapp/page.tsx[0m:[93m110[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m110[0m 110|    const data = await getArticles();
+[7m   [0m [91m        ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m111[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m111[0m 111|    featured = data.featured;
+[7m   [0m [91m                 ~[0m
+
+[96mapp/page.tsx[0m:[93m112[0m:[93m18[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m112[0m 112|    trending = data.trending;
+[7m   [0m [91m                 ~[0m
+
+[96mapp/page.tsx[0m:[93m113[0m:[93m16[0m - [91merror[0m[90m TS1005: [0m';' expected.
+
+[7m113[0m 113|    latest = data.latest;
+[7m   [0m [91m               ~[0m
+
+[96mapp/page.tsx[0m:[93m114[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m114[0m 114|  } catch (err) {
+[7m   [0m [91m      ~[0m
+
+[96mapp/page.tsx[0m:[93m116[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m116[0m 116|  }
+[7m   [0m [91m      ~[0m
+
+[96mapp/page.tsx[0m:[93m117[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m117[0m 117|  const hasTrending = trending.length > 2;
+[7m   [0m [91m      ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m120[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m120[0m 120|  const heroStories = featured.length >= 3 ? featured.slice(0, 4) : latest.slice(0, 4);
+[7m   [0m [91m      ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m121[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m121[0m 121|  const mainHero = heroStories[0];
+[7m   [0m [91m      ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m122[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m122[0m 122|  const sideHeroes = heroStories.slice(1, 4);
+[7m   [0m [91m      ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m124[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m124[0m 124|  return (
+[7m   [0m [91m      ~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m130[0m:[93m12[0m - [91merror[0m[90m TS17008: [0mJSX element 'section' has no corresponding closing tag.
+
+[7m130[0m 130|      <section className="relative overflow-hidden">
+[7m   [0m [91m           ~~~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m148[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m148[0m 148|                    href="/auto-tune"
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m150[0m:[93m23[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m150[0m 150|                  >
+[7m   [0m [91m                      ~[0m
+
+[96mapp/page.tsx[0m:[93m154[0m:[93m25[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m154[0m 154|                  </Link>
+[7m   [0m [91m                        ~~~~[0m
+
+[96mapp/page.tsx[0m:[93m192[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m192[0m 192|                    href="/ia-auto-news"
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m194[0m:[93m23[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m194[0m 194|                  >
+[7m   [0m [91m                      ~[0m
+
+[96mapp/page.tsx[0m:[93m198[0m:[93m25[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m198[0m 198|                  </Link>
+[7m   [0m [91m                        ~~~~[0m
+
+[96mapp/page.tsx[0m:[93m217[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m217[0m 217|        </div>
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m217[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m217[0m 217|        </div>
+[7m   [0m [91m            ~~[0m
+
+[96mapp/page.tsx[0m:[93m218[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m218[0m 218|      </section>
+[7m   [0m [91m          ~~[0m
+
+[96mapp/page.tsx[0m:[93m223[0m:[93m21[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m223[0m 223|      {mainHero && (
+[7m   [0m [91m                    ~~[0m
+
+[96mapp/page.tsx[0m:[93m230[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m230[0m 230|                  href={`/article/${mainHero.id}`}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m232[0m:[93m21[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m232[0m 232|                >
+[7m   [0m [91m                    ~[0m
+
+[96mapp/page.tsx[0m:[93m237[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m237[0m 237|                        src={mainHero.image_url}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m240[0m:[93m28[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m240[0m 240|                      />
+[7m   [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m243[0m:[93m26[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m243[0m 243|                    )}
+[7m   [0m [91m                         ~[0m
+
+[96mapp/page.tsx[0m:[93m254[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m254[0m 254|                      )}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m254[0m:[93m28[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m254[0m 254|                      )}
+[7m   [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m259[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m259[0m 259|                      )}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m259[0m:[93m28[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m259[0m 259|                      )}
+[7m   [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m268[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m268[0m 268|                    )}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m268[0m:[93m26[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m268[0m 268|                    )}
+[7m   [0m [91m                         ~[0m
+
+[96mapp/page.tsx[0m:[93m277[0m:[93m23[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m277[0m 277|                </Link>
+[7m   [0m [91m                      ~~~~[0m
+
+[96mapp/page.tsx[0m:[93m284[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m284[0m 284|                    key={article.id}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m284[0m:[93m28[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m284[0m 284|                    key={article.id}
+[7m   [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m284[0m:[93m37[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m284[0m 284|                    key={article.id}
+[7m   [0m [91m                                    ~[0m
+
+[96mapp/page.tsx[0m:[93m285[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m285[0m 285|                    href={`/article/${article.id}`}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m287[0m:[93m23[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m287[0m 287|                  >
+[7m   [0m [91m                      ~[0m
+
+[96mapp/page.tsx[0m:[93m291[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m291[0m 291|                          src={article.image_url}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m294[0m:[93m30[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m294[0m 294|                        />
+[7m   [0m [91m                             ~[0m
+
+[96mapp/page.tsx[0m:[93m297[0m:[93m28[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m297[0m 297|                      )}
+[7m   [0m [91m                           ~[0m
+
+[96mapp/page.tsx[0m:[93m306[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m306[0m 306|                        )}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m306[0m:[93m30[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m306[0m 306|                        )}
+[7m   [0m [91m                             ~[0m
+
+[96mapp/page.tsx[0m:[93m315[0m:[93m25[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m315[0m 315|                  </Link>
+[7m   [0m [91m                        ~~~~[0m
+
+[96mapp/page.tsx[0m:[93m316[0m:[93m23[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m316[0m 316|                ))}
+[7m   [0m [91m                      ~[0m
+
+[96mapp/page.tsx[0m:[93m318[0m:[93m19[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'section'.
+
+[7m318[0m 318|            </div>
+[7m   [0m [91m                  ~~~[0m
+
+[96mapp/page.tsx[0m:[93m319[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m319[0m 319|          </div>
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m319[0m:[93m15[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m319[0m 319|          </div>
+[7m   [0m [91m              ~~[0m
+
+[96mapp/page.tsx[0m:[93m320[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m320[0m 320|        </section>
+[7m   [0m [91m            ~~[0m
+
+[96mapp/page.tsx[0m:[93m321[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m321[0m 321|      )}
+[7m   [0m [91m          ~[0m
+
+[96mapp/page.tsx[0m:[93m326[0m:[93m24[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m326[0m 326|      {hasTrending && (
+[7m   [0m [91m                       ~~[0m
+
+[96mapp/page.tsx[0m:[93m336[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m336[0m 336|                  key={article.id}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m336[0m:[93m26[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m336[0m 336|                  key={article.id}
+[7m   [0m [91m                         ~[0m
+
+[96mapp/page.tsx[0m:[93m336[0m:[93m35[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m336[0m 336|                  key={article.id}
+[7m   [0m [91m                                  ~[0m
+
+[96mapp/page.tsx[0m:[93m337[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m337[0m 337|                  href={`/article/${article.id}`}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m339[0m:[93m21[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m339[0m 339|                >
+[7m   [0m [91m                    ~[0m
+
+[96mapp/page.tsx[0m:[93m342[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m342[0m 342|                  ) : (
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m344[0m:[93m24[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m344[0m 344|                  )}
+[7m   [0m [91m                       ~[0m
+
+[96mapp/page.tsx[0m:[93m353[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m353[0m 353|                  )}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m353[0m:[93m24[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m353[0m 353|                  )}
+[7m   [0m [91m                       ~[0m
+
+[96mapp/page.tsx[0m:[93m354[0m:[93m23[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m354[0m 354|                </Link>
+[7m   [0m [91m                      ~~~~[0m
+
+[96mapp/page.tsx[0m:[93m355[0m:[93m21[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m355[0m 355|              ))}
+[7m   [0m [91m                    ~[0m
+
+[96mapp/page.tsx[0m:[93m357[0m:[93m17[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'section'.
+
+[7m357[0m 357|          </div>
+[7m   [0m [91m                ~~~[0m
+
+[96mapp/page.tsx[0m:[93m358[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m358[0m 358|        </section>
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m358[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m358[0m 358|        </section>
+[7m   [0m [91m            ~~[0m
+
+[96mapp/page.tsx[0m:[93m359[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m359[0m 359|      )}
+[7m   [0m [91m          ~[0m
+
+[96mapp/page.tsx[0m:[93m359[0m:[93m12[0m - [91merror[0m[90m TS1128: [0mDeclaration or statement expected.
+
+[7m359[0m 359|      )}
+[7m   [0m [91m           ~[0m
+
+[96mapp/page.tsx[0m:[93m378[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m378[0m 378|                href="/trending"
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m380[0m:[93m19[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m380[0m 380|              >
+[7m   [0m [91m                  ~[0m
+
+[96mapp/page.tsx[0m:[93m382[0m:[93m21[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m382[0m 382|              </Link>
+[7m   [0m [91m                    ~~~~[0m
+
+[96mapp/page.tsx[0m:[93m399[0m:[93m16[0m - [91merror[0m[90m TS17008: [0mJSX element 'aside' has no corresponding closing tag.
+
+[7m399[0m 399|          <aside className="hidden lg:block lg:col-span-1">
+[7m   [0m [91m               ~~~~~[0m
+
+[96mapp/page.tsx[0m:[93m413[0m:[93m1[0m - [91merror[0m[90m TS1003: [0mIdentifier expected.
+
+[7m413[0m 413|                        key={article.id}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m413[0m:[93m32[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m 413|                        key={article.id}
+[7m   [0m [91m                               ~[0m
+
+[96mapp/page.tsx[0m:[93m413[0m:[93m41[0m - [91merror[0m[90m TS1005: [0m',' expected.
+
+[7m413[0m 413|                        key={article.id}
+[7m   [0m [91m                                        ~[0m
+
+[96mapp/page.tsx[0m:[93m414[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m'}' expected.
+
+[7m414[0m 414|                        href={`/article/${article.id}`}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m416[0m:[93m27[0m - [91merror[0m[90m TS1382: [0mUnexpected token. Did you mean `{'>'}` or `&gt;`?
+
+[7m416[0m 416|                      >
+[7m   [0m [91m                          ~[0m
+
+[96mapp/page.tsx[0m:[93m432[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m432[0m 432|                            )}
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m432[0m:[93m34[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m432[0m 432|                            )}
+[7m   [0m [91m                                 ~[0m
+
+[96mapp/page.tsx[0m:[93m435[0m:[93m29[0m - [91merror[0m[90m TS17002: [0mExpected corresponding JSX closing tag for 'div'.
+
+[7m435[0m 435|                      </Link>
+[7m   [0m [91m                            ~~~~[0m
+
+[96mapp/page.tsx[0m:[93m436[0m:[93m27[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m436[0m 436|                    ))}
+[7m   [0m [91m                          ~[0m
+
+[96mapp/page.tsx[0m:[93m438[0m:[93m1[0m - [91merror[0m[90m TS1005: [0m')' expected.
+
+[7m438[0m 438|                </div>
+[7m   [0m [91m~~~[0m
+
+[96mapp/page.tsx[0m:[93m439[0m:[93m20[0m - [91merror[0m[90m TS1381: [0mUnexpected token. Did you mean `{'}'}` or `&rbrace;`?
+
+[7m439[0m 439|              )}
+[7m   [0m [91m                   ~[0m
+
+[96mapp/page.tsx[0m:[93m457[0m:[93m15[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m457[0m 457|          </aside>
+[7m   [0m [91m              ~~[0m
+
+[96mapp/page.tsx[0m:[93m458[0m:[93m13[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m458[0m 458|        </div>
+[7m   [0m [91m            ~~[0m
+
+[96mapp/page.tsx[0m:[93m459[0m:[93m11[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m459[0m 459|      </div>
+[7m   [0m [91m          ~~[0m
+
+[96mapp/page.tsx[0m:[93m460[0m:[93m9[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m460[0m 460|    </div>
+[7m   [0m [91m        ~~[0m
+
+[96mapp/page.tsx[0m:[93m461[0m:[93m7[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m461[0m 461|  );
+[7m   [0m [91m      ~[0m
+
+[96mapp/page.tsx[0m:[93m462[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m462[0m 462|}
+[7m   [0m [91m    ~[0m
+
+[96mapp/page.tsx[0m:[93m463[0m:[93m5[0m - [91merror[0m[90m TS1109: [0mExpression expected.
+
+[7m463[0m 463|
+[7m   [0m [91m    [0m
 
 
-Found 7 errors in 2 files.
+Found 194 errors in the same file, starting at: app/page.tsx[90m:1[0m
 
-Errors  Files
-     1  tests/unit/hooks/useArticleCountsByDay.test.ts[90m:45[0m
-     6  tests/unit/hooks/useDayFilter.test.ts[90m:42[0m
