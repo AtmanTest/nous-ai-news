@@ -37,6 +37,20 @@ export function FilteredFeed({ featured, latest, excludeIds = [], showEmptyMessa
   const readyFeatured = featured.filter(a => !seenIds.has(a.id)).slice(0, 4);
   const readyLatest = latest.filter(a => !seenIds.has(a.id));
 
+  // Dedup: exclude already-seen IDs, then exclude featured articles from latest
+  const unfilteredFeatured = featured.filter(a => !seenIds.has(a.id));
+  const seenInHero = new Set(unfilteredFeatured.slice(0, 4).map(a => a.id));
+  const filteredFeatured = unfilteredFeatured.filter(a => !hiddenSources.has(a.source_name));
+  const filteredLatest = latest.filter(a => !seenIds.has(a.id) && !seenInHero.has(a.id) && !hiddenSources.has(a.source_name));
+
+  // Auto-reset hidden sources if all current articles are filtered out (e.g., data source changed).
+  // This hook must run before any early return so hydration never changes hook order.
+  useEffect(() => {
+    if (ready && latest.length > 0 && filteredLatest.length === 0) {
+      showAllSources();
+    }
+  }, [ready, latest, filteredLatest, showAllSources]);
+
   if (!ready) {
     return (
       <>
@@ -55,19 +69,6 @@ export function FilteredFeed({ featured, latest, excludeIds = [], showEmptyMessa
       </>
     );
   }
-
-  // Dedup: exclude already-seen IDs, then exclude featured articles from latest
-  const unfilteredFeatured = featured.filter(a => !seenIds.has(a.id));
-  const seenInHero = new Set(unfilteredFeatured.slice(0, 4).map(a => a.id));
-  const filteredFeatured = unfilteredFeatured.filter(a => !hiddenSources.has(a.source_name));
-  const filteredLatest = latest.filter(a => !seenIds.has(a.id) && !seenInHero.has(a.id) && !hiddenSources.has(a.source_name));
-
-  // Auto-reset hidden sources if all current articles are filtered out (e.g., data source changed)
-  useEffect(() => {
-  if (ready && latest.length > 0 && filteredLatest.length === 0) {
-  showAllSources();
-  }
-  }, [ready, latest, filteredLatest, showAllSources]);
 
   return (
     <>

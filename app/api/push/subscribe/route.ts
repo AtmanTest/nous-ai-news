@@ -1,14 +1,6 @@
 import { z } from 'zod';
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
-import webpush from 'web-push';
-
-// Configure web-push with VAPID keys
-webpush.setVapidDetails(
-  process.env.VAPID_SUBJECT || 'mailto:thasin@live.com',
-  process.env.VAPID_PUBLIC_KEY!,
-  process.env.VAPID_PRIVATE_KEY!
-);
 
 const subscribeSchema = z.object({
   endpoint: z.string().url(),
