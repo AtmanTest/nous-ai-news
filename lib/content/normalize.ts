@@ -120,11 +120,46 @@ export function categorizeArticle(text: string): {
   };
 }
 
+export function cleanArticleText(value: string | null | undefined): string {
+  let text = (value || '').trim();
+
+  // Some feeds incorrectly HTML-escape CDATA markers, storing titles like
+  // `&lt;![CDATA[[A] Title]]&gt;` as literal text. Decode entities first,
+  // then unwrap CDATA defensively.
+  for (let i = 0; i < 3; i += 1) {
+    const before = text;
+    text = text
+      .replace(/&amp;/g, '&')
+      .replace(/&lt;/g, '<')
+      .replace(/&gt;/g, '>')
+      .replace(/&quot;/g, '"')
+      .replace(/&#39;/g, "'")
+      .replace(/&apos;/g, "'")
+      .replace(/&nbsp;/g, ' ')
+      .replace(/&#(\d+);/g, (_, num) => String.fromCodePoint(parseInt(num, 10)))
+      .replace(/&#x([0-9a-fA-F]+);/g, (_, hex) => String.fromCodePoint(parseInt(hex, 16)))
+      .replace(/&mdash;/g, '—')
+      .replace(/&ndash;/g, '–')
+      .replace(/&lsquo;/g, "'")
+      .replace(/&rsquo;/g, "'")
+      .replace(/&ldquo;/g, '"')
+      .replace(/&rdquo;/g, '"')
+      .replace(/&hellip;/g, '…')
+      .replace(/^<!\[CDATA\[([\s\S]*?)\]\]>$/i, '$1')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (text === before) break;
+  }
+
+  return text;
+}
+
 export function normalizeArticle(
   raw: RawArticle,
   sourceId: string
 ): NormalizedArticle {
-  const title = raw.title.trim();
+  const title = cleanArticleText(raw.title);
   const url = raw.url.split('?')[0].split('#')[0]; // Clean URL
   const published_at = raw.published_at
     ? new Date(raw.published_at).toISOString()
@@ -154,8 +189,8 @@ export function normalizeArticle(
   return {
     url,
     title,
-    summary: raw.summary?.slice(0, 500) || null,
-    content: raw.content?.slice(0, 10000) || null,
+    summary: raw.summary ? cleanArticleText(raw.summary).slice(0, 500) : null,
+    content: raw.content ? cleanArticleText(raw.content).slice(0, 10000) : null,
     author: raw.author || null,
     published_at,
     image_url: raw.image_url || null,

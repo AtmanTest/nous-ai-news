@@ -1,5 +1,5 @@
 import type { NormalizedArticle } from '../content/types';
-import { normalizeArticle } from '../content/normalize';
+import { normalizeArticle, cleanArticleText } from '../content/normalize';
 
 interface FeedItem {
   title: string;
@@ -74,7 +74,7 @@ function parseFeedXML(xml: string, feedUrl: string): ParsedFeed {
     const contentHtml = rawContent;
 
     const item: FeedItem = {
-      title: extractTag(itemXml, 'title') || '',
+      title: cleanArticleText(extractTag(itemXml, 'title') || ''),
       link: extractTag(itemXml, 'link') || '',
       description: stripHtml(descriptionHtml),
       content: stripHtml(contentHtml),
@@ -184,7 +184,7 @@ function extractAtomLink(xml: string): string {
 }
 
 function stripHtml(html: string): string {
-  return html
+  const text = html
     // Remove Reddit's SC_OFF/SC_ON comments and md div wrappers
     .replace(/<!--\s*SC_OFF\s*-->/gi, '')
     .replace(/<!--\s*SC_ON\s*-->/gi, '')
@@ -216,6 +216,8 @@ function stripHtml(html: string): string {
     // Collapse whitespace
     .replace(/\s+/g, ' ')
     .trim();
+
+  return cleanArticleText(text);
 }
 
 export function feedItemsToNormalized(
