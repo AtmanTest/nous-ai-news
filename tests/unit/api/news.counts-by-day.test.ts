@@ -46,7 +46,9 @@ function buildRequest(searchParams: Record<string, string> = {}) {
 }
 
 const today = new Date();
-today.setHours(0, 0, 0, 0);
+// Use UTC noon instead of midnight so subtracting a few hours stays on the
+// same UTC day in CI and local timezones.
+today.setUTCHours(12, 0, 0, 0);
 
 function iso(d: Date) {
   return d.toISOString();
