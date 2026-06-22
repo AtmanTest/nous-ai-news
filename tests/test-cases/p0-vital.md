@@ -120,9 +120,31 @@ Tous les P0 sont bloquants : 100% doivent passer avant commit/push/déploiement.
 
 - Priorité : P0
 - Type : API smoke
-- Auto : À renforcer
-- Endpoints : `/api/news`, `/api/news/counts-by-day`, `/api/huggingface/trending`, `/feed.xml`, `/sitemap.xml`, `/robots.txt`.
+- Auto : Oui (`tests/e2e/dashboard-critical.spec.ts`, pipeline `npm run test:e2e:smoke`)
+- Endpoints : `/api/news`, `/api/news/counts-by-day`, `/api/news/models`, `/api/huggingface/trending`, `/feed.xml`, `/sitemap.xml`, `/robots.txt`.
 - Résultat attendu : status < 400, schéma JSON/XML valide.
+
+## P0-DASHBOARD-001 — Widgets dashboard réels et visibles
+
+- Priorité : P0
+- Type : E2E smoke / régression dashboard
+- Auto : Oui (`tests/e2e/dashboard-critical.spec.ts`, pipeline `npm run test:e2e:smoke`)
+- Widgets : `View Engine`, `Read Essays`, `Latest AI News`, `Topics / All Models`, `Trending Models`.
+- Étapes :
+  1. Ouvrir `/`.
+  2. Vérifier les CTA `View Engine` → `/auto-tune` et `Read Essays` → `/ia-auto-news`.
+  3. Vérifier `Latest AI News` visible avec au moins un article réel.
+  4. Vérifier un lien `/topics/models` réel.
+  5. Vérifier `Trending Models` visible à 1100px de large.
+- Résultat attendu : aucun widget KO, aucun lien fake, panneau droit visible dès desktop large.
+
+## P0-DATA-001 — Data health articles production
+
+- Priorité : P0
+- Type : E2E smoke / data health
+- Auto : Oui (`tests/e2e/dashboard-critical.spec.ts`, pipeline `npm run test:e2e:smoke`)
+- Étapes : appeler `/api/news?limit=1`, puis ouvrir `/`.
+- Résultat attendu : l’API retourne au moins 1 article publié, la homepage affiche au moins un lien `/article/`, et aucun faux état `All articles are hidden by source filters` n’est visible quand la base contient des articles.
 
 ## P0-QUALITY-001 — Aucun contenu RSS brut non nettoyé visible
 

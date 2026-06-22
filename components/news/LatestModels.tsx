@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
+
 import { Cpu, ExternalLink, Loader2, Download, Heart } from 'lucide-react';
 
 interface ModelEntry {
@@ -137,7 +137,7 @@ export function LatestModels() {
                 <Heart className="h-3 w-3" />
                 {model.likes}
               </span>
-              <span>{timeAgo(model.updated)}</span>
+              <span suppressHydrationWarning>{timeAgo(model.updated)}</span>
             </div>
           </div>
         </a>

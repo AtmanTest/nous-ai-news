@@ -99,7 +99,7 @@ export default async function TopicPage({ params }: Props) {
                 )}
                 <span className="flex items-center gap-1">
                   <Clock className="h-3 w-3" />
-                  {article.published_at ? timeAgo(article.published_at) : 'Recently'}
+                  <span suppressHydrationWarning>{article.published_at ? timeAgo(article.published_at) : 'Recently'}</span>
                 </span>
               </div>
               <h2 className="font-semibold text-base sm:text-lg mb-1 group-hover:text-primary transition-colors leading-snug">

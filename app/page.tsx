@@ -269,7 +269,7 @@ export default async function HomePage() {
                     <div className="flex items-center gap-3 mt-3 text-xs text-white/50">
                       <span className="font-medium text-white/70">{mainHero.source_name}</span>
                       <span>·</span>
-                      <span>{mainHero.published_at ? timeAgo(mainHero.published_at) : ''}</span>
+                      <span suppressHydrationWarning>{mainHero.published_at ? timeAgo(mainHero.published_at) : ''}</span>
                       <span>·</span>
                       <span>{readingTime(mainHero.content || mainHero.summary || mainHero.title)} min read</span>
                     </div>
@@ -309,7 +309,7 @@ export default async function HomePage() {
                         {article.title}
                       </h3>
                       <div className="text-[10px] text-white/50 mt-1">
-                        {article.source_name} · {article.published_at ? timeAgo(article.published_at) : ''}
+                        {article.source_name} · <span suppressHydrationWarning>{article.published_at ? timeAgo(article.published_at) : ''}</span>
                       </div>
                     </div>
                   </Link>
@@ -383,7 +383,7 @@ export default async function HomePage() {
             </div>
 
             {/* Featured grid — top 4 stories with images */}
-            <FilteredFeed featured={featured} latest={[]} excludeIds={heroStories.slice(0, 4).map(a => a.id)} />
+            <FilteredFeed featured={featured} latest={[]} excludeIds={heroStories.slice(0, 4).map(a => a.id)} showEmptyMessage={false} />
 
             {/* Latest feed with load more */}
             <div className="mt-8">
@@ -424,7 +424,7 @@ export default async function HomePage() {
                           <div className="flex items-center gap-2 mt-1 text-[11px] text-muted-foreground">
                             <span className="font-medium">{article.source_name}</span>
                             <span>·</span>
-                            <span>{article.published_at ? timeAgo(article.published_at) : ''}</span>
+                            <span suppressHydrationWarning>{article.published_at ? timeAgo(article.published_at) : ''}</span>
                             {article.score && article.score > 50 && (
                               <span className="flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] bg-primary/10 text-primary">
                                 {article.score}

@@ -160,7 +160,7 @@ export default async function ArticlePage({ params }: Props) {
               <span className="hidden sm:inline">·</span>
               <span className="flex items-center gap-1">
                 <Clock className="h-3.5 w-3.5" />
-                {article.published_at ? timeAgo(article.published_at) : 'Recently'}
+                <span suppressHydrationWarning>{article.published_at ? timeAgo(article.published_at) : 'Recently'}</span>
               </span>
               <span className="hidden sm:inline">·</span>
               <span className="flex items-center gap-1">

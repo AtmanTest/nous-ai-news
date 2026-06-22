@@ -10,6 +10,7 @@
     "test": "vitest run",
     "test:unit": "vitest run",
     "test:e2e": "playwright test",
+    "test:e2e:smoke": "playwright test tests/e2e/smoke-critical.spec.ts tests/e2e/dashboard-critical.spec.ts --project=chromium --reporter=line",
     "tnr": "bash scripts/tnr.sh",
     "test:watch": "vitest",
     "generate:ia-news": "python3 scripts/ia-auto-news/generate_ia_auto_news.py",

@@ -24,7 +24,7 @@ export function AppLayout({
 }: AppLayoutProps) {
   return (
     <div className="flex justify-center min-h-screen bg-background">
-      <div className="flex w-full max-w-[1265px]">
+      <div className="flex w-full max-w-[1440px]">
         {/* Left Sidebar — TOUJOURS monté sur desktop, masqué mobile */}
         <div className="hidden md:block w-[68px] xl:w-[275px] shrink-0 border-r border-border/40">
           <LeftSidebar />
@@ -41,9 +41,9 @@ export function AppLayout({
           </div>
         </main>
 
-        {/* Right Panel — masqué sur tablet/mobile */}
+        {/* Right Panel — visible on large desktop widths, not only maximized xl screens */}
         {!hideRightPanel && (
-          <div className="hidden xl:block w-[350px] shrink-0">
+          <div className="hidden lg:block w-[300px] xl:w-[350px] shrink-0">
             <RightPanel
               trending={trending}
               topics={topics}

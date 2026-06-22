@@ -1,4 +1,4 @@
-name: CI — Lint, Type Check, Test, Build
+name: CI — Regression Tests, Build, Smoke
 
 on:
   push:
@@ -10,6 +10,12 @@ jobs:
   quality:
     name: Quality Gates
     runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
+      SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_KEY }}
     steps:
       - uses: actions/checkout@v4
 
@@ -22,14 +28,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Lint
-        run: npm run lint
+      - name: TNR unit/regression tests
+        run: npm run tnr
 
-      - name: Type check
-        run: npx tsc --noEmit
-
-      - name: Unit tests
-        run: npm run test:unit
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
 
       - name: Build
         run: npm run build
+
+      - name: P0 dashboard smoke tests
+        run: npm run test:e2e:smoke

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Clock, Sparkles, ImageOff, TrendingUp, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { timeAgo, readingTime } from '@/lib/utils';
-import { ShareButtons } from '@/components/sharing/ShareButtons';
+
 
 export type CardVariant = 'featured' | 'default' | 'compact' | 'list';
 
@@ -76,7 +76,6 @@ export function StoryCard({
   is_featured,
   showScore = true,
   className,
-  onHideSource,
 }: StoryCardProps) {
   const href = `/article/${slug || id}`;
   const minutes = readingTime(content || summary || title);
@@ -109,13 +108,11 @@ export function StoryCard({
             </h3>
             <div className="flex items-center justify-between mt-1.5">
               <div className="flex items-center gap-2 text-[11px] text-muted-foreground">
-                {published_at && <span>{timeAgo(published_at)}</span>}
+                {published_at && <span suppressHydrationWarning>{timeAgo(published_at)}</span>}
                 <span>·</span>
                 <span>{minutes}m read</span>
               </div>
-              <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                <ShareButtons title={title} path={href} />
-              </div>
+
             </div>
           </div>
         </div>
@@ -151,21 +148,10 @@ export function StoryCard({
               {source_name && (
                 <span className="inline-flex items-center gap-1 font-medium text-foreground/70">
                   {source_name}
-                  {onHideSource && (
-                    <button
-                      onClick={(e) => { e.preventDefault(); e.stopPropagation(); onHideSource(source_name); }}
-                      className="p-0.5 rounded hover:bg-accent text-muted-foreground/40 hover:text-foreground transition-colors"
-                      title="Hide articles from this source"
-                    >
-                      <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
-                        <line x1="1" y1="1" x2="23" y2="23" />
-                      </svg>
-                    </button>
-                  )}
+
                 </span>
               )}
-              {published_at && <><span>·</span><span>{timeAgo(published_at)}</span></>}
+              {published_at && <><span>·</span><span suppressHydrationWarning>{timeAgo(published_at)}</span></>}
               <span>·</span>
               <span>{minutes}m read</span>
               {language && language !== 'en' && (
@@ -176,9 +162,7 @@ export function StoryCard({
                 </>
               )}
             </div>
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-              <ShareButtons title={title} path={href} />
-            </div>
+
           </div>
         </div>
         {image_url && (
@@ -252,12 +236,7 @@ export function StoryCard({
           </div>
         </div>
 
-        {/* Share overlay */}
-        <div className="absolute bottom-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-          <div className="bg-background/80 backdrop-blur-sm rounded-lg p-0.5 shadow-sm border border-border/20">
-            <ShareButtons title={title} path={href} />
-          </div>
-        </div>
+
       </div>
 
       {/* Content */}
@@ -270,18 +249,7 @@ export function StoryCard({
           {source_name && (
             <span className="inline-flex items-center gap-1 font-medium text-foreground/70 truncate">
               {source_name}
-              {onHideSource && (
-                <button
-                  onClick={(e) => { e.preventDefault(); e.stopPropagation(); onHideSource(source_name); }}
-                  className="p-0.5 rounded hover:bg-accent text-muted-foreground/40 hover:text-foreground transition-colors shrink-0"
-                  title="Hide articles from this source"
-                >
-                  <svg className="h-3 w-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
-                    <line x1="1" y1="1" x2="23" y2="23" />
-                  </svg>
-                </button>
-              )}
+
             </span>
           )}
           {published_at && (
@@ -289,7 +257,7 @@ export function StoryCard({
               <span className="hidden sm:inline">·</span>
               <span className="flex items-center gap-0.5 whitespace-nowrap">
                 <Clock className="h-3 w-3" />
-                {timeAgo(published_at)}
+                <span suppressHydrationWarning>{timeAgo(published_at)}</span>
               </span>
             </>
           )}

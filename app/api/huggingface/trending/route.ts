@@ -22,7 +22,8 @@ interface HFModel {
  * GET /api/huggingface/trending?limit=10
  *
  * Returns top trending models from Hugging Face.
- * Fetches from HF API sorted by downloads × recency.
+ * Fetches from HF API sorted by recently updated models so the widget does not
+ * show stale all-time download leaders as “trending”.
  */
 export async function GET(request: Request) {
   const url = new URL(request.url);
@@ -34,9 +35,10 @@ export async function GET(request: Request) {
   }
 
   try {
-    // Fetch top models by likes × recency from HF API
+    // Fetch recently updated/high-signal models from HF API. Sorting by all-time
+    // downloads returns stale 2022-era sentence-transformer rows, not trends.
     const res = await fetch(
-      'https://huggingface.co/api/models?sort=downloads&direction=-1&limit=50',
+      'https://huggingface.co/api/models?sort=lastModified&direction=-1&limit=50',
       { headers: { 'User-Agent': 'DailyAI/1.0' }, signal: AbortSignal.timeout(10000) }
     );
 
