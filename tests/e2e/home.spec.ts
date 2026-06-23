@@ -42,13 +42,13 @@ test.describe('Home Page', () => {
     await page.goto('/');
     await page.click('a:has-text("View Engine")');
     await expect(page).toHaveURL(/.*auto-tune/);
-    await expect(page.locator('text=Auto Evolve')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('h1:has-text("Auto Evolve")')).toBeVisible({ timeout: 10000 });
   });
 
   test('navigation works - Read Essays button', async ({ page }) => {
     await page.goto('/');
     await page.click('a:has-text("Read Essays")');
     await expect(page).toHaveURL(/.*ia-auto-news/);
-    await expect(page.locator('text=DeepMind')).toBeVisible({ timeout: 10000 });
+    await expect(page.locator('h1:has-text("IA AUTO NEWS")')).toBeVisible({ timeout: 10000 });
   });
 });
