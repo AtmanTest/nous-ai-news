@@ -132,7 +132,7 @@ export default async function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Auto Evolve Card */}
             <div className="relative rounded-2xl bg-gradient-to-br from-primary/5 via-purple-500/5 to-pink-500/5 border border-primary/20 p-5 sm:p-6 flex flex-col">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] opacity-20" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] opacity-20 pointer-events-none" />
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-3 min-w-0">
                   <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 flex items-center justify-center shrink-0">
@@ -176,7 +176,7 @@ export default async function HomePage() {
 
             {/* DeepMind Card */}
             <div className="relative rounded-2xl bg-gradient-to-br from-pink-500/5 via-purple-500/5 to-rose-500/5 border border-pink-500/20 p-5 sm:p-6 flex flex-col">
-              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] opacity-20" />
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-from)_0%,_transparent_70%)] opacity-20 pointer-events-none" />
               <div className="flex flex-col gap-4">
                 <div className="flex items-start gap-3 min-w-0">
                   <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-pink-500 via-purple-500 to-rose-500 flex items-center justify-center shrink-0">

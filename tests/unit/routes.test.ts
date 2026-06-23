@@ -88,6 +88,8 @@ describe('Route Existence', () => {
     { route: '/register', label: 'Register page' },
     { route: '/status/releases', label: 'Releases page' },
     { route: '/status/changelog', label: 'Changelog page' },
+    { route: '/auto-tune', label: 'Auto Evolve page' },
+    { route: '/ia-auto-news', label: 'DeepMind essay page' },
   ];
 
   for (const { route, label } of expectedPages) {

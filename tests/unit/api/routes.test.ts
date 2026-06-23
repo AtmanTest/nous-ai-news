@@ -139,7 +139,7 @@ describe('Route Existence', () => {
     const uniqueRoutes = [...new Set(discovered)].sort();
 
     // Check that all expected non-dynamic routes are present
-    const expectedStatic = ['/', '/feed', '/search', '/trending', '/bookmarks', '/profile', '/feed.xml', '/status/releases', '/status/changelog'];
+    const expectedStatic = ['/', '/feed', '/search', '/trending', '/bookmarks', '/profile', '/feed.xml', '/status/releases', '/status/changelog', '/auto-tune', '/ia-auto-news'];
     for (const route of expectedStatic) {
       expect(uniqueRoutes).toContain(route);
     }
