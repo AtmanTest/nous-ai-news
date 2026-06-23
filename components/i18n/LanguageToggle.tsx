@@ -1,6 +1,7 @@
 'use client';
 
 import { useLocale } from 'next-intl';
+import { usePathname } from 'next/navigation';
 import { Languages } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -16,11 +17,14 @@ export function getNextLocale(locale: string): SupportedLocale {
 }
 
 export function persistLocale(locale: SupportedLocale) {
-  document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=${60 * 60 * 24 * 30}; sameSite=lax`;
+  if (typeof document !== 'undefined') {
+    document.cookie = `NEXT_LOCALE=${locale}; path=/; max-age=${60 * 60 * 24 * 30}; sameSite=lax`;
+  }
 }
 
 export function LanguageToggle({ className }: { className?: string }) {
-  const locale = useLocale();
+  const locale = useLocale() as SupportedLocale;
+  const pathname = usePathname();
   const nextLocale = getNextLocale(locale);
 
   const switchLocale = () => {

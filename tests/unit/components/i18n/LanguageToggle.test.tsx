@@ -7,6 +7,10 @@ vi.mock('next-intl', () => ({
   useLocale: () => 'fr',
 }));
 
+vi.mock('next/navigation', () => ({
+  usePathname: () => '/feed',
+}));
+
 describe('LanguageToggle', () => {
   it('toggles between French and English only', () => {
     expect(getNextLocale('fr')).toBe('en');
@@ -16,7 +20,6 @@ describe('LanguageToggle', () => {
 
   it('persists the selected locale in the NEXT_LOCALE cookie', () => {
     persistLocale('en');
-
     expect(document.cookie).toContain('NEXT_LOCALE=en');
   });
 
@@ -25,5 +28,10 @@ describe('LanguageToggle', () => {
 
     expect(screen.getByRole('button', { name: /switch language to english/i })).toBeInTheDocument();
     expect(screen.getByText('EN')).toBeInTheDocument();
+
+    const btn = screen.getByRole('button', { name: /switch language to english/i });
+    btn.click();
+
+    expect(document.cookie).toContain('NEXT_LOCALE=en');
   });
 });

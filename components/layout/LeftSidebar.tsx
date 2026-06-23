@@ -11,7 +11,6 @@ import {
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/contexts/AuthContext';
-import { LanguageToggle } from '@/components/i18n/LanguageToggle';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Home', icon: Home },
@@ -76,10 +75,6 @@ export function LeftSidebar() {
 
         {/* Divider */}
         <div className="my-2 border-t border-border/40 mx-3" />
-
-        <div className="px-2 xl:px-3">
-          <LanguageToggle className="w-full justify-start xl:justify-center" />
-        </div>
 
         <div className="my-2 border-t border-border/40 mx-3" />
 
