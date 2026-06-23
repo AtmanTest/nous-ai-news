@@ -120,6 +120,7 @@ export default async function HomePage() {
   const heroStories = featured.length >= 3 ? featured.slice(0, 4) : latest.slice(0, 4);
   const mainHero = heroStories[0];
   const sideHeroes = heroStories.slice(1, 4);
+  const heroIds = new Set(heroStories.map(a => a.id));
 
   return (
     <div className="animate-fade-in">
@@ -408,7 +409,7 @@ export default async function HomePage() {
                     <h3 className="text-lg font-bold text-foreground">Top Stories</h3>
                   </div>
                   <div className="space-y-3">
-                    {trending.slice(0, 6).map((article, i) => (
+                    {trending.filter(a => !heroIds.has(a.id)).slice(0, 6).map((article, i) => (
                       <Link
                         key={article.id}
                         href={`/article/${article.id}`}
@@ -417,7 +418,7 @@ export default async function HomePage() {
                         <span className="text-base font-bold text-primary/60 shrink-0 w-7 leading-none">
                           {String(i + 1).padStart(2, '0')}
                         </span>
-                        <div className="min-w-0">
+                        <div className="min-w-0 flex-1">
                           <h4 className="text-sm font-semibold leading-snug group-hover:text-primary transition-colors line-clamp-2">
                             {article.title}
                           </h4>
@@ -432,6 +433,13 @@ export default async function HomePage() {
                             )}
                           </div>
                         </div>
+                        {article.image_url && (
+                          <img
+                            src={article.image_url}
+                            alt=""
+                            className="w-10 h-10 rounded-lg object-cover shrink-0 hidden sm:block"
+                          />
+                        )}
                       </Link>
                     ))}
                   </div>
