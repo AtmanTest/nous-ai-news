@@ -242,7 +242,7 @@ export default async function HomePage() {
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-primary/10 via-secondary/10 to-primary/5" />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent pointer-events-none" />
                   </div>
 
                   {/* Content overlay */}
@@ -296,7 +296,7 @@ export default async function HomePage() {
                       ) : (
                         <div className="w-full h-full bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10" />
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent pointer-events-none" />
                     </div>
                     <div className="absolute bottom-0 left-0 right-0 p-4">
                       <div className="flex items-center gap-1.5 mb-1.5">
