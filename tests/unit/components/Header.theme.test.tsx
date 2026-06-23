@@ -14,6 +14,10 @@ vi.mock('@/components/layout/ThemeProvider', () => ({
   }),
 }));
 
+vi.mock('next-intl', () => ({
+  useLocale: () => 'en',
+}));
+
 // Lucide icons are already auto-mocked by vitest to be simple svg elements
 // but we add a data-testid to identify them for the icon checks
 vi.mock('lucide-react', () => {
@@ -27,6 +31,7 @@ vi.mock('lucide-react', () => {
     Sunset: iconMock('Sunset'),
     Search: iconMock('Search'),
     Settings: iconMock('Settings'),
+    Languages: iconMock('Languages'),
   };
 });
 

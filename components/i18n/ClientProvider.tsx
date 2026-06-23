@@ -19,7 +19,7 @@ export function I18nClientProvider({
   const validLocale = routing.locales.includes(locale as any) ? locale : routing.defaultLocale;
 
   return (
-    <NextIntlClientProvider locale={validLocale} messages={messages}>
+    <NextIntlClientProvider locale={validLocale} messages={messages} timeZone="UTC">
       {children}
     </NextIntlClientProvider>
   );

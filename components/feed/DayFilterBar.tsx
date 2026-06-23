@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
 export interface DayFilterBarProps {
@@ -82,13 +82,13 @@ function getUtcDateString(offsetDays: number): string {
   return utcDate.toISOString().split('T')[0];
 }
 
-function getUtcDateLabel(offsetDays: number, t: ReturnType<typeof useTranslations>): string {
+function getUtcDateLabel(offsetDays: number, t: ReturnType<typeof useTranslations>, locale: string): string {
   if (offsetDays === 0) return t('today');
   if (offsetDays === 1) return t('yesterday');
   const now = new Date();
   const utcDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
   utcDate.setUTCDate(utcDate.getUTCDate() - offsetDays);
-  return utcDate.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', timeZone: 'UTC' });
+  return utcDate.toLocaleDateString(locale, { weekday: 'short', day: 'numeric', timeZone: 'UTC' });
 }
 
 export function DayFilterBar({
@@ -99,6 +99,7 @@ export function DayFilterBar({
   className,
 }: DayFilterBarProps) {
   const t = useTranslations('feed.dayFilter');
+  const locale = useLocale();
 
   return (
     <div
@@ -118,7 +119,7 @@ export function DayFilterBar({
         const isYesterday = i === 1;
         const isActive = dateStr === selectedDate;
 
-        const label = getUtcDateLabel(i, t);
+        const label = getUtcDateLabel(i, t, locale);
         const count = articleCounts[dateStr] || 0;
 
         return (

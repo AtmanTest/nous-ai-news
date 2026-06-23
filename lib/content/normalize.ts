@@ -125,7 +125,8 @@ export function cleanArticleText(value: string | null | undefined): string {
 
   // Some feeds incorrectly HTML-escape CDATA markers, storing titles like
   // `&lt;![CDATA[[A] Title]]&gt;` as literal text. Decode entities first,
-  // then unwrap CDATA defensively.
+  // then unwrap CDATA defensively. The final marker cleanup also handles
+  // partial fragments that previously leaked into generated tags.
   for (let i = 0; i < 3; i += 1) {
     const before = text;
     text = text
@@ -146,6 +147,8 @@ export function cleanArticleText(value: string | null | undefined): string {
       .replace(/&rdquo;/g, '"')
       .replace(/&hellip;/g, '…')
       .replace(/^<!\[CDATA\[([\s\S]*?)\]\]>$/i, '$1')
+      .replace(/<!\[CDATA\[/gi, '')
+      .replace(/\]\]>/g, '')
       .replace(/\s+/g, ' ')
       .trim();
 
@@ -160,19 +163,21 @@ export function normalizeArticle(
   sourceId: string
 ): NormalizedArticle {
   const title = cleanArticleText(raw.title);
+  const summary = raw.summary ? cleanArticleText(raw.summary) : '';
+  const content = raw.content ? cleanArticleText(raw.content) : '';
   const url = raw.url.split('?')[0].split('#')[0]; // Clean URL
   const published_at = raw.published_at
     ? new Date(raw.published_at).toISOString()
     : new Date().toISOString();
 
   // Detect language (simple heuristic)
-  const language = detectLanguage(title + ' ' + (raw.summary || ''));
+  const language = detectLanguage(`${title} ${summary}`);
 
   // Extract entities
-  const entities = extractEntities(title + ' ' + (raw.summary || '') + ' ' + (raw.content || ''));
+  const entities = extractEntities(`${title} ${summary} ${content}`);
 
   // Calculate initial score
-  const score = calculateInitialScore(raw);
+  const score = calculateInitialScore({ ...raw, title, summary, content });
 
   // Detect if breaking
   const is_breaking = BREAKING_KEYWORDS.some((kw) =>
@@ -180,7 +185,7 @@ export function normalizeArticle(
   );
 
   // Auto-categorize (comprehensive version)
-  const classifyText = [title, raw.summary || '', raw.source_name].filter(Boolean).join(' ');
+  const classifyText = [title, summary, raw.source_name].filter(Boolean).join(' ');
   const { category, eventTags } = categorizeArticle(classifyText);
 
   // Auto-tag: combine event tags, entities, and title keywords
@@ -189,8 +194,8 @@ export function normalizeArticle(
   return {
     url,
     title,
-    summary: raw.summary ? cleanArticleText(raw.summary).slice(0, 500) : null,
-    content: raw.content ? cleanArticleText(raw.content).slice(0, 10000) : null,
+    summary: summary ? summary.slice(0, 500) : null,
+    content: content ? content.slice(0, 10000) : null,
     author: raw.author || null,
     published_at,
     image_url: raw.image_url || null,
@@ -225,7 +230,11 @@ function buildTags(
   }
 
   // Significant title words (grouped by bigrams)
-  const words = title.toLowerCase().split(/\s+/);
+  const words = cleanArticleText(title)
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, ' ')
+    .split(/\s+/)
+    .filter(Boolean);
   const stopWords = new Set(['this', 'that', 'with', 'from', 'have', 'been', 'the', 'and', 'for', 'are', 'was', 'has', 'its', 'new', 'how', 'why', 'what', 'can', 'not', 'but', 'all', 'who', 'out', 'just', 'more', 'also', 'into', 'over', 'than', 'then', 'after', 'about', 'they']);
 
   // Bigrams (more meaningful than single words)
@@ -236,7 +245,10 @@ function buildTags(
     }
   }
 
-  return Array.from(tags).slice(0, 10);
+  return Array.from(tags)
+    .map((tag) => cleanArticleText(tag))
+    .filter((tag) => tag.length > 0 && !/cdata/i.test(tag))
+    .slice(0, 10);
 }
 
 // ── Existing functions (unchanged) ──────────────────────────

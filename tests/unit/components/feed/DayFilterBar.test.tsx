@@ -24,8 +24,11 @@ const mockTranslate = vi.fn((key: string, params?: Record<string, unknown>) => {
   return result;
 });
 
+let mockLocale = 'en';
+
 vi.mock('next-intl', () => ({
   useTranslations: () => mockTranslate,
+  useLocale: () => mockLocale,
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) =>
     React.createElement(React.Fragment, null, children),
 }));
@@ -39,6 +42,7 @@ const yesterdayStr = utcYesterday.toISOString().split('T')[0];
 describe('DayFilterBar', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    mockLocale = 'en';
   });
 
   it('renders 7 day chips by default', () => {
@@ -224,5 +228,33 @@ describe('DayFilterBar', () => {
     // Verify the date string passed to onDateChange would be the exact UTC date
     fireEvent.click(dayBeforeYesterdayTab);
     expect(onDateChange).toHaveBeenCalledWith(dayBeforeYesterdayStr);
+  });
+
+  it('localizes older weekday chips with the active app locale', () => {
+    mockLocale = 'en';
+    const { rerender } = render(
+      React.createElement(DayFilterBar, { selectedDate: todayStr, onDateChange: vi.fn() })
+    );
+
+    const thirdChipDate = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - 2));
+    const englishThirdChipLabel = thirdChipDate.toLocaleDateString('en', {
+      weekday: 'short',
+      day: 'numeric',
+      timeZone: 'UTC',
+    });
+    expect(screen.getAllByRole('tab')[2].textContent).toContain(englishThirdChipLabel);
+
+    mockLocale = 'fr';
+    rerender(
+      React.createElement(DayFilterBar, { selectedDate: todayStr, onDateChange: vi.fn() })
+    );
+
+    const frenchThirdChipLabel = thirdChipDate.toLocaleDateString('fr', {
+      weekday: 'short',
+      day: 'numeric',
+      timeZone: 'UTC',
+    });
+    expect(screen.getAllByRole('tab')[2].textContent).toContain(frenchThirdChipLabel);
+    expect(englishThirdChipLabel).not.toEqual(frenchThirdChipLabel);
   });
 });

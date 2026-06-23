@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { Search, Sun, Moon, Sunset, Settings } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
+import { LanguageToggle } from '@/components/i18n/LanguageToggle';
 
 const themeCycle: Record<string, 'dark' | 'dim' | 'light'> = {
   dark: 'dim',
@@ -22,6 +23,7 @@ export function Header() {
           </div>
         </Link>
         <div className="flex items-center gap-1">
+          <LanguageToggle className="px-2" />
           <Link href="/search" className="p-2 rounded-full hover:bg-accent/30 transition-colors">
             <Search className="h-5 w-5" />
           </Link>

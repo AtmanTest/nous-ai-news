@@ -40,6 +40,7 @@ const mockTranslateFactory = (namespace: string) => {
 
 vi.mock('next-intl', () => ({
   useTranslations: (ns: string) => mockTranslateFactory(ns),
+  useLocale: () => 'en',
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) =>
     React.createElement(React.Fragment, null, children),
 }));

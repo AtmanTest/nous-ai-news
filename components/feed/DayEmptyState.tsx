@@ -1,7 +1,7 @@
 'use client';
 
 import { ChevronLeft } from 'lucide-react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
 export interface DayEmptyStateProps {
@@ -16,11 +16,14 @@ export function DayEmptyState({
   className,
 }: DayEmptyStateProps) {
   const t = useTranslations('feed.dayFilter.emptyState');
-  const dateObj = new Date(date + 'T00:00:00');
-  const formattedDate = dateObj.toLocaleDateString(undefined, {
+  const locale = useLocale();
+  const [year, month, day] = date.split('-').map(Number);
+  const dateObj = new Date(Date.UTC(year, month - 1, day));
+  const formattedDate = dateObj.toLocaleDateString(locale, {
     weekday: 'long',
     month: 'long',
     day: 'numeric',
+    timeZone: 'UTC',
   });
 
   return (

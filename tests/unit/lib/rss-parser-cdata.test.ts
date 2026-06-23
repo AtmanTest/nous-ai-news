@@ -27,6 +27,22 @@ describe('RSS text sanitization', () => {
     expect(normalized.title).toBe('[Exclusive] $250 off AI Engineer tix til Monday');
     expect(normalized.summary).toBe('Summary & context');
     expect(normalized.title).not.toContain('CDATA');
+    expect(normalized.tags.join(' ')).not.toMatch(/cdata/i);
+  });
+
+  it('removes partial CDATA fragments from generated tags', () => {
+    const normalized = normalizeArticle({
+      url: 'https://example.com/bloomberg',
+      title: '<![CDATA[Gold Steadies as US and Iran Flag Early Progress in Peace Talks]]>',
+      summary: '<![CDATA[Markets summary]]>',
+      source_name: 'Bloomberg AI',
+      source_type: 'rss',
+      source_url: 'https://example.com/feed.xml',
+      published_at: '2026-06-22T10:00:00Z',
+    }, 'bloomberg-ai');
+
+    expect(normalized.tags).toEqual(expect.arrayContaining(['gold steadies']));
+    expect(normalized.tags.join(' ')).not.toMatch(/<!|CDATA|\]\]>/i);
   });
 
   it('keeps entity and score detection working after sanitization', () => {

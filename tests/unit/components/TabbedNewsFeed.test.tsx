@@ -39,6 +39,7 @@ vi.mock('next-intl', () => ({
       return result;
     };
   },
+  useLocale: () => 'en',
   NextIntlClientProvider: ({ children }: { children: React.ReactNode }) =>
     React.createElement(React.Fragment, null, children),
 }));
