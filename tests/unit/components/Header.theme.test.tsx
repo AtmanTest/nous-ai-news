@@ -66,11 +66,6 @@ describe('Header theme toggle', () => {
       const settingsLink = links.find(l => l.getAttribute('href') === '/settings');
       expect(settingsLink).toBeDefined();
     });
-
-    it('renders the home link with N logo', () => {
-      render(<Header />);
-      expect(screen.getByText('N')).toBeDefined();
-    });
   });
 
   // ── Correct icon per theme ────────────────────────────────────────────

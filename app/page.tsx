@@ -407,7 +407,7 @@ export default async function HomePage() {
                     <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
                       <TrendingUp className="h-4 w-4 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground">Top Stories</h3>
+                    <h3 className="text-lg font-bold text-foreground">Daily AI NEWS</h3>
                   </div>
                   <div className="space-y-3">
                     {trending.filter(a => !heroIds.has(a.id)).slice(0, 6).map((article, i) => (

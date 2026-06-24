@@ -72,66 +72,12 @@ export function Footer() {
             © {new Date().getFullYear()} Daily AI. All rights reserved.
           </p>
 
-          <div className="relative inline-flex items-center gap-1 text-sm" style={{ color: 'currentColor' }}>
-            <span className="relative inline-block" style={{ position: 'relative', cursor: 'default' }}>
-              <span className="inline-flex items-center gap-1">
-                <span style={{ color: 'var(--color-primary, currentColor)' }}>✦</span>
-                <Link
-                  href="https://www.linkedin.com/in/thasin-j-47582635/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium transition-colors duration-180"
-                  style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: 500, textDecoration: 'none' }}
-                >
-                  Conceived by Jahangir Thasin
-                </Link>
-                <span style={{ opacity: 0.3 }}> · </span>
-                <span
-                  className="footer-tooltip-trigger"
-                  style={{ position: 'relative', color: 'rgba(255,255,255,0.4)', fontSize: '13px' }}
-                >
-                  Crafted with AI
-                </span>
-              </span>
-            </span>
+          <div className="text-sm text-muted-foreground">
+            Thinked by Thasin Jahangir, Made wityh love with AI — <Link href="https://www.linkedin.com/in/thasin-j-47582635/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">LinkedIn</Link>
           </div>
-
-          <Link
-            href="https://www.linkedin.com/in/thasin-j-47582635/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs flex items-center gap-1.5 transition-opacity duration-180"
-            style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}
-          >
-            💼 Jahangir Thasin
-          </Link>
         </div>
       </div>
 
-      <style>{`
-        .footer-tooltip-trigger {
-          position: relative;
-          cursor: default;
-        }
-        .footer-tooltip-trigger:hover::after {
-          content: "Built using Claude AI · Designed for AI enthusiasts worldwide 🌍";
-          position: absolute;
-          bottom: 28px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: rgba(20,20,30,0.95);
-          border: 1px solid rgba(255,255,255,0.15);
-          border-radius: 6px;
-          padding: 6px 12px;
-          font-size: 11px;
-          color: rgba(255,255,255,0.8);
-          white-space: nowrap;
-          opacity: 1;
-          pointer-events: none;
-          transition: opacity 150ms ease;
-          z-index: 50;
-        }
-      `}</style>
     </footer>
   );
 }
