@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
   Home, Search, Bookmark, TrendingUp, Newspaper,
-  Settings, Sparkles, User,
+  Settings, Sparkles,
   MoreHorizontal, LogOut, LogIn, UserPlus,
   Calendar, Brain,
 } from 'lucide-react';
@@ -111,14 +111,12 @@ export function LeftSidebar() {
           className="flex items-center gap-3 w-full p-3 rounded-full hover:bg-accent/20 transition-colors"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <div className="h-10 w-10 rounded-full bg-accent flex items-center justify-center shrink-0">
-            {user ? (
-              <span className="text-sm font-bold text-foreground">
-                {(displayName || '?')[0].toUpperCase()}
-              </span>
-            ) : (
-              <User className="h-5 w-5 text-muted-foreground" />
-            )}
+          <div className="h-10 w-10 rounded-full overflow-hidden bg-accent flex items-center justify-center shrink-0">
+            <img
+              src="https://media.licdn.com/dms/image/v2/D4E35AQH48h0Gd3b9sA/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1737031316814?e=1740268800&v=beta&t=j07vMPBYORRSidUpnwq3P9bPB9YMYS6E2HMOshspxdM"
+              alt="JT"
+              className="h-full w-full object-cover"
+            />
           </div>
           <div className="hidden xl:block text-left flex-1 min-w-0">
             <p className="text-sm font-bold truncate">

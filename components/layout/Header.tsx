@@ -53,14 +53,18 @@ export function Header() {
           <div className="relative" ref={menuRef}>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="ml-1 h-8 w-8 rounded-full flex items-center justify-center text-xs font-bold transition-colors duration-180"
+              className="ml-1 h-8 w-8 rounded-full overflow-hidden transition-colors duration-180"
               style={{
                 background: 'rgba(255,255,255,0.08)',
                 border: '1px solid rgba(255,255,255,0.2)',
                 color: 'currentColor',
               }}
             >
-              JT
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4E35AQH48h0Gd3b9sA/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1737031316814?e=1740268800&v=beta&t=j07vMPBYORRSidUpnwq3P9bPB9YMYS6E2HMOshspxdM"
+                alt="JT"
+                className="h-full w-full object-cover"
+              />
             </button>
             {menuOpen && (
               <div
@@ -69,10 +73,14 @@ export function Header() {
               >
                 <div className="p-4">
                   <div className="flex items-center gap-3">
-                    <div className="h-11 w-11 rounded-full flex items-center justify-center text-sm font-bold"
-                      style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)', color: 'currentColor' }}>
-                      JT
-                    </div>
+                    <div className="h-11 w-11 rounded-full overflow-hidden flex items-center justify-center"
+                    style={{ background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)', color: 'currentColor' }}>
+                      <img
+                        src="https://media.licdn.com/dms/image/v2/D4E35AQH48h0Gd3b9sA/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1737031316814?e=1740268800&v=beta&t=j07vMPBYORRSidUpnwq3P9bPB9YMYS6E2HMOshspxdM"
+                        alt="JT"
+                        className="h-full w-full object-cover"
+                      />
+                  </div>
                     <div>
                       <div className="text-sm font-bold">Jahangir Thasin</div>
                       <div className="text-xs text-muted-foreground">Consultant QA Senior · Freelance</div>
