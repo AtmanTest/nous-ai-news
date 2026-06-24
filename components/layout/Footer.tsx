@@ -67,7 +67,7 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 pt-8 border-t border-white/[0.07] px-8 py-5 flex flex-wrap items-center justify-between gap-3">
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} Daily AI. All rights reserved.
           </p>
@@ -81,32 +81,17 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-medium transition-colors duration-180"
-                  style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', textDecoration: 'none' }}
+                  style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', fontWeight: 500, textDecoration: 'none' }}
                 >
                   Conceived by Jahangir Thasin
                 </Link>
                 <span style={{ opacity: 0.3 }}> · </span>
                 <span
-                  className="inline-block"
+                  className="footer-tooltip-trigger"
                   style={{ position: 'relative', color: 'rgba(255,255,255,0.4)', fontSize: '13px' }}
                 >
                   Crafted with AI
                 </span>
-              </span>
-              <span
-                className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 pointer-events-none transition-opacity duration-150"
-                style={{
-                  background: 'rgba(20,20,30,0.95)',
-                  border: '1px solid rgba(255,255,255,0.15)',
-                  borderRadius: '6px',
-                  padding: '6px 12px',
-                  fontSize: '11px',
-                  color: 'rgba(255,255,255,0.8)',
-                  whiteSpace: 'nowrap',
-                  transform: 'translateX(-50%)',
-                }}
-              >
-                Built using Claude AI · Designed for AI enthusiasts worldwide 🌍
               </span>
             </span>
           </div>
@@ -122,6 +107,31 @@ export function Footer() {
           </Link>
         </div>
       </div>
+
+      <style>{`
+        .footer-tooltip-trigger {
+          position: relative;
+          cursor: default;
+        }
+        .footer-tooltip-trigger:hover::after {
+          content: "Built using Claude AI · Designed for AI enthusiasts worldwide 🌍";
+          position: absolute;
+          bottom: 28px;
+          left: 50%;
+          transform: translateX(-50%);
+          background: rgba(20,20,30,0.95);
+          border: 1px solid rgba(255,255,255,0.15);
+          border-radius: 6px;
+          padding: 6px 12px;
+          font-size: 11px;
+          color: rgba(255,255,255,0.8);
+          white-space: nowrap;
+          opacity: 1;
+          pointer-events: none;
+          transition: opacity 150ms ease;
+          z-index: 50;
+        }
+      `}</style>
     </footer>
   );
 }

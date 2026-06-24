@@ -53,7 +53,7 @@ export function Header() {
           <div className="relative" ref={menuRef}>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="ml-1 h-8 w-8 rounded-full flex items-center justify-center text-xs font-bold"
+              className="ml-1 h-8 w-8 rounded-full flex items-center justify-center text-xs font-bold transition-colors duration-180"
               style={{
                 background: 'rgba(255,255,255,0.08)',
                 border: '1px solid rgba(255,255,255,0.2)',
@@ -64,7 +64,7 @@ export function Header() {
             </button>
             {menuOpen && (
               <div
-                className="absolute right-0 top-[44px] w-[260px] rounded-xl border border-border/60 bg-card shadow-xl z-50"
+                className="absolute right-4 top-[44px] w-[260px] rounded-xl border border-white/10 bg-card shadow-[0_8px_32px_rgba(0,0,0,0.5)] z-[1000]"
                 style={{ animation: 'opacity 180ms ease, translateY(-4px) 180ms ease' }}
               >
                 <div className="p-4">
@@ -83,20 +83,20 @@ export function Header() {
                     </div>
                   </div>
                 </div>
-                <div className="border-t border-border/40 mx-4" />
+                <div className="border-t border-white/[0.07] mx-4" />
                 <div className="p-2">
                   <Link
                     href="https://www.linkedin.com/in/thasin-j-47582635/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors"
+                    className="flex items-center gap-2 px-3 py-2 rounded-lg text-sm transition-colors duration-180"
                     style={{ color: 'rgba(255,255,255,0.7)' }}
                     onClick={() => setMenuOpen(false)}
                   >
                     🔗 LinkedIn Profile
                   </Link>
                 </div>
-                <div className="border-t border-border/40 mx-4" />
+                <div className="border-t border-white/[0.07] mx-4" />
                 <div className="p-3 text-center">
                   <span className="text-[11px] italic opacity-40">✦ Conceived by JT · Crafted with AI</span>
                 </div>
