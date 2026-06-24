@@ -27,7 +27,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-border/40 bg-background/80 backdrop-blur-xl md:hidden">
+    <header className="sticky top-0 z-30 border-b border-border/40 bg-background/80 backdrop-blur-xl hidden md:flex">
       <div className="flex items-center justify-between h-[53px] px-4">
         <Link href="/" className="flex items-center gap-2">
           <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
