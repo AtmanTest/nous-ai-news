@@ -17,6 +17,11 @@ interface FeedHeaderProps {
 export function FeedHeader({ title, tabs, activeTab, onTabChange, showBack, showSettings, onBack }: FeedHeaderProps) {
   return (
     <div className="sticky top-0 z-30 bg-background/65 backdrop-blur-xl border-b border-border/40">
+      {/* Brand row */}
+      <div className="px-4 pt-2 pb-1">
+        <span className="text-[11px] font-bold tracking-wider text-muted-foreground uppercase">Daily AI News</span>
+      </div>
+
       {/* Title row */}
       <div className="flex items-center justify-between px-4 h-[53px]">
         <div className="flex items-center gap-4">
