@@ -191,10 +191,9 @@ describe('TabbedNewsFeed', () => {
 
       const { container } = render(<TabbedNewsFeed />);
 
-      // The loading state renders 6 skeleton cards for articles 
-      // + 7 skeleton chips for day filter = 13 total .animate-pulse elements
+      // The loading state renders 6 skeleton cards for articles
       const skeletons = container.querySelectorAll('.animate-pulse');
-      expect(skeletons.length).toBe(13);
+      expect(skeletons.length).toBe(6);
     });
   });
 

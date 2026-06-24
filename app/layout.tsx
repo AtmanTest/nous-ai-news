@@ -24,24 +24,22 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
   title: {
-    default: "Daily AI — Global AI Coverage",
-    template: "%s | Daily AI",
+    default: "Daily AI News",
+    template: "%s | Daily AI News",
   },
   description:
     "Premium international AI news platform covering models, research, business, policy, and open source. Real-time curated AI news from global sources.",
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: "Daily AI",
-    title: "Daily AI — Global AI Coverage",
-    description:
-      "Premium international AI news platform covering models, research, business, policy, and open source.",
+    siteName: "Daily AI News",
+    title: "Daily AI News",
+    description: "Premium international AI news platform covering models, research, business, policy, and open source. Real-time curated AI news from global sources.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Daily AI — Global AI Coverage",
-    description:
-      "Premium international AI news platform covering models, research, business, policy, and open source.",
+    title: "Daily AI News",
+    description: "Premium international AI news platform covering models, research, business, policy, and open source. Real-time curated AI news from global sources.",
   },
   robots: {
     index: true,

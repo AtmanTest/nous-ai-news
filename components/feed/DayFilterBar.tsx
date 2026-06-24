@@ -1,34 +1,23 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useLocale, useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 
 export interface DayFilterBarProps {
   selectedDate: string; // ISO date 'YYYY-MM-DD'
   onDateChange: (date: string) => void;
-  articleCounts?: Record<string, number>;
-  isLoadingCounts?: boolean;
   className?: string;
 }
 
 interface DayChipProps {
   date: string;
   label: string;
-  count: number;
   isActive: boolean;
-  isLoading: boolean;
   onClick: () => void;
 }
 
-function DayChip({
-  date,
-  label,
-  count,
-  isActive,
-  isLoading,
-  onClick,
-}: DayChipProps) {
+function DayChip({ date, label, isActive, onClick }: DayChipProps) {
   const t = useTranslations('feed.dayFilter');
 
   return (
@@ -44,31 +33,9 @@ function DayChip({
       onClick={onClick}
       role="tab"
       aria-selected={isActive}
-      aria-label={label + (count > 0 ? `, ${t('articlesCount', { count })}` : `, ${t('noArticles')}`)}
+      aria-label={label}
     >
       <span>{label}</span>
-      <AnimatePresence mode="wait">
-        {isLoading ? (
-          <motion.span
-            key="skeleton"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="w-4 h-3 bg-neutral-700 animate-pulse rounded text-xs"
-            aria-hidden="true"
-          />
-        ) : (
-          <motion.span
-            key="count"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.8 }}
-            className="text-xs opacity-60 whitespace-nowrap"
-          >
-            {count}
-          </motion.span>
-        )}
-      </AnimatePresence>
     </motion.div>
   );
 }
@@ -94,8 +61,6 @@ function getUtcDateLabel(offsetDays: number, t: ReturnType<typeof useTranslation
 export function DayFilterBar({
   selectedDate,
   onDateChange,
-  articleCounts = {},
-  isLoadingCounts = false,
   className,
 }: DayFilterBarProps) {
   const t = useTranslations('feed.dayFilter');
@@ -120,16 +85,13 @@ export function DayFilterBar({
         const isActive = dateStr === selectedDate;
 
         const label = getUtcDateLabel(i, t, locale);
-        const count = articleCounts[dateStr] || 0;
 
         return (
           <DayChip
             key={dateStr}
             date={dateStr}
             label={label}
-            count={count}
             isActive={isActive}
-            isLoading={isLoadingCounts}
             onClick={() => onDateChange(dateStr)}
           />
         );

@@ -69,11 +69,57 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Daily AI. All rights reserved.
+            © {new Date().getFullYear()} Daily AI. All rights reserved.
           </p>
-          <p className="text-xs text-muted-foreground">
-            Powered by AI · Curated for humans
-          </p>
+
+          <div className="relative inline-flex items-center gap-1 text-sm" style={{ color: 'currentColor' }}>
+            <span className="relative inline-block" style={{ position: 'relative', cursor: 'default' }}>
+              <span className="inline-flex items-center gap-1">
+                <span style={{ color: 'var(--color-primary, currentColor)' }}>✦</span>
+                <Link
+                  href="https://www.linkedin.com/in/thasin-j-47582635/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium transition-colors duration-180"
+                  style={{ color: 'rgba(255,255,255,0.7)', fontSize: '13px', textDecoration: 'none' }}
+                >
+                  Conceived by Jahangir Thasin
+                </Link>
+                <span style={{ opacity: 0.3 }}> · </span>
+                <span
+                  className="inline-block"
+                  style={{ position: 'relative', color: 'rgba(255,255,255,0.4)', fontSize: '13px' }}
+                >
+                  Crafted with AI
+                </span>
+              </span>
+              <span
+                className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 opacity-0 pointer-events-none transition-opacity duration-150"
+                style={{
+                  background: 'rgba(20,20,30,0.95)',
+                  border: '1px solid rgba(255,255,255,0.15)',
+                  borderRadius: '6px',
+                  padding: '6px 12px',
+                  fontSize: '11px',
+                  color: 'rgba(255,255,255,0.8)',
+                  whiteSpace: 'nowrap',
+                  transform: 'translateX(-50%)',
+                }}
+              >
+                Built using Claude AI · Designed for AI enthusiasts worldwide 🌍
+              </span>
+            </span>
+          </div>
+
+          <Link
+            href="https://www.linkedin.com/in/thasin-j-47582635/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs flex items-center gap-1.5 transition-opacity duration-180"
+            style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none' }}
+          >
+            💼 Jahangir Thasin
+          </Link>
         </div>
       </div>
     </footer>

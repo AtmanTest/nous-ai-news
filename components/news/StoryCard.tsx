@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import { Clock, Sparkles, ImageOff, TrendingUp, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -77,6 +78,8 @@ export function StoryCard({
   showScore = true,
   className,
 }: StoryCardProps) {
+  const [imgError, setImgError] = useState(false);
+
   const href = `/article/${slug || id}`;
   const minutes = readingTime(content || summary || title);
   const readableCat = category ? categoryLabel(category) : null;
@@ -94,8 +97,8 @@ export function StoryCard({
         <div className="flex gap-3 p-3">
           {/* Image thumbnail */}
           <div className="shrink-0 w-20 h-20 rounded-md overflow-hidden bg-muted">
-            {image_url ? (
-              <img src={image_url} alt="" className="w-full h-full object-cover" loading="lazy" />
+            {image_url && !imgError ? (
+              <img src={image_url} alt="" className="w-full h-full object-cover" loading="lazy" onError={() => setImgError(true)} />
             ) : (
               <div className="w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 flex items-center justify-center">
                 <ImageOff className="h-5 w-5 text-muted-foreground/30" />
@@ -140,17 +143,11 @@ export function StoryCard({
               <span className="text-[10px] font-bold text-red-500 uppercase tracking-wider">Breaking</span>
             )}
           </div>
-          <h3 className="text-sm font-semibold leading-snug group-hover:text-primary transition-colors">
+          <h3 className="text-base font-semibold leading-snug group-hover:text-primary transition-colors">
             {title}
           </h3>
           <div className="flex items-center justify-between mt-1 text-[11px] text-muted-foreground">
             <div className="flex items-center gap-2">
-              {source_name && (
-                <span className="inline-flex items-center gap-1 font-medium text-foreground/70">
-                  {source_name}
-
-                </span>
-              )}
               {published_at && <><span>·</span><span suppressHydrationWarning>{timeAgo(published_at)}</span></>}
               <span>·</span>
               <span>{minutes}m read</span>
@@ -165,9 +162,13 @@ export function StoryCard({
 
           </div>
         </div>
-        {image_url && (
+        {image_url && !imgError ? (
           <div className="shrink-0 w-16 h-16 rounded-md overflow-hidden bg-muted sm:w-20 sm:h-20">
-            <img src={image_url} alt="" className="w-full h-full object-cover" loading="lazy" />
+            <img src={image_url} alt="" className="w-full h-full object-cover" loading="lazy" onError={() => setImgError(true)} />
+          </div>
+        ) : (
+          <div className="shrink-0 w-16 h-16 rounded-md overflow-hidden bg-muted sm:w-20 sm:h-20 flex items-center justify-center">
+            <ImageOff className="h-6 w-6 text-muted-foreground/30" />
           </div>
         )}
       </Link>
@@ -190,12 +191,13 @@ export function StoryCard({
         'relative overflow-hidden bg-muted',
         is_featured ? 'aspect-[16/9] sm:aspect-[2/1]' : 'aspect-[16/10]'
       )}>
-        {image_url ? (
+        {image_url && !imgError ? (
           <img
             src={image_url}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             loading={is_featured ? 'eager' : 'lazy'}
+            onError={() => setImgError(true)}
           />
         ) : (
           <div className="w-full h-full bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10 flex items-center justify-center">
@@ -246,12 +248,6 @@ export function StoryCard({
       )}>
         {/* Meta row */}
         <div className="flex items-center gap-2 text-[11px] text-muted-foreground mb-1.5">
-          {source_name && (
-            <span className="inline-flex items-center gap-1 font-medium text-foreground/70 truncate">
-              {source_name}
-
-            </span>
-          )}
           {published_at && (
             <>
               <span className="hidden sm:inline">·</span>

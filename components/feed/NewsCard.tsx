@@ -2,11 +2,9 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { MessageCircle, Repeat2, Heart, BarChart3, Bookmark, Share, MoreHorizontal } from 'lucide-react';
+import { MessageCircle, Repeat2, Heart, BarChart3, Bookmark, Share } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { timeAgo } from '@/lib/utils';
 import { TagChip } from '@/components/ui/TagChip';
-import { SourceAvatar } from '@/components/ui/SourceAvatar';
 import { ShareButtons } from '@/components/sharing/ShareButtons';
 import { useBookmarks } from '@/hooks/useBookmarks';
 
@@ -39,6 +37,8 @@ export function NewsCard({
   const [showShare, setShowShare] = useState(false);
   const { isBookmarked, toggleBookmark } = useBookmarks();
 
+  const [imgError, setImgError] = useState(false);
+
   const bookmarked = isBookmarked(id);
 
   const handleLike = (e: React.MouseEvent) => {
@@ -51,54 +51,29 @@ export function NewsCard({
   return (
     <Link href={href} className="block group">
       <article className="px-4 py-3 border-b border-border/40 hover:bg-accent/[0.03] transition-colors cursor-pointer">
-        {/* Header — Source info */}
-        <div className="flex items-start gap-3 mb-1">
-          <SourceAvatar src={source_logo} name={source_name} size="md" />
-          <div className="flex-1 min-w-0 flex items-center gap-1 text-[15px]">
-            <span className="font-bold truncate hover:underline">{source_name}</span>
-            {source_handle && (
-              <span className="text-muted-foreground truncate">@{source_handle}</span>
-            )}
-            <span className="text-muted-foreground">·</span>
-            <span className="text-muted-foreground whitespace-nowrap">
-              {published_at ? timeAgo(published_at) : ''}
-            </span>
-          </div>
-          <button
-            onClick={(e) => { e.preventDefault(); e.stopPropagation(); }}
-            className="p-1 rounded-full hover:bg-primary/10 hover:text-primary transition-colors opacity-0 group-hover:opacity-100"
-          >
-            <MoreHorizontal className="h-4 w-4" />
-          </button>
-        </div>
-
-        {/* Body — Title + Summary */}
-        <div className="pl-[52px]">
-          <h3 className="text-[15px] font-bold leading-snug mb-0.5 line-clamp-2">
+        {/* Title directly — no source name */}
+        <div className="min-w-0">
+          <h3 className="text-base font-bold leading-snug mb-0.5 line-clamp-2">
             {title}
           </h3>
-          {summary && (
-            <p className="text-[15px] text-muted-foreground leading-5 line-clamp-3 mb-3">
-              {summary}
-            </p>
-          )}
         </div>
 
         {/* Image */}
-        {image_url && (
-          <div className="ml-[52px] mb-3 rounded-2xl overflow-hidden border border-border/40">
+        {image_url && !imgError && (
+          <div className="ml-0 mb-3 rounded-2xl overflow-hidden border border-border/40">
             <img
               src={image_url}
               alt={title}
               className="w-full aspect-[16/9] object-cover"
               loading="lazy"
+              onError={() => setImgError(true)}
             />
           </div>
         )}
 
         {/* Tags */}
         {tags && tags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 ml-[52px] mb-2">
+          <div className="flex flex-wrap gap-1.5 mb-2">
             {tags.slice(0, 4).map((tag) => (
               <TagChip key={tag} label={tag} />
             ))}
@@ -106,7 +81,7 @@ export function NewsCard({
         )}
 
         {/* Action Bar */}
-        <div className="ml-[52px] max-w-[425px]">
+        <div className="max-w-[425px]">
           <div className="flex items-center justify-between -ml-2">
             {/* Comment */}
             <ActionBtn icon={<MessageCircle className="h-4 w-4" />} count={Math.round((score || 10) * 0.3)} />

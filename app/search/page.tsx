@@ -66,9 +66,10 @@ export default async function SearchPage({ searchParams }: Props) {
       dbQuery = dbQuery.eq('category', categoryFilter);
     }
 
-    // Keyword filters (tags array contains)
-    for (const kw of activeKeywords) {
-      dbQuery = dbQuery.contains('tags', [kw]);
+    // Keyword filters (tags array contains) — OR logic
+    if (activeKeywords.length > 0) {
+      const orConditions = activeKeywords.map(kw => `tags.cs.{${kw}}`).join(',');
+      dbQuery = dbQuery.or(orConditions);
     }
 
     // Text search

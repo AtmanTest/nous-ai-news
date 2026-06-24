@@ -71,36 +71,6 @@ export function RightPanel({ trending = [], topics = [], customContent }: RightP
       {/* Latest Models Widget — dynamic from Supabase */}
       <LatestModels />
 
-      {/* Auto Evolve Widget */}
-      <WidgetCard title="Auto Evolve">
-        <div className="px-3 py-3 space-y-2">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-[15px] font-medium">Pipeline CI/CD autonome</span>
-          </div>
-          <p className="text-[13px] text-muted-foreground">Lance les tests, corrige les bugs, pousse en prod</p>
-          <p className="text-[13px] text-muted-foreground">Dernier run : il y a 2h · v2.14.3</p>
-          <Link href="/auto-tune" className="inline-flex items-center gap-1 text-[15px] text-primary hover:underline mt-1">
-            Voir Auto Evolve <ExternalLink className="h-4 w-4" />
-          </Link>
-        </div>
-      </WidgetCard>
-
-      {/* IA AUTO NEWS Widget */}
-      <WidgetCard title="DeepMind">
-        <div className="px-3 py-3 space-y-2">
-          <div className="flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-pink-500 animate-pulse" />
-            <span className="text-[15px] font-medium">Philosophe IA actif</span>
-          </div>
-          <p className="text-[13px] text-muted-foreground">Analyse 20 Min + BBC + Google News → 2-3 essais philosophiques</p>
-          <p className="text-[13px] text-muted-foreground">Généré quotidien à 6h00 · DALL-E 3 images</p>
-          <Link href="/ia-auto-news" className="inline-flex items-center gap-1 text-[15px] text-pink-300 hover:underline mt-1">
-            Lire les essais <ExternalLink className="h-4 w-4" />
-          </Link>
-        </div>
-      </WidgetCard>
-
       {/* Custom content slot */}
       {customContent}
     </aside>

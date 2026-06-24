@@ -218,68 +218,6 @@ describe('RightPanel', () => {
     });
   });
 
-  it('renders "Auto Evolve" widget', () => {
-    render(React.createElement(RightPanel));
-    expect(screen.getByText('Auto Evolve')).toBeInTheDocument();
-  });
-
-  it('renders green dot for active status', () => {
-    render(React.createElement(RightPanel));
-    const greenDot = document.querySelector('.bg-green-500');
-    expect(greenDot).toBeInTheDocument();
-  });
-
-  it('renders pipeline description', () => {
-    render(React.createElement(RightPanel));
-    expect(screen.getByText('Pipeline CI/CD autonome')).toBeInTheDocument();
-  });
-
-  it('renders auto-tune description', () => {
-    render(React.createElement(RightPanel));
-    expect(screen.getByText('Lance les tests, corrige les bugs, pousse en prod')).toBeInTheDocument();
-  });
-
-  it('renders last run info', () => {
-    render(React.createElement(RightPanel));
-    expect(screen.getByText('Dernier run : il y a 2h · v2.14.3')).toBeInTheDocument();
-  });
-
-  it('renders \"Voir Auto Evolve\" link with ExternalLink icon', () => {
-    render(React.createElement(RightPanel));
-    const autoTuneLink = screen.getByText('Voir Auto Evolve');
-    expect(autoTuneLink).toBeInTheDocument();
-    expect(autoTuneLink.closest('a')).toHaveAttribute('href', '/auto-tune');
-    const externalLinks = screen.getAllByTestId('icon-ExternalLink');
-    expect(externalLinks.length).toBeGreaterThanOrEqual(1);
-  });
-
-  it('renders "DeepMind" widget', () => {
-    render(React.createElement(RightPanel));
-    expect(screen.getByText('DeepMind')).toBeInTheDocument();
-  });
-
-  it('renders pink dot for DeepMind active status', () => {
-    render(React.createElement(RightPanel));
-    const pinkDot = document.querySelector('.bg-pink-500');
-    expect(pinkDot).toBeInTheDocument();
-  });
-
-  it('renders DeepMind description', () => {
-    render(React.createElement(RightPanel));
-    expect(screen.getByText('Philosophe IA actif')).toBeInTheDocument();
-    expect(screen.getByText('Analyse 20 Min + BBC + Google News → 2-3 essais philosophiques')).toBeInTheDocument();
-    expect(screen.getByText('Généré quotidien à 6h00 · DALL-E 3 images')).toBeInTheDocument();
-  });
-
-  it('renders "Lire les essais" link with ExternalLink icon', () => {
-    render(React.createElement(RightPanel));
-    const iaNewsLink = screen.getByText('Lire les essais');
-    expect(iaNewsLink).toBeInTheDocument();
-    expect(iaNewsLink.closest('a')).toHaveAttribute('href', '/ia-auto-news');
-    const externalLinks = screen.getAllByTestId('icon-ExternalLink');
-    expect(externalLinks.length).toBeGreaterThanOrEqual(2);
-  });
-
   it('renders custom content when provided', () => {
     const customContent = React.createElement('div', { 'data-testid': 'custom-content' }, 'Custom Widget');
     render(React.createElement(RightPanel, { customContent }));

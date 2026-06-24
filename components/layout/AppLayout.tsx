@@ -6,7 +6,6 @@ import { RightPanel } from './RightPanel';
 import { Header } from './Header';
 import { BottomNav } from './BottomNav';
 import { cn } from '@/lib/utils';
-import { LanguageToggle } from '@/components/i18n/LanguageToggle';
 
 interface AppLayoutProps {
   children: ReactNode;
@@ -52,9 +51,6 @@ export function AppLayout({
             />
           </div>
         )}
-      </div>
-      <div className="fixed top-2 right-2 z-50 md:top-3 md:right-3">
-        <LanguageToggle />
       </div>
       <BottomNav />
     </div>

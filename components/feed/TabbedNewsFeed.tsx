@@ -8,7 +8,6 @@ import { NewsCard } from '@/components/feed/NewsCard';
 import { SkeletonCard } from '@/components/feed/SkeletonCard';
 import { useFeed, type Article } from '@/hooks/useFeed';
 import { useDayFilter } from '@/hooks/useDayFilter';
-import { useArticleCountsByDay } from '@/hooks/useArticleCountsByDay';
 import { DayFilterBar } from '@/components/feed/DayFilterBar';
 import { DayEmptyState } from '@/components/feed/DayEmptyState';
 import { cn } from '@/lib/utils';
@@ -137,7 +136,6 @@ export function TabbedNewsFeed() {
   } = useFeed();
 
   const { days, goToPreviousDay, goToNextDay, canGoNext, canGoPrevious } = useDayFilter();
-  const { counts, isLoading: isLoadingCounts } = useArticleCountsByDay(7);
 
   const handleTabChange = useCallback((value: string) => {
     setTab(value as 'latest' | 'trending' | 'for-you');
@@ -183,8 +181,6 @@ export function TabbedNewsFeed() {
           const newUrl = query ? `${pathname}?${query}` : pathname;
           router.replace(newUrl, { scroll: false });
         }}
-        articleCounts={counts}
-        isLoadingCounts={isLoadingCounts}
       />
 
       {/* Loading state — initial load */}

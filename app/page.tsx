@@ -7,6 +7,7 @@ import { timeAgo, readingTime } from '@/lib/utils';
 import { LiveUpdateBar } from '@/components/news/LiveUpdateBar';
 import { RefreshButton } from '@/components/news/RefreshButton';
 import { FilteredFeed } from '@/components/news/FilteredFeed';
+import { HeroImage } from '@/components/news/HeroImage';
 
 const PAGE_SIZE = 12;
 
@@ -234,7 +235,7 @@ export default async function HomePage() {
                   {/* Background image */}
                   <div className="absolute inset-0 bg-muted">
                     {mainHero.image_url ? (
-                      <img
+                      <HeroImage
                         src={mainHero.image_url}
                         alt=""
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -288,7 +289,7 @@ export default async function HomePage() {
                   >
                     <div className="absolute inset-0 bg-muted">
                       {article.image_url ? (
-                        <img
+                        <HeroImage
                           src={article.image_url}
                           alt=""
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
