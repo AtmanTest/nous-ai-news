@@ -7,13 +7,13 @@ import { cn } from '@/lib/utils';
 
 const items = [
   { href: '/', label: 'Home', icon: Home },
-  { href: '/feed', label: 'Feed', icon: Calendar },
-  { href: '/daily', label: 'Daily', icon: Calendar },
-  { href: '/trending', label: 'Trending', icon: TrendingUp },
+  { href: '/feed', label: 'Feed', icon: Calendar, gradient: false },
+  { href: '/daily', label: 'Daily', icon: Calendar, gradient: false },
+  { href: '/trending', label: 'Trending', icon: TrendingUp, gradient: false },
   { href: '/ia-auto-news', label: 'DeepMind', icon: Brain, gradient: true },
-  { href: '/search', label: 'Search', icon: Search },
+  { href: '/search', label: 'Search', icon: Search, gradient: false },
   { href: '/auto-tune', label: 'Auto Evolve', icon: Sparkles, gradient: true },
-  { href: '/settings', label: 'Settings', icon: Settings },
+  { href: '/settings', label: 'Settings', icon: Settings, gradient: false },
 ];
 
 export function BottomNav() {
@@ -32,17 +32,19 @@ export function BottomNav() {
               href={item.href}
               className={cn(
                 'flex flex-col items-center justify-center gap-0.5 min-w-[48px] px-2 py-1.5 rounded-lg transition-colors',
-                isActive
-                  ? item.gradient
-                    ? isDeepMind
-                      ? 'text-pink-400'
-                      : 'text-blue-400'
-                    : 'text-primary'
-                  : 'text-muted-foreground hover:text-foreground'
+                isDeepMind
+                  ? isActive
+                    ? 'bg-black text-white'
+                    : 'text-muted-foreground hover:text-foreground'
+                  : isActive
+                    ? item.gradient
+                      ? 'text-blue-400'
+                      : 'text-primary'
+                    : 'text-muted-foreground hover:text-foreground'
               )}
             >
-              <Icon className={cn('h-5 w-5 transition-all', isActive && item.gradient && isDeepMind && 'text-pink-400', isActive && 'scale-110')} />
-              <span className={cn('text-[10px] font-medium', isActive && 'font-semibold')}>
+              <Icon className={cn('h-5 w-5 transition-all', isActive && 'scale-110', isDeepMind && 'text-pink-400')} />
+              <span className={cn('text-[10px] font-medium', (isActive || isDeepMind) && 'font-semibold')}>
                 {item.label}
               </span>
             </Link>

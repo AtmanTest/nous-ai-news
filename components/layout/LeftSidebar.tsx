@@ -89,16 +89,16 @@ export function LeftSidebar() {
               href={item.href}
               className={cn(
                 'flex items-center gap-4 px-3 py-3 xl:px-4 rounded-full transition-colors group',
-                item.gradient
-                  ? isDeepMind
-                    ? 'text-pink-400 hover:text-pink-300 hover:bg-pink-500/10'
-                    : 'text-blue-400 hover:text-blue-300 hover:bg-blue-500/10'
-                  : active
-                    ? 'font-bold text-foreground'
-                    : 'font-normal text-muted-foreground hover:text-foreground hover:bg-accent/20'
+                isDeepMind
+                  ? 'bg-black text-white hover:bg-white/10'
+                  : item.gradient
+                    ? 'text-blue-400 hover:text-blue-300 hover:bg-blue-500/10'
+                    : active
+                      ? 'font-bold text-foreground'
+                      : 'font-normal text-muted-foreground hover:text-foreground hover:bg-accent/20'
               )}
             >
-              <Icon className={cn('h-6 w-6 shrink-0', item.gradient && (isDeepMind ? 'text-pink-400' : 'text-blue-400'))} />
+              <Icon className={cn('h-6 w-6 shrink-0', isDeepMind ? 'text-pink-400' : item.gradient && 'text-blue-400')} />
               <span className="hidden xl:block text-xl leading-6">{item.label}</span>
             </Link>
           );

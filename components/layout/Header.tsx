@@ -14,7 +14,7 @@ export function Header() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <header className="sticky top-0 z-30 border-b border-border/40 bg-background/80 backdrop-blur-xl hidden md:flex">
+    <header className="sticky top-0 z-30 border-b border-border/40 bg-background/80 backdrop-blur-xl flex">
       <div className="flex items-center justify-between h-[53px] px-4">
         <div className="flex items-center gap-1">
           <Link href="/search" className="p-2 rounded-full hover:bg-accent/30 transition-colors">

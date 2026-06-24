@@ -5,6 +5,7 @@ import { LeftSidebar } from './LeftSidebar';
 import { RightPanel } from './RightPanel';
 import { Header } from './Header';
 import { BottomNav } from './BottomNav';
+import { Footer } from './Footer';
 import { cn } from '@/lib/utils';
 
 interface AppLayoutProps {
@@ -53,6 +54,7 @@ export function AppLayout({
         )}
       </div>
       <BottomNav />
+      <Footer />
     </div>
   );
 }
