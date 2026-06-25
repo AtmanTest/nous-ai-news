@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useCallback, useEffect } from 'react';
+import Link from 'next/link';
 import { Play, Pause, Volume2, VolumeX, Radio, ExternalLink } from 'lucide-react';
 
 const YT_VIDEO_ID = 'rdpKLZEOsws';
@@ -268,6 +269,18 @@ export function AiRadioPlayer() {
           >
             Digital Decibels
           </a>
+        </div>
+
+        {/* Branding badge */}
+        <div className="text-center">
+          <Link
+            href="https://www.linkedin.com/in/thasin-j-47582635/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full border animate-glide-border text-[10px] font-medium tracking-wide animate-pulse-blue"
+          >
+            ✦ Thinked by Jahangir Thasin · Made with ❤️ &amp; AI
+          </Link>
         </div>
       </div>
     </div>
