@@ -9,6 +9,7 @@ import { RefreshButton } from '@/components/news/RefreshButton';
 import { FilteredFeed } from '@/components/news/FilteredFeed';
 import { HeroImage } from '@/components/news/HeroImage';
 import { DailyAiNewsFeed } from '@/components/news/DailyAiNewsFeed';
+import { AiRadioPlayer } from '@/components/radio/AiRadioPlayer';
 
 const PAGE_SIZE = 12;
 
@@ -411,6 +412,9 @@ export default async function HomePage() {
                 <h3 className="text-sm font-semibold">Topics</h3>
               </div>
               <TopicPills topics={[]} />
+
+              {/* AI Radio — generative ambient/chill/focus music */}
+              <AiRadioPlayer />
 
               {/* Source freshness note */}
               <div className="p-3 rounded-lg bg-muted/30 border border-border/30">
