@@ -32,7 +32,7 @@ export function Header() {
             {theme === 'dim' && <Sunset className="h-5 w-5" />}
             {theme === 'light' && <Moon className="h-5 w-5" />}
           </button>
-          <span className="hidden xl:inline-block text-[11px] font-medium text-muted-foreground whitespace-nowrap">
+          <span className="text-[11px] font-medium text-muted-foreground whitespace-nowrap">
             <Link href="https://www.linkedin.com/in/thasin-j-47582635/" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors">
               Thinked by Jahangir Thasin, Made with love with AI — LinkedIn
             </Link>

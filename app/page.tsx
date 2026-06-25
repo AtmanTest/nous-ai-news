@@ -398,56 +398,7 @@ export default async function HomePage() {
           </div>
 
           {/* Sidebar */}
-          <aside className="hidden lg:block lg:col-span-1">
-            <div className="sticky top-20 space-y-8">
-              {/* Top Stories widget - PROMINENT, FIRST */}
-              {trending.length > 0 && (
-                <div className="bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5 border border-primary/20 rounded-2xl p-5">
-                  <div className="flex items-center gap-2 mb-4">
-                    <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                      <TrendingUp className="h-4 w-4 text-white" />
-                    </div>
-                    <h3 className="text-lg font-bold text-foreground">Daily AI NEWS</h3>
-                  </div>
-                  <div className="space-y-3">
-                    {trending.filter(a => !heroIds.has(a.id)).slice(0, 6).map((article, i) => (
-                      <Link
-                        key={article.id}
-                        href={`/article/${article.id}`}
-                        className="group flex items-start gap-3 p-2 rounded-xl hover:bg-primary/5 transition-colors border border-transparent hover:border-primary/20"
-                      >
-                        <span className="text-base font-bold text-primary/60 shrink-0 w-7 leading-none">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                        <div className="min-w-0 flex-1">
-                          <h4 className="text-sm font-semibold leading-snug group-hover:text-primary transition-colors line-clamp-2">
-                            {article.title}
-                          </h4>
-                          <div className="flex items-center gap-2 mt-1 text-[11px] text-muted-foreground">
-                            <span className="font-medium">{article.source_name}</span>
-                            <span>·</span>
-                            <span suppressHydrationWarning>{article.published_at ? timeAgo(article.published_at) : ''}</span>
-                            {article.score && article.score > 50 && (
-                              <span className="flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] bg-primary/10 text-primary">
-                                {article.score}
-                              </span>
-                            )}
-                          </div>
-                        </div>
-                        {article.image_url && (
-                          <img
-                            src={article.image_url}
-                            alt=""
-                            className="w-10 h-10 rounded-lg object-cover shrink-0 hidden sm:block"
-                          />
-                        )}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {/* Topics widget - SECOND */}
+          {/* Sidebar */}
               <div>
                 <div className="flex items-center gap-2 mb-3">
                   <Hash className="h-4 w-4 text-primary" />
