@@ -76,6 +76,20 @@ const config: Config = {
           "0%": { backgroundPosition: "-200% 0" },
           "100%": { backgroundPosition: "200% 0" },
         },
+        "pulse-blue": {
+          "0%, 100%": { color: "#93c5fd" },
+          "50%": { color: "#3b82f6" },
+        },
+        "glide-border": {
+          "0%, 100%": {
+            borderColor: "rgba(59,130,246,0.2)",
+            boxShadow: "0 0 0 0 rgba(59,130,246,0)",
+          },
+          "50%": {
+            borderColor: "rgba(59,130,246,0.5)",
+            boxShadow: "0 0 8px 0 rgba(59,130,246,0.15)",
+          },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.4s ease-out",
@@ -83,6 +97,8 @@ const config: Config = {
         "slide-up": "slide-up 0.3s ease-out",
         "pulse-soft": "pulse-soft 2s ease-in-out infinite",
         shimmer: "shimmer 1.5s ease-in-out infinite",
+        "pulse-blue": "pulse-blue 4s ease-in-out infinite",
+        "glide-border": "glide-border 4s ease-in-out infinite",
       },
       maxWidth: {
         reading: "var(--reading-width)",
