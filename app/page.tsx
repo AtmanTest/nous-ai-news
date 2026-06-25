@@ -403,15 +403,14 @@ export default async function HomePage() {
             </div>
           </div>
 
-          {/* Sidebar */}
-          {/* Sidebar */}
-              <div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Hash className="h-4 w-4 text-primary" />
-                  <h3 className="text-sm font-semibold">Topics</h3>
-                </div>
-                <TopicPills topics={[]} />
+          <aside className="lg:col-span-1">
+            {/* Sidebar */}
+            <div className="space-y-6">
+              <div className="flex items-center gap-2 mb-3">
+                <Hash className="h-4 w-4 text-primary" />
+                <h3 className="text-sm font-semibold">Topics</h3>
               </div>
+              <TopicPills topics={[]} />
 
               {/* Source freshness note */}
               <div className="p-3 rounded-lg bg-muted/30 border border-border/30">
