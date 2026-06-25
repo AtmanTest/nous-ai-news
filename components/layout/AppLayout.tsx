@@ -24,7 +24,7 @@ export function AppLayout({
   rightPanelContent,
 }: AppLayoutProps) {
   return (
-    <div className="flex justify-center min-h-screen bg-background">
+    <div className="flex flex-col justify-center min-h-screen bg-background">
       <div className="flex w-full max-w-[1440px]">
         {/* Left Sidebar — TOUJOURS monté sur desktop, masqué mobile */}
         <div className="hidden md:block w-[68px] xl:w-[275px] shrink-0 border-r border-border/40">
