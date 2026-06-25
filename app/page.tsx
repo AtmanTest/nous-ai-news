@@ -8,6 +8,7 @@ import { LiveUpdateBar } from '@/components/news/LiveUpdateBar';
 import { RefreshButton } from '@/components/news/RefreshButton';
 import { FilteredFeed } from '@/components/news/FilteredFeed';
 import { HeroImage } from '@/components/news/HeroImage';
+import { DailyAiNewsFeed } from '@/components/news/DailyAiNewsFeed';
 
 const PAGE_SIZE = 12;
 
@@ -386,6 +387,11 @@ export default async function HomePage() {
 
             {/* Featured grid — top 4 stories with images */}
             <FilteredFeed featured={featured} latest={[]} excludeIds={heroStories.slice(0, 4).map(a => a.id)} showEmptyMessage={false} />
+
+            {/* Daily AI NEWS — top 6 trending stories (moved from right panel for more space) */}
+            <div className="mt-8 mb-8">
+              <DailyAiNewsFeed />
+            </div>
 
             {/* Latest feed with load more */}
             <div className="mt-8">
