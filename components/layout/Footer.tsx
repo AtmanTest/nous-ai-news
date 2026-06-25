@@ -68,12 +68,8 @@ export function Footer() {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/[0.07] px-8 py-5 flex flex-wrap items-center justify-between gap-3">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} Daily AI. All rights reserved.
-          </p>
-
           <div className="text-sm text-muted-foreground">
-            Thinked by Thasin Jahangir, Made wityh love with AI — <Link href="https://www.linkedin.com/in/thasin-j-47582635/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">LinkedIn</Link>
+            © {new Date().getFullYear()} Daily AI. All rights reserved.
           </div>
         </div>
       </div>
