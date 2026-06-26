@@ -32,10 +32,9 @@ export function Header() {
             {theme === 'dim' && <Sunset className="h-5 w-5" />}
             {theme === 'light' && <Moon className="h-5 w-5" />}
           </button>
-          <span className="inline-flex items-center gap-1 ml-2 min-w-0">
+          <span className="inline-flex items-center gap-1 ml-2 overflow-hidden">
             <Link href="https://www.linkedin.com/in/thasin-j-47582635/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full border animate-glide-border text-[10px] font-medium tracking-wide animate-pulse-blue whitespace-nowrap">
-              <span className="hidden sm:inline">✦ Thinked by Jahangir Thasin · Made with ❤️ &amp; AI</span>
-              <span className="sm:hidden">✦ Thinked · Made with ❤️</span>
+              <span className="truncate max-w-[90px] sm:max-w-none">✦ Thinked by Jahangir Thasin, Made with ❤️ with AI — LinkedIn</span>
             </Link>
           </span>
         </div>
