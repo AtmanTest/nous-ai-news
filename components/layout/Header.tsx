@@ -34,7 +34,7 @@ export function Header() {
           </button>
           <span className="inline-flex items-center gap-1 ml-2 overflow-hidden">
             <Link href="https://www.linkedin.com/in/thasin-j-47582635/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full border animate-glide-border text-[10px] font-medium tracking-wide animate-pulse-blue whitespace-nowrap">
-              <span className="truncate max-w-[90px] sm:max-w-none">✦ Thinked by Jahangir Thasin, Made with ❤️ with AI — LinkedIn</span>
+              ✦ Thinked by Jahangir Thasin, Made with ❤️ with AI — LinkedIn
             </Link>
           </span>
         </div>
