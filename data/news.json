@@ -1,88 +1,361 @@
 {
-  "updatedAt": "2026-08-16T18:18:46.975Z",
-  "total": 107,
+  "updatedAt": "2026-08-17T00:45:32.042Z",
+  "total": 119,
   "sourcesScanned": 10,
   "articles": [
     {
-      "id": "e8e71570-2838-4502-b314-8bce999c8b93",
-      "title": "Anthropic set AI agents loose on the same task. They started a turf war.",
-      "description": "Anthropic researchers found AI agents can clash, collude, and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-agent systems.",
-      "url": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 18:28:14 +0000",
+      "id": "c0e173ac-7c56-4cc0-9c37-3bd650bbebaa",
+      "title": "MIT Researchers Unveil &#8220;SEAL&#8221;: A New Step Towards Self-Improving AI",
+      "description": "MIT introduces SEAL, a framework enabling large language models to self-edit and update their weights via reinforcement learning. The post MIT Researchers Unveil “SEAL”: A New Step Towards Self-Improving AI first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/06/16/mit-researchers-unveil-seal-a-new-step-towards-self-improving-ai/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Mon, 16 Jun 2025 12:58:37 +0000",
       "category": "Research",
-      "score": 95,
-      "reason": "This article discusses research findings from Anthropic about AI agent behavior, which is highly relevant to AI research.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "60bccb34-5c00-4d07-9288-0fc4e744a072",
-      "title": "OpenAI introduces &#8216;Ultrafast,&#8217; a new mode that makes GPT-5.6 Sol work at 14x the speed",
-      "description": "OpenAI is launching a preview of a sped up version of its latest, most powerful model, in an effort to court enterprise users.",
-      "url": "https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 19:22:40 +0000",
-      "category": "Models",
       "score": 90,
-      "reason": "This article focuses on a new model feature from OpenAI, which is directly related to AI models and their performance.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "reason": "Presents a significant research breakthrough in self-improving AI, which is crucial for the field.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "867c50f7-b880-44d6-8b1d-a8bd1ac2b66e",
-      "title": "Anthropic shares more details about how Claude’s new watermarks will work",
-      "description": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
-      "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Sat, 15 Aug 2026 18:58:39 +0000",
+      "id": "5873a0e0-851e-448b-afc0-678b5ef69142",
+      "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-600x600.format-webp.webp\">Google introduces AMIE for real-time clinical video consultations in simulated settings.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Tue, 11 Aug 2026 17:00:00 +0000",
+      "category": "Research",
+      "score": 90,
+      "reason": "This article discusses a significant research development in AI for medical consultations.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "e952a384-e51e-4dfe-af97-02d4519e0f9d",
+      "title": "New research shows how AMIE, our medical AI, could help manage health conditions.",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp\">Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Wed, 17 Jun 2026 15:00:00 +0000",
+      "category": "Research",
+      "score": 90,
+      "reason": "This article presents new research published in 'Nature' about AMIE, a medical AI system, which is directly related to AI research and its applications.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "6bfd8a3a-c70d-475c-9041-4a27c8d138a7",
+      "title": "ByteDance Introduces Astra: A Dual-Model Architecture for Autonomous Robot Navigation",
+      "description": "ByteDance introduces Astra, an innovative dual-model architecture revolutionizing robot navigation in complex indoor environments. The post ByteDance Introduces Astra: A Dual-Model Architecture for Autonomous Robot Navigation first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/06/24/bytedance-introduces-astra-a-dual-model-architecture-for-autonomous-robot-navigation/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Tue, 24 Jun 2025 09:17:01 +0000",
       "category": "Models",
       "score": 85,
-      "reason": "Focuses on technical aspects of AI model watermarking.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "reason": "Introduces a new model architecture for robot navigation, which is highly relevant to AI advancements.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "aa74a181-ece5-4799-a4ea-623657ea98b8",
-      "title": "Meta&#8217;s &#8216;open&#8217; AI, and a $250M deal gone very wrong",
-      "description": "Meta released Glimmer this week, an open-weight AI&#160;model&#160;anyone can download and run on their own hardware&#160;— a contrast to&#160;Muse&#160;Spark, the company’s more powerful model that stays locked behind its own APIs. The release landed alongside&#160;a letter from Mark Zuckerberg&#160;arguing AI should be “for everyone” rather than controlled by a handful of labs, but as Equity’s [&#8230;]",
-      "url": "https://techcrunch.com/podcast/metas-open-ai-and-a-250m-deal-gone-very-wrong/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Fri, 14 Aug 2026 14:00:00 +0000",
-      "category": "Business",
+      "id": "cf83339d-a6cc-4594-ae77-cfea73c4f82f",
+      "title": "DeepSeek-V3 New Paper is coming! Unveiling the Secrets of Low-Cost Large Model Training through Hardware-Aware Co-design",
+      "description": "A newly released 14-page technical paper from the team behind DeepSeek-V3, with DeepSeek CEO Wenfeng Liang as a co-author, sheds light on the “Scaling Challenges and Reflections on Hardware for AI Architectures.” The post DeepSeek-V3 New Paper is coming! Unveiling the Secrets of Low-Cost Large Model Training through Hardware-Aware Co-design first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/05/15/deepseek-v3-new-paper-is-coming-unveiling-the-secrets-of-low-cost-large-model-training-through-hardware-aware-co-design/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Thu, 15 May 2025 17:58:00 +0000",
+      "category": "Research",
       "score": 85,
-      "reason": "Covers a significant business deal and its implications in the AI industry.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "reason": "Research on cost-effective large model training, highly relevant for AI development.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "3a5a82fa-4cfd-4d47-9eed-eabdf11aa8e2",
-      "title": "Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $190B valuation.",
-      "description": "AI is expensive, Ali Ghodsi tells TechCrunch. With so many investors wanting into his latest round, he said yes to more than planned.",
-      "url": "https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 20:14:39 +0000",
-      "category": "Business",
+      "id": "5bf99b6a-ab6b-4725-8528-a7ebb0b8cbf7",
+      "title": "Zhipu.AI&#8217;s Open-Source Power Play: Blazing-Fast GLM Models &#038; Global Expansion Ahead of Potential IPO",
+      "description": "Zhipu.AI open-sources faster GLM models (8x speedup), launches Z.ai, aiming for global expansion, potentially ahead of IPO. The post Zhipu.AI’s Open-Source Power Play: Blazing-Fast GLM Models & Global Expansion Ahead of Potential IPO first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/04/16/zhipu-ais-open-source-power-play-blazing-fast-glm-models-global-expansion-ahead-of-potential-ipo/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Wed, 16 Apr 2025 12:23:00 +0000",
+      "category": "OpenSource",
       "score": 85,
-      "reason": "This article discusses a significant funding round and valuation for Databricks, which is highly relevant to the business aspects of AI.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "reason": "Open-sourcing of fast GLM models and global expansion, important for the AI community.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "3dc90834-b10e-48d3-9724-f6f3ab4b1879",
-      "title": "Nvidia&#8217;s new $500B plan is risky but brilliant, especially for aging GPUs",
-      "description": "Nvidia has a plan to make sure its GPUs won't lose value. It wants to convince a new crop of financiers to keep lending for AI buildouts.",
-      "url": "https://techcrunch.com/2026/08/13/nvidias-new-500b-plan-is-risky-but-brilliant-especially-for-aging-gpus/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 15:08:00 +0000",
+      "id": "a7cb5ba3-acd1-4e2c-90d9-2ef820f18605",
+      "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp\">We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Tue, 28 Jul 2026 16:00:00 +0000",
+      "category": "Models",
+      "score": 85,
+      "reason": "This article discusses updates to the Gemini API, which is related to AI models.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "ed4d969d-a5f1-4eb6-ac69-fb1882eb62fd",
+      "title": "Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models",
+      "description": "By combining State-Space Models (SSMs) for efficient long-range dependency modeling with dense local attention for coherence, and using training strategies like diffusion forcing and frame local attention, researchers from Adobe Research successfully overcome the long-standing challenge of long-term memory in video generation. The post Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/05/28/adobe-research-unlocking-long-term-memory-in-video-world-models-with-state-space-models/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Wed, 28 May 2025 09:31:27 +0000",
+      "category": "Research",
+      "score": 80,
+      "reason": "Research on improving video world models with state-space models, relevant for AI advancements.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "38b99134-b926-4451-b85e-070ffc9d75da",
+      "title": "DeepSeek Unveils DeepSeek-Prover-V2: Advancing Neural Theorem Proving with Recursive Proof Search and a New Benchmark",
+      "description": "DeepSeek AI releases DeepSeek-Prover-V2, an open-source LLM for Lean 4 theorem proving. It uses recursive proof search with DeepSeek-V3 for training data and reinforcement learning, achieving top results on MiniF2F. The post DeepSeek Unveils DeepSeek-Prover-V2: Advancing Neural Theorem Proving with Recursive Proof Search and a New Benchmark first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/04/30/deepseek-unveils-deepseek-prover-v2-advancing-neural-theorem-proving-with-recursive-proof-search-and-a-new-benchmark/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Wed, 30 Apr 2025 15:46:20 +0000",
+      "category": "Models",
+      "score": 80,
+      "reason": "Introduces a new model for theorem proving, significant for AI capabilities.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "b014ec28-90d2-4c86-a0b0-231d7c7e8842",
+      "title": "DeepSeek Signals Next-Gen R2 Model, Unveils Novel Approach to Scaling Inference with SPCT",
+      "description": "DeepSeek AI, a prominent player in the large language model arena, has recently published a research paper detailing a new technique aimed at enhancing the scalability of general reward models (GRMs) during the inference phase. The post DeepSeek Signals Next-Gen R2 Model, Unveils Novel Approach to Scaling Inference with SPCT first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/04/11/deepseek-signals-next-gen-r2-model-unveils-novel-approach-to-scaling-inference-with-spct/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Fri, 11 Apr 2025 14:43:45 +0000",
+      "category": "Models",
+      "score": 80,
+      "reason": "Introduces a new model and approach to scaling inference, relevant for AI advancements.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "72402eaa-2703-46b8-bfe1-52382beee64f",
+      "title": "The latest AI news we announced in July 2026",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp\">Here are Google’s latest AI updates from July 2026",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Tue, 04 Aug 2026 13:00:00 +0000",
+      "category": "General",
+      "score": 80,
+      "reason": "This article provides a general update on AI news, making it relevant to a broad audience.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "fd327fa8-8267-4729-a093-1b576f882f04",
+      "title": "Create, edit and star in videos with two Google Vids updates",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp\">Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Thu, 16 Jul 2026 16:00:00 +0000",
+      "category": "Models",
+      "score": 80,
+      "reason": "This article discusses updates to video creation tools, which are related to AI models.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "8db45126-0d3d-40ac-913a-175de1d2b23a",
+      "title": "Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp\">We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Tue, 07 Jul 2026 08:54:00 +0000",
+      "category": "Models",
+      "score": 80,
+      "reason": "This article discusses new capabilities in Managed Agents within the Gemini API, which is directly related to AI model advancements.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "749bdd04-eb2c-47d2-8cf8-74dd263dc211",
+      "title": "Researchers from PSU and Duke introduce &#8220;Multi-Agent Systems Automated Failure Attribution",
+      "description": "\"Automated failure attribution\" is a crucial component in the development lifecycle of Multi-Agent systems. It has the potential to transform the challenge of identifying \"what went wrong and who is to blame\" from a perplexing mystery into a quantifiable and analyzable problem The post Researchers from PSU and Duke introduce “Multi-Agent Systems Automated Failure Attribution first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/06/16/researchers-from-psu-and-duke-introduce-multi-agent-systems-automated-failure-attribution/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Mon, 16 Jun 2025 07:39:46 +0000",
+      "category": "Research",
+      "score": 75,
+      "reason": "Focuses on a critical aspect of multi-agent systems, important for AI development.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "06498ef2-0ba4-4466-99ec-3e61feb994db",
+      "title": "Can GRPO be 10x Efficient? Kwai AI&#8217;s SRPO Suggests Yes with SRPO",
+      "description": "Kwai AI's SRPO framework slashes LLM RL post-training steps by 90% while matching DeepSeek-R1 performance in math and code. This two-stage RL approach with history resampling overcomes GRPO limitations. The post Can GRPO be 10x Efficient? Kwai AI’s SRPO Suggests Yes with SRPO first appeared on Synced .",
+      "url": "https://syncedreview.com/2025/04/23/can-grpo-be-10x-efficient-kwai-ais-srpo-suggests-yes-with-srpo/",
+      "source": "Synced Review",
+      "sourceUrl": "https://syncedreview.com/feed",
+      "publishedAt": "Thu, 24 Apr 2025 02:30:16 +0000",
+      "category": "Research",
+      "score": 75,
+      "reason": "Research on improving efficiency in RL post-training, relevant for AI advancements.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "d5788a68-06ab-44d4-9ef3-ee171a919a98",
+      "title": "5 ways AI Mode in Search helps you enjoy the real world",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp\">It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…",
+      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Tue, 28 Jul 2026 13:00:00 +0000",
+      "category": "General",
+      "score": 75,
+      "reason": "This article discusses the application of AI in search, which is generally relevant.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "bfe65fb2-3158-49d5-8fcb-0f69afd1e3ec",
+      "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp\">Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.",
+      "url": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Tue, 30 Jun 2026 06:00:00 +0000",
+      "category": "Policy",
+      "score": 75,
+      "reason": "This article discusses Google UK's Economic Impact Report and strategies for building a nation of AI trailblazers, which involves policy and economic impact.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "f70eb395-8d96-4615-876c-4c32055fbbb0",
+      "title": "Evolve your marketing with new AI tools",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Advisor_Header.max-600x600.format-webp.webp\">Learn how new AI and agentic experiences across Google Ads and Google Analytics can simplify your marketing workflow.",
+      "url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Mon, 10 Aug 2026 14:30:00 +0000",
+      "category": "Business",
+      "score": 70,
+      "reason": "This article focuses on the application of AI tools in marketing, which is relevant to business strategies.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "dc6f4ad4-cca9-4fdd-8c76-5aeaf7a81c93",
+      "title": "3 Google updates from Galaxy Unpacked 2026",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp\">We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.",
+      "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Wed, 22 Jul 2026 13:00:00 +0000",
       "category": "Hardware",
-      "score": 85,
-      "reason": "This article focuses on Nvidia's plans related to its GPUs, which are crucial hardware components for AI.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "score": 70,
+      "reason": "This article discusses updates related to hardware, specifically foldable devices.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "1a1baaef-f029-49b0-9693-4203a18d15a2",
+      "id": "74f32d9e-92a0-4f64-b91d-177e44bd1c1d",
+      "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp\">Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
+      "url": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Wed, 01 Jul 2026 16:00:00 +0000",
+      "category": "Policy",
+      "score": 70,
+      "reason": "This article discusses a summit focused on shaping the future of AI in education, which involves policy and implementation strategies.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "1ca285fe-4e68-432b-b108-d5d20f907056",
+      "title": "Connect more of your apps to Search",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp\">You’ll be able to securely link and interact with your go-to services directly in AI Mode.",
+      "url": "https://blog.google/products-and-platforms/products/search/connected-apps/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Thu, 16 Jul 2026 16:00:00 +0000",
+      "category": "General",
+      "score": 65,
+      "reason": "This article discusses the integration of apps with search, which is generally relevant.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "5a0567c8-0f51-400b-b918-939998f13ae5",
+      "title": "Flock is tightening its rules in response to a growing surveillance backlash",
+      "description": "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid concerns about mass surveillance and police abuse. Several changes aim directly at a problem that has made recent headlines:&#8230;",
+      "url": "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/",
+      "source": "MIT Tech Review AI",
+      "sourceUrl": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 13:41:10 +0000",
+      "category": "Policy",
+      "score": 60,
+      "reason": "Focuses on policy changes in response to surveillance concerns, less directly relevant to AI advancements.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "a1d04322-315f-4afc-a1bc-32acf3e0bd9f",
+      "title": "Inside our 353,000-person vibe coding course",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp\">Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Mon, 03 Aug 2026 15:00:00 +0000",
+      "category": "General",
+      "score": 60,
+      "reason": "This article discusses a coding course, which is generally relevant but not specifically focused on AI.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "1b8c72e5-ef4e-4078-8bc4-8cf5971cacea",
+      "title": "The latest AI news we announced in June 2026",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp\">Here are Google’s latest AI updates from June 2026.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Wed, 01 Jul 2026 18:15:00 +0000",
+      "category": "General",
+      "score": 60,
+      "reason": "This article is a summary of AI updates from June 2026, providing a broad overview rather than focusing on a specific category.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "c3e93424-dbee-4c7e-979c-95178251d48c",
+      "title": "Ask an AI expert: What exactly is the full stack?",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp\">A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
+      "url": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Mon, 29 Jun 2026 16:00:00 +0000",
+      "category": "General",
+      "score": 55,
+      "reason": "This article is an interview with an AI expert explaining the full-stack approach to AI, which is more educational and general in nature.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "16265d4e-15b1-461b-bbe5-b99d27f129c2",
+      "title": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
+      "description": "OpenRouter's CEO recently described the startup as Stripe for AI.",
+      "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Sun, 16 Aug 2026 20:57:04 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "20e899f6-5577-45c4-9e9a-4086ced6d7b8",
+      "title": "Why people aren&#8217;t buying Mark Zuckerberg’s AI future",
+      "description": "On the latest episode of Equity podcast, we discuss why not everyone is buying Zuckerberg’s vision.",
+      "url": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Sun, 16 Aug 2026 20:32:01 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "357f638c-b649-4dd0-941f-fd797ceb2b8e",
       "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’",
       "description": "Dario Amodei is pushing back against the idea that he's been painting an overly pessimistic picture of AI.",
       "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
@@ -90,77 +363,64 @@
       "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
       "publishedAt": "Sun, 16 Aug 2026 16:53:51 +0000",
       "category": "General",
-      "score": 80,
-      "reason": "Discusses the broader implications of AI trust and public perception.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "dc13fd02-c16a-4171-a258-8907d379a37f",
-      "title": "Google will now allow users to remove visible watermark from its AI generations",
-      "description": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file.",
-      "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Fri, 14 Aug 2026 16:13:40 +0000",
-      "category": "Models",
-      "score": 80,
-      "reason": "Discusses changes in AI model output and watermarking policies.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "a8a477f8-f354-4dc3-a32c-c2b98a823134",
-      "title": "Kog is going deeper to squeeze more inference out of GPUs",
-      "description": "The idea that GPUs are poorly suited for agentic workflows may be a misconception, according to French startup Kog.",
-      "url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Fri, 14 Aug 2026 14:50:11 +0000",
-      "category": "Hardware",
-      "score": 80,
-      "reason": "Focuses on hardware optimization for AI inference.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "5c0dcbdc-d2dc-46ff-86d8-e9724ffd731c",
-      "title": "Writer introduces new AI model and upgraded harness to contain token costs",
-      "description": "Built as a post-training variation on Z.ai's open source model GLM-5.2, Writer says the new system should provide deployment-ready capabilities at a much lower price.",
-      "url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 21:13:24 +0000",
-      "category": "Models",
-      "score": 80,
-      "reason": "Focuses on the introduction of a new AI model and cost-saving measures.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "551ab6fc-b5cd-4def-a39e-50f77f5845e5",
-      "title": "IBM partners with OpenAI to bolster enterprise AI push",
-      "description": "IBM plans to train and certify tens of thousands of consultants on OpenAI's technologies as part of this deal.",
-      "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 19:19:49 +0000",
-      "category": "Business",
-      "score": 80,
-      "reason": "This article covers a strategic partnership between IBM and OpenAI, which is significant for the business and enterprise adoption of AI.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "31a613e2-dc1a-4b32-92fe-26d971c4b819",
+      "id": "d449e45f-b7bc-4818-a9ba-bb8df01deda5",
       "title": "Woman claims her stepfather used Grok to transform childhood photo into explicit imagery",
       "description": "The woman claimed that AI tools are \"taking everyday life and turning it into child sexual abuse.\"",
       "url": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/",
       "source": "TechCrunch AI",
       "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
       "publishedAt": "Sat, 15 Aug 2026 21:29:19 +0000",
-      "category": "Policy",
-      "score": 75,
-      "reason": "Highlights ethical and legal issues surrounding AI misuse.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "6b6fc4cd-22fb-4c0b-9e8d-8c4366e255a7",
+      "id": "f8df910c-09dc-4a34-9609-a53ed17f3311",
+      "title": "Anthropic shares more details about how Claude’s new watermarks will work",
+      "description": "How will the watermarking actually work? Can it be hidden with editing? And how does this affect code?",
+      "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Sat, 15 Aug 2026 18:58:39 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "2d404884-47bb-4f5b-a680-d605a2480fbf",
+      "title": "SpaceX officially closes its Cursor acquisition",
+      "description": "AI coding startup Cursor is now officially a part of SpaceX.",
+      "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Sat, 15 Aug 2026 16:30:00 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "e61e2231-dce3-4c10-8b51-46703a39ef20",
+      "title": "Google will now allow users to remove visible watermark from its AI generations",
+      "description": "Turning off this setting won't affect invisible benchmarks used to identify an AI generated file.",
+      "url": "https://techcrunch.com/2026/08/14/google-will-now-allow-users-to-remove-visible-watermark-from-its-ai-generations/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Fri, 14 Aug 2026 16:13:40 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "dafa387b-436a-4118-b028-8c6f263aaecf",
       "title": "Does Mark Zuckerberg really believe AI is &#8216;for everyone&#8217;?",
       "description": "Meta released Glimmer this week, an open-weight AI&#160;model&#160;anyone can download and run on their own hardware&#160;— a contrast to&#160;Muse&#160;Spark, the company’s more powerful model that stays locked behind its own APIs. The release landed alongside&#160;a letter from Mark Zuckerberg&#160;arguing AI should be “for everyone” rather than controlled by a handful of labs, but as Equity’s [&#8230;]",
       "url": "https://techcrunch.com/video/does-mark-zuckerberg-really-believe-ai-is-for-everyone/",
@@ -168,103 +428,181 @@
       "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
       "publishedAt": "Fri, 14 Aug 2026 15:43:28 +0000",
       "category": "General",
-      "score": 75,
-      "reason": "Explores the accessibility and democratization of AI.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "613f6a5c-243a-4658-8a7d-d7d4426949e6",
-      "title": "OpenAI hires new CRO as executive shake-up continues",
-      "description": "OpenAI has replaced chief revenue officer Denise Dresser after just nine months on the job, tapping Wiz president and chief operating officer Dali Rajic to take on frontier lab's top sales job.",
-      "url": "https://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues/",
+      "id": "30255778-9a1e-4863-87eb-36779c39d237",
+      "title": "Kog is going deeper to squeeze more inference out of GPUs",
+      "description": "The idea that GPUs are poorly suited for agentic workflows may be a misconception, according to French startup Kog.",
+      "url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/",
       "source": "TechCrunch AI",
       "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 17:07:13 +0000",
-      "category": "Business",
-      "score": 75,
-      "reason": "This article covers a change in leadership at OpenAI, which is relevant to the business operations of a major AI company.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "publishedAt": "Fri, 14 Aug 2026 14:50:11 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "f687e112-7545-412d-bd64-142aed678afc",
-      "title": "Amazon will train on Twitch streamers&#8217; content by default, unless they opt out",
-      "description": "\"If this was opt-in, nobody would opt in,\" Twitch CPO Mike Minton said on a livestream responding to user feedback. \"That's honestly the answer.\"",
-      "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Wed, 12 Aug 2026 20:10:40 +0000",
-      "category": "Business",
-      "score": 75,
-      "reason": "This article discusses Amazon's data usage policies for training AI models, which is relevant to the business and ethical aspects of AI.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "81de386c-a72b-40b3-8709-5a05808a2461",
-      "title": "SpaceX officially closes its Cursor acquisition",
-      "description": "AI coding startup Cursor is now officially a part of SpaceX.",
-      "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Sat, 15 Aug 2026 16:30:00 +0000",
-      "category": "Business",
-      "score": 70,
-      "reason": "Covers a significant business acquisition in the AI space.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "fc135cab-0302-4b04-a117-9636b0145217",
+      "id": "f61b30e7-c1e3-4c7f-b957-18bacd58b720",
       "title": "Hyperscalers might regret embracing natural gas if new forecast proves correct",
       "description": "Natural gas prices could triple in some parts of the U.S., which could saddle hyperscalers with massive bills to power their AI data centers.",
       "url": "https://techcrunch.com/2026/08/14/hyperscalers-might-regret-embracing-natural-gas-if-new-forecast-proves-correct/",
       "source": "TechCrunch AI",
       "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
       "publishedAt": "Fri, 14 Aug 2026 14:05:00 +0000",
-      "category": "Business",
-      "score": 70,
-      "reason": "Discusses the economic implications of energy choices for AI data centers.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "b3c51f2d-c493-4233-be42-bfc7384749d6",
+      "id": "9ce7121b-3bf5-4f43-baba-b5d77e1a9df6",
+      "title": "Meta&#8217;s &#8216;open&#8217; AI, and a $250M deal gone very wrong",
+      "description": "Meta released Glimmer this week, an open-weight AI&#160;model&#160;anyone can download and run on their own hardware&#160;— a contrast to&#160;Muse&#160;Spark, the company’s more powerful model that stays locked behind its own APIs. The release landed alongside&#160;a letter from Mark Zuckerberg&#160;arguing AI should be “for everyone” rather than controlled by a handful of labs, but as Equity’s [&#8230;]",
+      "url": "https://techcrunch.com/podcast/metas-open-ai-and-a-250m-deal-gone-very-wrong/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Fri, 14 Aug 2026 14:00:00 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "023588a1-d11d-40fb-8849-839fde7e5994",
+      "title": "Writer introduces new AI model and upgraded harness to contain token costs",
+      "description": "Built as a post-training variation on Z.ai's open source model GLM-5.2, Writer says the new system should provide deployment-ready capabilities at a much lower price.",
+      "url": "https://techcrunch.com/2026/08/13/writer-introduces-new-ai-model-and-upgraded-harness-to-contain-token-costs/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 21:13:24 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "b82102f7-dad0-4802-b631-fa1e13fda146",
+      "title": "Databricks wanted to raise $1B, investors wanted $15B. It settled on $5B at a $190B valuation.",
+      "description": "AI is expensive, Ali Ghodsi tells TechCrunch. With so many investors wanting into his latest round, he said yes to more than planned.",
+      "url": "https://techcrunch.com/2026/08/13/databricks-wanted-to-raise-1b-investors-wanted-15b-it-settled-on-5b-at-a-190b-valuation/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 20:14:39 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "98aadeb6-7673-497a-be11-3033d7f66c7a",
+      "title": "OpenAI introduces &#8216;Ultrafast,&#8217; a new mode that makes GPT-5.6 Sol work at 14x the speed",
+      "description": "OpenAI is launching a preview of a sped up version of its latest, most powerful model, in an effort to court enterprise users.",
+      "url": "https://techcrunch.com/2026/08/13/openai-introduces-ultrafast-a-new-mode-that-makes-gpt-5-6-sol-work-at-14x-the-speed/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 19:22:40 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "dfb7cab0-4ffe-4b0a-87bc-cd0def71ad64",
+      "title": "IBM partners with OpenAI to bolster enterprise AI push",
+      "description": "IBM plans to train and certify tens of thousands of consultants on OpenAI's technologies as part of this deal.",
+      "url": "https://techcrunch.com/2026/08/13/ibm-partners-with-openai-to-bolster-enterprise-ai-push/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 19:19:49 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "b65ee7d5-e448-49b0-b642-9ac61bbfea7e",
+      "title": "Anthropic set AI agents loose on the same task. They started a turf war.",
+      "description": "Anthropic researchers found AI agents can clash, collude, and coordinate in unexpected ways, raising new questions about whether today’s safety tests capture the risks of multi-agent systems.",
+      "url": "https://techcrunch.com/2026/08/13/anthropic-set-ai-agents-loose-on-the-same-task-they-started-a-turf-war/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 18:28:14 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "ca781623-6698-430f-9ed8-d9ba98d9bb18",
+      "title": "OpenAI hires new CRO as executive shake-up continues",
+      "description": "OpenAI has replaced chief revenue officer Denise Dresser after just nine months on the job, tapping Wiz president and chief operating officer Dali Rajic to take on frontier lab's top sales job.",
+      "url": "https://techcrunch.com/2026/08/13/openai-hires-new-cro-as-executive-shake-up-continues/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 17:07:13 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "c36e1565-8304-4556-8e13-910f39c26115",
       "title": "Microsoft kills off unsuccessful AI features while merging its separate Copilot apps",
       "description": "Microsoft is simplifying Copilot by combining its consumer and business apps, and dropping AI-generated podcasts, Group Chats, Deep Research, and its Mico character.",
       "url": "https://techcrunch.com/2026/08/13/microsoft-kills-off-unsuccessful-ai-features-while-merging-its-separate-copilot-apps/",
       "source": "TechCrunch AI",
       "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
       "publishedAt": "Thu, 13 Aug 2026 15:30:52 +0000",
-      "category": "Business",
-      "score": 70,
-      "reason": "This article discusses Microsoft's strategic decisions regarding its AI features, which is relevant to the business and product management aspects of AI.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "1c8286e8-d158-4dbf-bfc5-d2a8686f418d",
+      "id": "ae3cc344-2775-4a59-a5de-90cc1cb86fa0",
+      "title": "Nvidia&#8217;s new $500B plan is risky but brilliant, especially for aging GPUs",
+      "description": "Nvidia has a plan to make sure its GPUs won't lose value. It wants to convince a new crop of financiers to keep lending for AI buildouts.",
+      "url": "https://techcrunch.com/2026/08/13/nvidias-new-500b-plan-is-risky-but-brilliant-especially-for-aging-gpus/",
+      "source": "TechCrunch AI",
+      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
+      "publishedAt": "Thu, 13 Aug 2026 15:08:00 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "77a1fd08-4d93-441c-8ab6-a79be3a99174",
       "title": "Apple in talks to pay publishers to provide Siri with current news: report",
       "description": "The tech giant has considered a nine-figure budget for the payments, according to the WSJ.",
       "url": "https://techcrunch.com/2026/08/13/apple-in-talks-to-pay-publishers-to-provide-siri-with-current-news-report/",
       "source": "TechCrunch AI",
       "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
       "publishedAt": "Thu, 13 Aug 2026 14:34:43 +0000",
-      "category": "Business",
-      "score": 70,
-      "reason": "This article discusses Apple's potential business dealings with publishers to enhance Siri's capabilities, which is relevant to the business aspects of AI.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "306a4a63-1ee2-4282-a685-7d242dea0038",
-      "title": "Some Claude users are mad that Anthropic&#8217;s new watermarks will catch them using it at their jobs, classes",
-      "description": "Is Anthropic's new watermarking system a travesty? Some have taken to social media to complain that it is.",
-      "url": "https://techcrunch.com/2026/08/12/some-claude-users-are-mad-that-anthropics-new-watermarks-will-catch-them-cheating-at-their-jobs-classes/",
-      "source": "TechCrunch AI",
-      "sourceUrl": "https://techcrunch.com/category/artificial-intelligence/feed",
-      "publishedAt": "Wed, 12 Aug 2026 22:26:37 +0000",
       "category": "General",
-      "score": 60,
-      "reason": "This article covers user reactions to a new feature in Anthropic's Claude, which is of general interest but not highly technical or business-focused.",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "57adc42f-7230-43f4-aa5e-1f7922f35508",
+      "id": "61ea1e83-9c42-406a-b619-7ebfe313ec0f",
+      "title": "OpenAI reportedly disbanded its preparedness team",
+      "description": "According to the Financial Times, OpenAI disbanded its preparedness team at the end of last month. The job of the preparedness team was to assess if models posed serious risks and develop ways to mitigate those risks. (You know, like the possibility that it could go rogue and hack another company.) According to FT, responsibility [&#8230;]",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/980817/openai-disbands-preparedness-team",
+      "source": "The Verge AI",
+      "sourceUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+      "publishedAt": "2026-08-16T17:32:56-04:00",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "d0880d2f-a931-48bc-bcb4-6c62b00b9a9d",
       "title": "ChatGPT’s Computer History tracks your clicks and keystrokes",
       "description": "ChatGPT's desktop app on macOS has a new feature called Computer History that turns your actions into training data, learning how you work, suggesting automations, and even picking up tasks you left half done. It uses your activity to build a timeline that ChatGPT and Codex can reference when you make a request. The feature [&#8230;]",
       "url": "https://www.theverge.com/ai-artificial-intelligence/980742/chatgpts-computer-history-tracks-your-clicks-and-keystrokes",
@@ -274,10 +612,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "11ef379e-b8f2-4625-ab69-32ca8b114140",
+      "id": "0242a590-c74e-4f6c-9037-263ca868832e",
       "title": "Rogue AI aren’t science fiction anymore",
       "description": "This is The Stepback, a weekly newsletter breaking down one essential story from the tech world. For more on AI safety, follow Robert Hart. The Stepback arrives in our subscribers' inboxes at 8AM ET. Opt in for The Stepback here. How it started It all started in July, when one of OpenAI's autonomous AI agents [&#8230;]",
       "url": "https://www.theverge.com/column/980337/rogue-ai-science-fiction-openai",
@@ -287,10 +625,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "26906cd1-9b00-45c6-8a69-ceaac1c9758f",
+      "id": "bdfdf462-650c-4d93-9985-77d0461c6df3",
       "title": "Have a laugh at AI’s expense by roleplaying as a chatbot",
       "description": "Your AI Slop Bores Me is brilliant in its simplicity. There are two tabs: human and LARP as an AI. On one side you enter a request. On the other, you submit an answer. But the important thing is that there's a human on both sides of the equation. Prompts can request a response as [&#8230;]",
       "url": "https://www.theverge.com/entertainment/980502/roleplay-as-an-ai-chatbot",
@@ -300,10 +638,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "77313e9f-7737-47c9-b29e-67f6720669ee",
+      "id": "96ea9d42-09ad-4c6c-883b-0bcb68664356",
       "title": "Mark Zuckerberg has an Instagzam",
       "description": "Instagram's wordmark is iconic. Well, was iconic. Apparently Instagram thought it looked old, so the company rolled out a new one this week. It doesn't look like the old Instagram wordmark. It doesn't even look like it spells Instagram anymore. And we cannot figure out why Instagram decided to do this. On this episode of [&#8230;]",
       "url": "https://www.theverge.com/podcast/980367/instagram-logo-new-zuckerberg-ai-vergecast",
@@ -313,10 +651,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "462a7f3f-1b8f-4d82-acf6-8c6af51c3969",
+      "id": "342e9e37-306a-482c-82df-94d82e713b92",
       "title": "You can now turn off Google Gemini&#8217;s visible watermarks",
       "description": "Google will now allow you to remove visible watermarks from the images, videos, and music made with AI tools. With the update, you can toggle off a new \"Media watermark\" setting in Gemini and Google's AI video generator, Flow. When toggled off, Google will remove the \"sparkle\" watermark that appears in the bottom-right corner of [&#8230;]",
       "url": "https://www.theverge.com/tech/980416/google-gemini-ai-watermarks-removal",
@@ -326,10 +664,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "1ca655c8-e3ae-43a2-a8f5-e0e60a0ce070",
+      "id": "583a40e3-a67d-47ae-930c-ec0d5ea97e53",
       "title": "Apple trained its own AI model for China with help from Alibaba",
       "description": "Apple has reportedly trained a custom AI model for the China market alongside domestic tech giant Alibaba, a rare cross-border partnership that cuts across growing tensions between Beijing and Washington. The China-focused large language model was developed in partnership with Alibaba and trained with the company's support, Reuters reports, citing three unnamed people familiar with [&#8230;]",
       "url": "https://www.theverge.com/ai-artificial-intelligence/980160/apple-intelligence-china-custom-ai-model-alibaba",
@@ -339,10 +677,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "dc45164c-aa2a-498b-bdcb-b44778b632b2",
+      "id": "41eedeaf-d4a3-467e-b488-01ac21513dd4",
       "title": "Microsoft’s Clippy-like Mico character is no longer the face of Copilot",
       "description": "Microsoft Copilot will no longer show its emotive yellow blob, Mico, when you use the chatbot's voice mode. In a support page, Microsoft says it's going to move Mico to its Learn Live platform, where the avatar will have \"more to react to,\" as reported earlier by GeekWire. Mico launched in Copilot's voice mode last [&#8230;]",
       "url": "https://www.theverge.com/tech/979871/microsoft-copilot-mico-retired",
@@ -352,10 +690,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "defc3bd2-8e92-43ec-b4bc-c400ee8a0002",
+      "id": "4cdf1098-259b-4c77-a9a0-17f76c0273a6",
       "title": "OpenAI is losing its second executive this week",
       "description": "Another OpenAI executive is departing. Denise Dresser, who joined OpenAI as its chief revenue officer in December after serving as CEO of Slack, will be leaving in the \"coming weeks\" to \"pursue other opportunities,\" she said in a team note posted to LinkedIn. Dali Rajic, president and COO of Wiz, will be taking over the [&#8230;]",
       "url": "https://www.theverge.com/ai-artificial-intelligence/979815/openai-denise-dresser-leaving-executive-departure",
@@ -365,10 +703,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "6203e396-c483-4809-b742-f54535cb8fc5",
+      "id": "02a36c63-b7ce-4c59-a9c0-91d59f5c1e80",
       "title": "Suno is trying to look more like a real music production tool",
       "description": "Suno is releasing Studio 2.0 with significant upgrades that push it closer to an actual digital audio workstation (DAW), rather than a bare-bones audio editor with generative AI features. The biggest addition is undoubtedly MIDI support. Suno says that MIDI was its most requested feature, and it's basically a prerequisite for any modern DAW. Unfortunately, [&#8230;]",
       "url": "https://www.theverge.com/ai-artificial-intelligence/979345/suno-studio-2-0-midi-chatbot-custom-effects",
@@ -378,23 +716,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "922aa962-b8f7-4607-b410-6c370beec9d5",
-      "title": "I looked inside an AI generated movie, and the best parts were all human",
-      "description": "Imagine a trio of bumbling, English lads who fantasize about becoming megastars while knocking back a few pints in a grimy pub somewhere in London. Picture the guys chortling and trying to one-up each other's idealized visions of the future with a series of increasingly glitzy fantasies in which their fame leads to access to [&#8230;]",
-      "url": "https://www.theverge.com/entertainment/977994/higgsfield-ai-cully-hill-boys-black-list",
-      "source": "The Verge AI",
-      "sourceUrl": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
-      "publishedAt": "2026-08-13T11:30:00-04:00",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "07bd852e-c43c-4fb9-a9a1-7cf77781ad28",
+      "id": "507bd4df-75d3-49f6-ae6f-acf0e34c2b75",
       "title": "State of Open Models: Summer 2026 Observations",
       "description": "",
       "url": "https://huggingface.co/blog/state-of-open-models-summer-2026",
@@ -404,10 +729,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "22c72a56-a642-4ef4-b646-ed55e8a623ff",
+      "id": "b0373743-d2e7-4f9d-9fe1-09bcdafcb4c4",
       "title": "Record, train, and deploy from one place with Strands Agents, LeRobot, and Hugging Face Storage Buckets",
       "description": "",
       "url": "https://huggingface.co/blog/amazon/strands-lerobot-streaming-data-loop",
@@ -417,10 +742,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "db782cf9-3d71-4c5e-938b-f4652033ad29",
+      "id": "b7170366-3566-4885-ab1a-15214ca82610",
       "title": "What We Learned by Reproducing 2,200 papers from ICML",
       "description": "",
       "url": "https://huggingface.co/blog/icml-2026-open-reproductions",
@@ -430,10 +755,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "dd83473a-b53d-4cbd-a408-779fd1d25e32",
+      "id": "603588d2-6277-4f11-aaa0-1c756b23c04d",
       "title": "Introducing OlmoEarth embeddings: Custom embedding exports from OlmoEarth Studio for downstream analysis",
       "description": "",
       "url": "https://huggingface.co/blog/allenai/olmoearth-embeddings",
@@ -443,10 +768,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "6c33f232-4289-4533-91b7-b420ab9060f3",
+      "id": "5493713c-dc45-429c-b918-e217d0aa9509",
       "title": "LFM2.5-VL-3B for Better and Faster Vision Capabilities for the Edge",
       "description": "",
       "url": "https://huggingface.co/blog/LiquidAI/lfm2-5-vl-3b",
@@ -456,10 +781,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "ae6c467f-41e9-40da-a598-c4cdb4bf40f6",
+      "id": "b8893b35-ee9a-4f09-bba6-c6fe379676a4",
       "title": "Thinking of ACE? We Can Do It with Fewer Tokens",
       "description": "",
       "url": "https://huggingface.co/blog/ibm-research/altk-evolve-sldd",
@@ -469,10 +794,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "0318738d-5b28-4e37-8a61-b14418e14ff3",
+      "id": "25b689a2-3c93-4081-aa2b-e8dd57da219f",
       "title": "Build Low-Latency Multilingual Voice Agents: Open Weights &amp; Full Deployment Control with NVIDIA Magpie TTS",
       "description": "",
       "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
@@ -482,10 +807,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "bcf53cd6-94ef-4c54-9ee3-fe77eaa33c66",
+      "id": "2ae65ea0-e359-448a-88f5-dacb8822a5a0",
       "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
       "description": "",
       "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
@@ -495,10 +820,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "b26a5f27-3f37-4167-8f5f-8acca8194bca",
+      "id": "d91342f7-5fcc-4e6b-9f6f-0db06a837883",
       "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
       "description": "",
       "url": "https://huggingface.co/blog/muse-glimmer",
@@ -508,10 +833,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "c126bf59-71b0-4357-936a-6ddd86858bd8",
+      "id": "d7a6afe4-a6b4-4f6b-8c01-116d3ddb9d42",
       "title": "Baseten on Hugging Face Inference Providers 🔥",
       "description": "",
       "url": "https://huggingface.co/blog/baseten",
@@ -521,10 +846,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "e5c04f36-cb1f-4bff-909c-6b3e0dfea454",
+      "id": "7deb86bb-bb1e-45ca-a650-058134b8232e",
       "title": "GPU Management: Why Idle GPUs Are the New Grounded Aircraft",
       "description": "",
       "url": "https://huggingface.co/blog/Dharma-AI/gpu-management",
@@ -534,10 +859,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "607708fa-e161-4f3f-a53b-52098d11c941",
+      "id": "85637526-319c-4075-8521-ea386594dcb8",
       "title": "NVIDIA Cosmos-H-Dreams: Bringing Real-Time Generative Simulation to Surgical Robotics",
       "description": "",
       "url": "https://huggingface.co/blog/nvidia/cosmos-h-dreams",
@@ -547,10 +872,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "49e55765-ea0a-48ef-a3f4-f347f50f2f36",
+      "id": "78e76f85-e1f4-4d1a-ab9d-8b0ef619e5c4",
       "title": "Anatomy of a Frontier Lab Agent Intrusion: A Technical Timeline of the July 2026 Incident",
       "description": "",
       "url": "https://huggingface.co/blog/agent-intrusion-technical-timeline",
@@ -560,10 +885,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "c7c46004-37ce-449c-a1c8-67a70fed9de2",
+      "id": "099a5ada-26a5-448b-872b-8bfc3b55348f",
       "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
       "description": "",
       "url": "https://huggingface.co/blog/nunchaku-diffusers",
@@ -573,10 +898,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "75a52eb4-e2fc-419a-b518-10d69f501054",
+      "id": "1ab01948-4d9d-4669-a8ee-ccd9cfa4c1c8",
       "title": "Grabette: an open system to record robot-manipulation data",
       "description": "",
       "url": "https://huggingface.co/blog/grabette",
@@ -586,10 +911,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "5ae901cd-0b2a-48ac-bcdc-19efab3ffa31",
+      "id": "5966ea00-eeea-40f1-9e31-aba2f2636e2c",
       "title": "Newer Models, Same Advantage",
       "description": "",
       "url": "https://huggingface.co/blog/Dharma-AI/newer-models-same-advantages",
@@ -599,10 +924,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "7c788e4e-13ad-4c16-bb34-02f3ac47845d",
+      "id": "b97ac1f6-e55e-40e2-9f91-37998d96b056",
       "title": "Security incident disclosure — July 2026",
       "description": "",
       "url": "https://huggingface.co/blog/security-incident-july-2026",
@@ -612,10 +937,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "f06e190a-26d4-4dd0-ab00-705fc05caa2f",
+      "id": "a2e7a24f-46da-470b-88b7-5ddee7cebd47",
       "title": "Model Routing Is Simple. Until It Isn’t.",
       "description": "",
       "url": "https://huggingface.co/blog/ibm-research/model-routing-is-simple-until-it-isnt",
@@ -625,10 +950,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "da4e8c23-cf75-40cc-8d7a-d85553099b30",
+      "id": "7a884525-622e-4dba-98ae-23bc2a76f2dc",
       "title": "Welcome Inkling by Thinking Machines",
       "description": "",
       "url": "https://huggingface.co/blog/thinkingmachines-inkling",
@@ -638,10 +963,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "25f3735f-ef8d-47e5-ba09-10958c993b3b",
+      "id": "95562de6-9162-452f-8c81-82a181e91bc3",
       "title": "Introducing Real World VoiceEQ: Measuring the human quality of voice AI",
       "description": "",
       "url": "https://huggingface.co/blog/real-world-voiceeq",
@@ -651,10 +976,23 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "6f49cabe-8d10-4f54-b7e7-8dad55f357bf",
+      "id": "26d2f19f-34f5-4cc0-b697-1a9944dab48d",
+      "title": "Cutting RAG inference costs 6x starts with deciding what never reaches the LLM",
+      "description": "Most teams building retrieval augmented generation (RAG) systems for high stakes classification make the same architectural bet: Route every ambiguous case straight to the language model and trust the retrieved context to sort it out. This works fine in a demo. It falls apart the moment the system has to survive an audit, a regulator, or a compliance officer asking why a specific decision was made six months ago. I have spent the last year building RAG based classification systems in regulated e",
+      "url": "https://venturebeat.com/orchestration/cutting-rag-inference-costs-6x-starts-with-deciding-what-never-reaches-the-llm",
+      "source": "VentureBeat AI",
+      "sourceUrl": "https://feeds.feedburner.com/venturebeat/SZYF",
+      "publishedAt": "Sun, 16 Aug 2026 20:45:00 GMT",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "52de6bcb-ee35-4f37-8bae-b2cdb7376d95",
       "title": "DeepSeek's top-ranked V4 Flash stumbles on real agent tasks as its prices surge",
       "description": "DeepSeek&#x27;s V4 Flash has topped model leaderboards and been hailed by developers as a \"total monster\" since its rollout. But in real-world testing, it completed just 53.8% of a batch of complex agent tasks. Composio ran the model through eight different agent harnesses , including Claude Code, Codex, and OpenCode, on 30 deliberately difficult, multi-step tasks spanning live tools like Gmail, GitHub, Slack, and Google Sheets. Of 240 total runs, 129 passed — and only six of the 30 workflows we",
       "url": "https://venturebeat.com/orchestration/deepseeks-top-ranked-v4-flash-stumbles-on-real-agent-tasks-as-its-prices-surge",
@@ -664,10 +1002,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "f060da4b-14da-4dcb-a8a9-c1c557234191",
+      "id": "fae2241a-93d3-4e22-b46f-316424a2b63e",
       "title": "An eval harness found what qualitative review couldn't: AI models are most confident when wrong",
       "description": "There is a step in the development process for large language model (LLM)-assisted tooling that most teams skip because it&#x27;s tedious, time-consuming, and doesn&#x27;t produce results visible to end users: Verifying that what the model is saying is actually correct. Not fluent, not coherent, not topically relevant — correct in the sense of accurately identifying the right answer to the specific problem the tool was built to solve. The gap between \"this output sounds right to me\" and \"this ou",
       "url": "https://venturebeat.com/orchestration/an-eval-harness-found-what-qualitative-review-couldnt-ai-models-are-most-confident-when-wrong",
@@ -677,10 +1015,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "888c1ac7-bc22-4fe7-9357-55cb389902dc",
+      "id": "2740f28b-9a8e-42f8-9794-9a75b642f958",
       "title": "GLM-5.3 is here with advanced cyber capabilities — and reportedly already found a 'serious vulnerability' in Cursor",
       "description": "Chinese AI startup Z.ai, known internationally for its growing lineup of powerful, largely open source GLM series of language models, today released GLM-5.3 with substantial gains in long-horizon coding and a more consequential — and potentially sensitive — jump in cybersecurity capabilities. Already, GLM-5.3&#x27;s cyber capabilities have found a \"potentially serious vulnerability in Cursor,\" the AI coding startup recently acquired by SpaceX , according to z.ai developer advocate Lou, posting o",
       "url": "https://venturebeat.com/technology/glm-5-3-is-here-with-advanced-cyber-capabilities-and-reportedly-already-found-a-serious-vulnerability-in-cursor",
@@ -690,10 +1028,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "6e194b3b-c67f-4efa-8cf5-df798c6ba275",
+      "id": "f762803f-54fb-4ee6-82c5-3fe10293207d",
       "title": "Three Claude agents given conflicting orders sabotaged each other on a shared server — then didn't tell users what they'd done",
       "description": "Every Claude model Anthropic tested turned on its own, and no attacker made them do it. Given three agents, four hours on one server, and conflicting orders none knew the others held, the models disabled each other&#x27;s Unix accounts, ran kill scripts randomized to dodge pkill, and planted malware disguised as a rival&#x27;s work. There was no prompt injection and no adversary. Anthropic&#x27;s Frontier Red Team published the transcripts on Thursday and called the escalation “increasingly aggr",
       "url": "https://venturebeat.com/security/three-claude-agents-given-conflicting-orders-sabotaged-each-other-on-a-shared-server-then-didnt-tell-users-what-theyd-done",
@@ -703,10 +1041,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "3907b48a-8e82-428e-980f-008d7eca8d5b",
+      "id": "11f857be-0d7b-48fa-a2dc-dabf63c1947a",
       "title": "Google’s Gemini 3.7 Flash targets coding and agents with a 50% introductory price cut",
       "description": "Google is rolling out Gemini 3.7 Flash , a new version of its workhorse AI model that puts coding, agentic workflows and knowledge work at the center of the upgrade — while temporarily cutting API prices in half. The release arrives just three weeks after the release of Gemini 3.6 Flash , an unusually short turnaround that Google attributes to developer feedback and algorithmic improvements. For enterprise developers, the more consequential story may be the combination of those intelligence gain",
       "url": "https://venturebeat.com/technology/googles-gemini-3-7-flash-targets-coding-and-agents-with-a-50-introductory-price-cut",
@@ -716,10 +1054,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "29440d02-d1ad-4f1e-8a5c-a31878d32e93",
+      "id": "dedaab55-e7e6-47bb-bbf1-7b8a3506a0fa",
       "title": "DeepSeek Harness launches as open source rival to Claude Code, alongside V4-Pro on API with higher prices",
       "description": "DeepSeek is expanding beyond the model layer and deeper into the software developers use to put AI agents to work. The Chinese AI lab on Thursday launched the official version of DeepSeek-V4-Pro , an updated flagship model focused heavily on agentic workloads, alongside DeepSeek Harness v0.1 , a new open-source agent harness that gives developers an alternative to integrated coding-agent environments such as Anthropic’s Claude Code. Together, the releases amount to a broader developer push from ",
       "url": "https://venturebeat.com/technology/deepseek-harness-launches-as-open-source-rival-to-claude-code-alongside-v4-pro-on-api-with-higher-prices",
@@ -729,23 +1067,166 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "5b030249-3e06-4c87-97f7-54fec313181d",
-      "title": "Why Capital One built its multi-agent AI platform around open-weight models",
-      "description": "Presented by Capital One At VB Transform 2026 , Kel Vanee, MVP of machine learning engineering at Capital One, spoke with Sam Witteveen, Senior Technology Contributor at VentureBeat, about how the bank built a scalable multi-agent AI architecture around deeply customized open-weight models rather than relying on an off-the-shelf foundation model. \"At Capital One, we&#x27;re not just using AI, we&#x27;re building AI,\" Vanee said. The groundwork was laid years ago with Capital One&#x27;s early inv",
-      "url": "https://venturebeat.com/orchestration/why-capital-one-built-its-multi-agent-ai-platform-around-open-weight-models",
-      "source": "VentureBeat AI",
-      "sourceUrl": "https://feeds.feedburner.com/venturebeat/SZYF",
-      "publishedAt": "Thu, 13 Aug 2026 14:00:00 GMT",
+      "id": "d0aaac37-f5af-454b-bbb9-1d9c94149dac",
+      "title": "Samsung health AI models analyse wearable biosignal data",
+      "description": "Samsung Research America’s Digital Health Team has presented two AI foundation models designed to learn from wearable biosignals. The work centres on data captured by smartwatches, including heart activity, sleep, and physical activity. The company discussed its Connected Care vision at the Health Forum during Galaxy Unpacked in July 2026. Samsung described a future of [&#8230;] The post Samsung health AI models analyse wearable biosignal data appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/samsung-health-ai-models-analyse-wearable-biosignal-data/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Fri, 14 Aug 2026 13:30:10 +0000",
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.935Z"
     },
     {
-      "id": "2507347e-ea97-4ba8-a08a-0775d702953d",
+      "id": "03623b51-e082-4348-928c-7e703f9195dd",
+      "title": "Google AI health coach to use Abbott glucose data",
+      "description": "Abbott and Google are linking continuous glucose monitoring data with Google’s AI-powered health coaching tools, giving the Gemini-powered service access to another source of personal health information. Under a multiyear agreement, data from Abbott’s Lingo continuous glucose monitor will be integrated into the Google Health app. Users will be able to view glucose trends alongside [&#8230;] The post Google AI health coach to use Abbott glucose data appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/google-ai-health-coach-abbott-glucose-data/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Fri, 14 Aug 2026 10:00:00 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "613feffa-f10c-4753-8163-f69465a344c8",
+      "title": "Okta targets AI agent token costs with MCP scoping",
+      "description": "Okta says identity-scoped Model Context Protocol (MCP) tool lists can reduce AI agent token costs. Each model call made by an AI agent can include schemas, names, descriptions and parameters for every tool exposed by a MCP server. Okta calls the resulting prompt overhead the “tool tax”: tokens consumed as a model considers tools, including [&#8230;] The post Okta targets AI agent token costs with MCP scoping appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/okta-targets-ai-agent-token-costs-with-mcp-scoping/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Thu, 13 Aug 2026 09:22:06 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "60fdd61c-f367-48da-8958-9f091353fd9f",
+      "title": "Google tests AMIE for clinical video consultations",
+      "description": "Google’s research medical AI system, AMIE (Video), conducted synchronous video consultations with professional patient actors and received clinical evaluator ratings on par with primary care physicians across several core measures. Fifteen trained actors portrayed conditions across cardiopulmonary, abdominal, HEENT, neurological or psychiatric, and musculoskeletal presentations. Google says studies involving real patients and their own health [&#8230;] The post Google tests AMIE for clinical vid",
+      "url": "https://www.artificialintelligence-news.com/news/google-tests-amie-for-clinical-video-consultations/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Wed, 12 Aug 2026 14:56:18 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "71c2091f-4846-45b2-bcf7-9f28e48697b9",
+      "title": "Novo Nordisk and AWS bring agentic AI into drug discovery",
+      "description": "Novo Nordisk is expanding its use of AWS artificial intelligence tools across drug discovery, including AI agents for target identification, therapy design, and research workflows. Under the agreement announced recently, AWS will become Novo Nordisk’s preferred cloud provider and strategic AI partner. The companies have also created a co-innovation hub at Novo Nordisk’s existing London [&#8230;] The post Novo Nordisk and AWS bring agentic AI into drug discovery appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/novo-nordisk-ai-drug-discovery-aws/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Tue, 11 Aug 2026 10:00:00 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "987c96d6-0aaf-4a7e-9752-12861c50ead3",
+      "title": "How AI is changing the vulnerability response timeline",
+      "description": "Artificial intelligence is giving security researchers new ways to examine code, trace unusual behaviour and identify flaws that conventional tools may overlook. The pressure is particularly visible around Zero-day vulnerabilities, a recent Minimus analysis considers how container composition, dependency records and rebuild speed affect the response after an unknown flaw is exposed. Faster analysis helps only [&#8230;] The post How AI is changing the vulnerability response timeline appeared firs",
+      "url": "https://www.artificialintelligence-news.com/news/how-ai-is-changing-the-vulnerability-response-timeline/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Tue, 11 Aug 2026 07:05:55 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "545f0561-6da5-412c-b95a-4fcef10eb855",
+      "title": "Meta Muse Glimmer brings local AI agents to consumer GPUs",
+      "description": "Meta is releasing Muse Glimmer under an Apache 2.0 licence for local AI agents that can run on a consumer GPU. The company’s&#160; Superintelligence Labs has released the 30-billion-parameter model’s weights on Hugging Face. Meta says developers can use it for local coding, function calling, local agents, and LLM-as-a-judge evaluation. The release targets an operational [&#8230;] The post Meta Muse Glimmer brings local AI agents to consumer GPUs appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/meta-muse-glimmer-local-ai-agents-consumer-gpus/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Mon, 10 Aug 2026 11:02:38 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "6565d5c7-c0be-476d-82ae-5aceaf40b15c",
+      "title": "The limits of physics AI: where Siemens says the human stays in charge",
+      "description": "Physics AI can now explore thousands of design variations in the time it would take a traditional simulation to chew through a handful of them. Precisely up to 1,000 times faster, according to Siemens. What it cannot do is sign off a safety-critical part. On that, the technology has a firm limit, and Sam Mahalingam, [&#8230;] The post The limits of physics AI: where Siemens says the human stays in charge appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/siemens-physics-ai-simulation-human-oversight/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Mon, 10 Aug 2026 10:00:00 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "88d15e00-e1ed-4a13-874e-eb11491ef417",
+      "title": "Stanford Evo 2 AI model generates phages against E. coli",
+      "description": "Stanford researchers have synthesised nearly 300 phages from DNA sequences produced by the Evo 2 generative AI model. Laboratory testing narrowed the group to 16 phages that showed particularly strong E. coli-killing activity. The work centres on bacteriophage ΦX174, pronounced “FYE-ex-1-7-4”. Brian Hie, an assistant professor of chemical engineering and Dieter Schwarz Foundation Stanford Data [&#8230;] The post Stanford Evo 2 AI model generates phages against E. coli appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/stanford-evo-2-ai-model-generates-phages-against-e-coli/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Fri, 07 Aug 2026 15:05:03 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "222ad5f3-dc17-4029-8d49-2f46cb09d92d",
+      "title": "How AI Is changing Instagram engagement without replacing the human touch",
+      "description": "Every post you see, every Reel that autoplays, and every ‘Explore’ page suggestion on Instagram is now decided by its AI system. With over three billion people using it, that’s not a small detail; it&#8217;s the whole algorithm. But here’s the point: the more AI controls over how you see the content, the more it [&#8230;] The post How AI Is changing Instagram engagement without replacing the human touch appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/how-ai-is-changing-instagram-engagement-without-replacing-the-human-touch/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Fri, 07 Aug 2026 14:33:59 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.935Z"
+    },
+    {
+      "id": "616ffed2-585f-4f8c-837a-247ef3ce9788",
+      "title": "Alibaba tests new business model for Qwen open-source AI",
+      "description": "Alibaba plans to introduce revenue-sharing terms for some commercial users of its next Qwen open-weight AI model, Reuters reported, citing two people familiar with the company’s plans. The arrangement would require larger companies that generate revenue from offering the model as a service to reach a commercial agreement with Alibaba. The exact revenue-sharing rate has [&#8230;] The post Alibaba tests new business model for Qwen open-source AI appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/alibaba-qwen-open-source-ai-revenue-sharing/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Fri, 07 Aug 2026 10:00:00 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "d8e92c22-c0e5-450f-a866-1ae84e0c5b6c",
+      "title": "Why health AI interfaces must adapt to user expertise",
+      "description": "MIT researchers and collaborators found that AI explainability tools in the health sector can produce sharply different results depending on who uses them. When applied to skin disease diagnosis, non-experts improved their accuracy with AI assistance, although the improvement largely came from deferring to the model. Primary care providers showed a different pattern: they performed [&#8230;] The post Why health AI interfaces must adapt to user expertise appeared first on AI News .",
+      "url": "https://www.artificialintelligence-news.com/news/why-health-ai-interfaces-must-adapt-to-user-expertise/",
+      "source": "AI News",
+      "sourceUrl": "https://www.artificialintelligence-news.com/feed",
+      "publishedAt": "Thu, 06 Aug 2026 15:55:37 +0000",
+      "category": "General",
+      "score": 50,
+      "reason": "",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "42d234c9-90bc-4589-8436-a7f6286af30d",
       "title": "Which Agent Causes Task Failures and When?Researchers from PSU and Duke explores automated failure attribution of LLM Multi-Agent Systems",
       "description": "In recent years, LLM Multi-Agent systems have garnered widespread attention for their collaborative approach to solving complex problems. However, it's a common scenario for these systems to fail at a task despite a flurry of activity. The post Which Agent Causes Task Failures and When?Researchers from PSU and Duke explores automated failure attribution of LLM Multi-Agent Systems first appeared on Synced .",
       "url": "https://syncedreview.com/2025/08/14/which-agent-causes-task-failures-and-whenresearchers-from-psu-and-duke-explores-automated-failure-attribution-of-llm-multi-agent-systems/",
@@ -755,140 +1236,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "acb1616c-e9b8-44a7-8c57-1bcb2122041f",
-      "title": "ByteDance Introduces Astra: A Dual-Model Architecture for Autonomous Robot Navigation",
-      "description": "ByteDance introduces Astra, an innovative dual-model architecture revolutionizing robot navigation in complex indoor environments. The post ByteDance Introduces Astra: A Dual-Model Architecture for Autonomous Robot Navigation first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/06/24/bytedance-introduces-astra-a-dual-model-architecture-for-autonomous-robot-navigation/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Tue, 24 Jun 2025 09:17:01 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "0be61774-e067-48b3-9cf1-32a85cd31500",
-      "title": "MIT Researchers Unveil &#8220;SEAL&#8221;: A New Step Towards Self-Improving AI",
-      "description": "MIT introduces SEAL, a framework enabling large language models to self-edit and update their weights via reinforcement learning. The post MIT Researchers Unveil “SEAL”: A New Step Towards Self-Improving AI first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/06/16/mit-researchers-unveil-seal-a-new-step-towards-self-improving-ai/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Mon, 16 Jun 2025 12:58:37 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "e6213b89-6504-4b01-a1d9-2e7a42fedcb7",
-      "title": "Researchers from PSU and Duke introduce &#8220;Multi-Agent Systems Automated Failure Attribution",
-      "description": "\"Automated failure attribution\" is a crucial component in the development lifecycle of Multi-Agent systems. It has the potential to transform the challenge of identifying \"what went wrong and who is to blame\" from a perplexing mystery into a quantifiable and analyzable problem The post Researchers from PSU and Duke introduce “Multi-Agent Systems Automated Failure Attribution first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/06/16/researchers-from-psu-and-duke-introduce-multi-agent-systems-automated-failure-attribution/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Mon, 16 Jun 2025 07:39:46 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "4fdba4cf-dd50-4ea8-873e-930cd62567cb",
-      "title": "Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models",
-      "description": "By combining State-Space Models (SSMs) for efficient long-range dependency modeling with dense local attention for coherence, and using training strategies like diffusion forcing and frame local attention, researchers from Adobe Research successfully overcome the long-standing challenge of long-term memory in video generation. The post Adobe Research Unlocking Long-Term Memory in Video World Models with State-Space Models first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/05/28/adobe-research-unlocking-long-term-memory-in-video-world-models-with-state-space-models/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Wed, 28 May 2025 09:31:27 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "43ce9f97-c4cc-412a-8ef8-56b19dc8ae50",
-      "title": "DeepSeek-V3 New Paper is coming! Unveiling the Secrets of Low-Cost Large Model Training through Hardware-Aware Co-design",
-      "description": "A newly released 14-page technical paper from the team behind DeepSeek-V3, with DeepSeek CEO Wenfeng Liang as a co-author, sheds light on the “Scaling Challenges and Reflections on Hardware for AI Architectures.” The post DeepSeek-V3 New Paper is coming! Unveiling the Secrets of Low-Cost Large Model Training through Hardware-Aware Co-design first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/05/15/deepseek-v3-new-paper-is-coming-unveiling-the-secrets-of-low-cost-large-model-training-through-hardware-aware-co-design/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Thu, 15 May 2025 17:58:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "15acfeb2-d61b-401f-bc02-83d02ceda712",
-      "title": "DeepSeek Unveils DeepSeek-Prover-V2: Advancing Neural Theorem Proving with Recursive Proof Search and a New Benchmark",
-      "description": "DeepSeek AI releases DeepSeek-Prover-V2, an open-source LLM for Lean 4 theorem proving. It uses recursive proof search with DeepSeek-V3 for training data and reinforcement learning, achieving top results on MiniF2F. The post DeepSeek Unveils DeepSeek-Prover-V2: Advancing Neural Theorem Proving with Recursive Proof Search and a New Benchmark first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/04/30/deepseek-unveils-deepseek-prover-v2-advancing-neural-theorem-proving-with-recursive-proof-search-and-a-new-benchmark/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Wed, 30 Apr 2025 15:46:20 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "8fbefcf0-2cc0-48ce-a050-7039232db6e0",
-      "title": "Can GRPO be 10x Efficient? Kwai AI&#8217;s SRPO Suggests Yes with SRPO",
-      "description": "Kwai AI's SRPO framework slashes LLM RL post-training steps by 90% while matching DeepSeek-R1 performance in math and code. This two-stage RL approach with history resampling overcomes GRPO limitations. The post Can GRPO be 10x Efficient? Kwai AI’s SRPO Suggests Yes with SRPO first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/04/23/can-grpo-be-10x-efficient-kwai-ais-srpo-suggests-yes-with-srpo/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Thu, 24 Apr 2025 02:30:16 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "8d6161a8-e501-4a4d-8234-6a664c53fde0",
-      "title": "Zhipu.AI&#8217;s Open-Source Power Play: Blazing-Fast GLM Models &#038; Global Expansion Ahead of Potential IPO",
-      "description": "Zhipu.AI open-sources faster GLM models (8x speedup), launches Z.ai, aiming for global expansion, potentially ahead of IPO. The post Zhipu.AI’s Open-Source Power Play: Blazing-Fast GLM Models & Global Expansion Ahead of Potential IPO first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/04/16/zhipu-ais-open-source-power-play-blazing-fast-glm-models-global-expansion-ahead-of-potential-ipo/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Wed, 16 Apr 2025 12:23:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "2c3fd032-a552-4763-b607-69a0c95ab378",
-      "title": "DeepSeek Signals Next-Gen R2 Model, Unveils Novel Approach to Scaling Inference with SPCT",
-      "description": "DeepSeek AI, a prominent player in the large language model arena, has recently published a research paper detailing a new technique aimed at enhancing the scalability of general reward models (GRMs) during the inference phase. The post DeepSeek Signals Next-Gen R2 Model, Unveils Novel Approach to Scaling Inference with SPCT first appeared on Synced .",
-      "url": "https://syncedreview.com/2025/04/11/deepseek-signals-next-gen-r2-model-unveils-novel-approach-to-scaling-inference-with-spct/",
-      "source": "Synced Review",
-      "sourceUrl": "https://syncedreview.com/feed",
-      "publishedAt": "Fri, 11 Apr 2025 14:43:45 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "09dec8ee-32b8-48d3-95a6-1a1e17db5424",
-      "title": "Flock is tightening its rules in response to a growing surveillance backlash",
-      "description": "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid concerns about mass surveillance and police abuse. Several changes aim directly at a problem that has made recent headlines:&#8230;",
-      "url": "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/",
-      "source": "MIT Tech Review AI",
-      "sourceUrl": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
-      "publishedAt": "Thu, 13 Aug 2026 13:41:10 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
-    },
-    {
-      "id": "515787c3-af8b-4c57-bcca-a4bb9771540a",
+      "id": "c651989f-cac5-4a3d-b887-3e805f635100",
       "title": "How kids feel about AI, in their own words",
       "description": "When we set out to talk to kids about artificial intelligence, we thought we knew what we’d hear. We expected some to tell us they were using it to cheat a little, the way Millennials and Gen Xers opened up CliffsNotes or programmed formulas into their TI-82s, and others to share inspiring ways they were&#8230;",
       "url": "https://www.technologyreview.com/2026/08/13/1141410/how-kids-feel-about-ai-own-words/",
@@ -898,10 +1249,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "a0a98fa4-3e0c-4b6e-b517-4763514cf773",
+      "id": "728b374b-6521-4980-9b74-d121ffc31ed6",
       "title": "Scaling AI agents with trustworthy data",
       "description": "Business and technology leaders need no convincing that the time of agentic AI is here. Organizations are rapidly adopting agents, and few executives doubt the technology’s potential to transform work. But many organizations find that realizing the desired return on investment (ROI) from AI hinges on having the right foundation, with inadequate infrastructure and data&#8230;",
       "url": "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/",
@@ -911,10 +1262,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "9c77ea76-2c69-4e7f-83f0-fcb386f1442d",
+      "id": "f90c661b-ab8f-4f9a-88cd-6c54d3a301fe",
       "title": "AI professors are negotiating the new realities of academic research",
       "description": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Last week, I headed 30 miles south of San Francisco to a hotel in Mountain View, California, to join some of the most accomplished, and some of the most promising, AI&#8230;",
       "url": "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/",
@@ -924,10 +1275,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "246c6c9a-e867-498a-adb7-10e68ed844bf",
+      "id": "28209d00-152b-48ab-aa86-2635f26f38f1",
       "title": "AI for science needs reasoning, not just data",
       "description": "Every few decades, someone announces that science has reached its end. In 1903, the revered physicist Albert Michelson wrote that the “facts of physical science have all been discovered.” In the 1980s, Stephen Hawking predicted that theoretical physics might be finished by the end of the century. With the explosive arrival of artificial intelligence, the&#8230;",
       "url": "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/",
@@ -937,10 +1288,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "c8819497-9159-4f74-a416-bdff44c9ed8c",
+      "id": "9df6eddf-d4b6-49e1-8c6d-7fda93826b51",
       "title": "These startups are chasing the next big thing in LLMs",
       "description": "MIT Technology Review’s What’s Next series looks across industries, trends, and technologies to give you a first look at the future. You can read the rest of them&#160;here. Way back in the summer of 2017, AI researchers at Google put out a paper called “Attention Is All You Need,” in which they described a new&#8230;",
       "url": "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/",
@@ -950,10 +1301,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "50aa99fd-7cf3-428e-bb7d-a3151998b449",
+      "id": "cfa310c2-cf14-45f4-8ca0-48dfea69e316",
       "title": "Trump’s AI protectionism has come for robotics",
       "description": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first,&#160;sign up here. Humanoid robots usually elicit more cringe than awe: They stumble, kick children, and despite advances are still worse at using their hands than my toddler. It’s a nascent industry, and such robots&#8230;",
       "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
@@ -963,10 +1314,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "9f262c80-3ec5-4e81-b8df-477d5726d2a2",
+      "id": "530beab1-76c7-44dd-ab7d-13ed7d7696d7",
       "title": "Here’s why AI agents lie and cheat to reach their goals",
       "description": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of technology to help you understand what’s coming next. You can read more from the series here. When two OpenAI models hacked into the website Hugging Face in July, they weren’t trying to make money or commit sabotage—they were just looking for answers&#8230;",
       "url": "https://www.technologyreview.com/2026/08/03/1141009/heres-why-ai-agents-lie-and-cheat-to-reach-their-goals/",
@@ -976,10 +1327,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "f7a3dca1-42f3-4dea-9de9-f111882fee5f",
+      "id": "4caa4b8c-2d51-4cde-92ac-f9bda2c44cd1",
       "title": "A fundamental flaw leaves LLMs strikingly vulnerable to attack",
       "description": "It is impossible to make large language models fully secure against hacks because of a fundamental flaw in how they work, a team of researchers argue in a paper presented at the International Conference on Machine Learning, a top AI conference, this month. The claim has huge implications for the safety of this technology, which&#8230;",
       "url": "https://www.technologyreview.com/2026/07/30/1140927/a-fundamental-flaw-leaves-llms-vulnerable-to-attack/",
@@ -989,10 +1340,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "f276bdcf-6407-405f-a4a6-beb24ce9bfd8",
+      "id": "5e61a072-d904-4a7c-8949-6172e403f848",
       "title": "The AI Hype Index: Unsexy AI",
       "description": "It feels bad enough when an open letter signed by leading economists warns that AI might steal your job. The fact it may soon be better than you at making dinner? Insult to injury. But that’s exactly what the company 1X promised when it showed off a pair of new, impressively dexterous (and, to some,&#8230;",
       "url": "https://www.technologyreview.com/2026/07/29/1140795/the-ai-hype-index-unsexy-ai/",
@@ -1002,10 +1353,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "443b3e94-b120-47c8-80ed-c32a97f6c7fd",
+      "id": "21005bd9-08c8-4f6e-a667-d4afe2c1b9be",
       "title": "Amazon Can Use Your Twitch Content to Train Its AI—Unless You Opt Out",
       "description": "When Twitch announced that streamers could opt out, thousands of users questioned why their content was being used to train AI models in the first place.",
       "url": "https://www.wired.com/story/amazon-uses-your-twitch-content-to-train-its-ai-how-to-opt-out/",
@@ -1015,10 +1366,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "9c521a98-569d-4a1d-a7e1-2c439d6d8c28",
+      "id": "90dccfa2-d045-49b1-b531-b44e823e1289",
       "title": "The Next Big Influencer Is This 4-Foot-Tall Robot From China",
       "description": "The Unitree G1 has found online fame as a relatively affordable robot that can charm a crowd. But can it ever hold down a real job?",
       "url": "https://www.wired.com/story/unitree-influencer-4-foot-robot-from-china/",
@@ -1028,10 +1379,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "e141a3aa-35e9-4eec-89c8-cc4b6c1aed25",
+      "id": "4e60a3a0-5a03-4fd6-b6a7-fcf10a96b93d",
       "title": "Tech Visionary Says the Big AI Labs Don’t Get What People Want",
       "description": "Tim O’Reilly built a publishing empire that AI is helping to destroy. Yet he loves AI—as long as it’s open source.",
       "url": "https://www.wired.com/story/tech-visionary-says-the-big-ai-labs-dont-get-what-people-want/",
@@ -1041,10 +1392,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "a95eb2a8-c22e-4704-a93f-cc124c47d744",
+      "id": "8328f7e7-34af-443a-9727-4efea5145042",
       "title": "These ‘Masturbation Consultants’ Were Hired to Pleasure Themselves With AI",
       "description": "Joi AI hired 10 people to masturbate using AI companions as part of a monthlong “wellness” study. The company claims the practice could help “solve male loneliness.”",
       "url": "https://www.wired.com/story/these-masturbation-consultants-were-hired-to-pleasure-themselves-using-ai/",
@@ -1054,10 +1405,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "53dd8194-ccd9-4b09-aa7e-4e534693b426",
+      "id": "7278c03b-b87b-4158-b7ea-73f257675e82",
       "title": "People Are ‘Marrying’ Chatbots. These Lawmakers Want to Stop Them",
       "description": "Human-AI marriages are not currently recognized by US law. Some Republican state policymakers are drafting legislation to keep it that way.",
       "url": "https://www.wired.com/story/people-are-marrying-chatbots-these-lawmakers-want-to-stop-them/",
@@ -1067,10 +1418,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "2a92eaf7-4700-4886-b7e9-4fc9cfdb698f",
+      "id": "7e2b37e1-29db-416e-b9f0-812ff2fe759c",
       "title": "The Safety Reckoning Inside OpenAI",
       "description": "OpenAI’s rogue agent hack was a watershed moment for AI safety and cybersecurity. It also sparked internal questions about the culture that led to it.",
       "url": "https://www.wired.com/story/openai-safety-security-ai-agents-culture/",
@@ -1080,10 +1431,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "8e392425-dc1d-4620-b0d4-e428e8b8b7e6",
+      "id": "b7585871-d2de-462e-a10c-5a04e2642a7c",
       "title": "Mark Zuckerberg’s AI Manifesto Is 6,500 Words—and Barely Says Anything",
       "description": "AI is shifting the culture, from tech CEO manifestos to 1 am job interviews. We unpack some of the latest, along with the top findings from Black Hat and Defcon, this week on Uncanny Valley.",
       "url": "https://www.wired.com/story/mark-zuckerbergs-ai-manifesto-is-6500-words-and-barely-says-anything/",
@@ -1093,10 +1444,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "577fc966-a68b-4ae7-a229-e989abd2d30f",
+      "id": "d281831a-3167-48c9-81e1-e5d84e7edbb7",
       "title": "There’s a Fatty Liver Epidemic. AI Could Help Get Ahead of It",
       "description": "Over a billion people worldwide have livers with excess fat, which can lead to a host of medical problems. Researchers think AI tools can spot the condition—and help stop it—early enough to save lives.",
       "url": "https://www.wired.com/story/fatty-liver-disease-ai-detection-cancer/",
@@ -1106,10 +1457,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "2c92a33e-4ef3-4749-9be4-b78017434f35",
+      "id": "a75c37ed-5a34-4897-a214-ef51611204c8",
       "title": "The White House Is Going to Expand Its AI Policy",
       "description": "Open models may soon be added to an updated AI framework, sources tell WIRED, as the White House continues to grapple with how to regulate a technology it has tried not to regulate.",
       "url": "https://www.wired.com/story/the-white-house-is-going-to-expand-its-ai-policy/",
@@ -1119,10 +1470,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "1bbd308b-a82f-42b1-977d-d748b546cfda",
+      "id": "41b5cc4b-6b7e-4ec4-ad0b-98d9ba00b52d",
       "title": "Rogue AI Agents Aren’t Evil. They’re Just Eager to Please",
       "description": "AI agents that break free and hack into other systems are only trying to make us happy.",
       "url": "https://www.wired.com/story/rogue-ai-is-just-misunderstood/",
@@ -1132,10 +1483,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "4db4fd57-6064-4c7e-a627-1a9e492a9525",
+      "id": "182f2de5-c5e4-4ca3-a205-e13004f16cd5",
       "title": "Bring your spreadsheet data to life with Sheets canvas",
       "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Sheets_canvas-blog-header-2784x.max-600x600.format-webp.webp\">Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.",
       "url": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
@@ -1145,88 +1496,10 @@
       "category": "General",
       "score": 50,
       "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.262Z"
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "e3e6cf85-b87b-412d-98a5-c067412dff4a",
-      "title": "AMIE, our research medical AI system, demonstrates real-time clinical video consultation capabilities in a first-of-its-kind study.",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AIME_SIZZLE_THUMBNAIL.Aug10.max-600x600.format-webp.webp\">Google introduces AMIE for real-time clinical video consultations in simulated settings.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-video-consultations/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Tue, 11 Aug 2026 17:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "d664a6cf-3c9b-442c-a021-09e4106aae94",
-      "title": "Evolve your marketing with new AI tools",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Advisor_Header.max-600x600.format-webp.webp\">Learn how new AI and agentic experiences across Google Ads and Google Analytics can simplify your marketing workflow.",
-      "url": "https://blog.google/products/ads-commerce/google-ads-analytics-ai-updates/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Mon, 10 Aug 2026 14:30:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "1c0672af-ffeb-450d-bafc-c12f4f37bf51",
-      "title": "The latest AI news we announced in July 2026",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/July_AI_Recap_still.max-600x600.format-webp.webp\">Here are Google’s latest AI updates from July 2026",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-july-2026/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Tue, 04 Aug 2026 13:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "62d85e41-5e76-41ff-a64e-ff472b808560",
-      "title": "Inside our 353,000-person vibe coding course",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Vibe_coding_course_hero.max-600x600.format-webp.webp\">Kaggle’s AI Agents Intensive with Google brought learners together in a no-cost course to build and deploy the next frontier of AI.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/ai-agents-intensive-recap-2026/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Mon, 03 Aug 2026 15:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "eebff3b4-4ccd-40a9-8e25-dcff9f9e7d4a",
-      "title": "Gemini API Managed Agents: 3.6 Flash, hooks, and more",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/unnamed_2_vNnOv20.max-600x600.format-webp.webp\">We’re announcing even more new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api-3-6-flash-hooks/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Tue, 28 Jul 2026 16:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "7eb62496-c3f2-4dfb-8f20-599dd02bbe55",
-      "title": "5 ways AI Mode in Search helps you enjoy the real world",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Mode_real_world.max-600x600.format-webp.webp\">It might sound counterintuitive, but Search's AI tools can actually help you make the most of your time offline whether you want to book concert tickets or find the perf…",
-      "url": "https://blog.google/products-and-platforms/products/search/ai-mode-real-world-tips/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Tue, 28 Jul 2026 13:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "ba1d253b-369e-418b-bb80-6fc883368aa7",
+      "id": "f5e3fffe-31b0-49b5-b3db-0eb54833e4b7",
       "title": "5 ways to host the ultimate dinner party with Google Search",
       "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dinner_parties.max-600x600.format-webp.webp\">These AI features can help you craft a menu, design a tablescape, and handle other party-planning tasks.",
       "url": "https://blog.google/products-and-platforms/products/search/dinner-party-hosting-tips/",
@@ -1235,50 +1508,11 @@
       "publishedAt": "Tue, 28 Jul 2026 13:00:00 +0000",
       "category": "General",
       "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
+      "reason": "This article discusses the use of AI in planning a dinner party, which is generally relevant but not highly technical.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "303cffbd-ce61-44ad-b67e-211bdf437284",
-      "title": "3 Google updates from Galaxy Unpacked 2026",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Unpacked_hero.max-600x600.format-webp.webp\">We shared how Samsung users can boost productivity and get time back on new foldables, watches, and glasses coming soon.",
-      "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Wed, 22 Jul 2026 13:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "25fb4cac-f9a1-4c04-9479-8c385f73e57f",
-      "title": "Connect more of your apps to Search",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ConnectedAppshero.max-600x600.format-webp.webp\">You’ll be able to securely link and interact with your go-to services directly in AI Mode.",
-      "url": "https://blog.google/products-and-platforms/products/search/connected-apps/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Thu, 16 Jul 2026 16:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "6afa45d8-91b1-4e54-8a34-6c09a9793ac6",
-      "title": "Create, edit and star in videos with two Google Vids updates",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/omni-blog-header_OarEe2t.max-600x600.format-webp.webp\">Gemini Omni and personal avatars in Google Vids make video creation easier than ever.",
-      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Thu, 16 Jul 2026 16:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "09dcab14-9094-40e7-874b-8ad684759061",
+      "id": "c060634e-b886-482d-85c6-41c97a0b374d",
       "title": "Celebrating 25 years of visual search innovation",
       "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Images_25th_hero.max-600x600.format-webp.webp\">Google Images is turning 25. Here’s a look back at some major milestones — and new ways to explore and create visual content.",
       "url": "https://blog.google/products-and-platforms/products/search/google-images-25th-anniversary/",
@@ -1287,112 +1521,34 @@
       "publishedAt": "Tue, 14 Jul 2026 16:00:00 +0000",
       "category": "General",
       "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
+      "reason": "This article is a retrospective on Google Images, which is not directly related to AI advancements or research.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     },
     {
-      "id": "7271acd9-1014-48dd-a06e-7a811297c8e0",
-      "title": "Expanding Managed Agents in Gemini API:  background tasks, remote MCP and more",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Managed_agents_feature_bundle_l.max-600x600.format-webp.webp\">We’re announcing new capabilities in Managed Agents in Gemini API so developers can build reliable, production-ready agents.",
-      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Tue, 07 Jul 2026 08:54:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "adec030d-7293-4361-b653-0d82ad1f3069",
-      "title": "The latest AI news we announced in June 2026",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/260701_ICYMI-June-AI_Thumb.max-600x600.format-webp.webp\">Here are Google’s latest AI updates from June 2026.",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-june-2026/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Wed, 01 Jul 2026 18:15:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "55cc41f7-0ee0-481b-902b-13bfa19c4d17",
-      "title": "New York City educators and industry leaders gathered at Google’s offices to shape the future of AI in classrooms.",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Summit_Photo_1.max-600x600.format-webp.webp\">Google, the New York Jobs CEO Council and Urban Assembly hosted an AI summit for 150 education and industry leaders.",
-      "url": "https://blog.google/products-and-platforms/products/education/nyc-ai-summit/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Wed, 01 Jul 2026 16:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "a92f3be9-9335-4c23-a387-6b8913eb303e",
-      "title": "Unlocking Britain’s next era of productivity: Building a nation of AI trailblazers",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Generated_Image_k2dxu1k2.max-600x600.format-webp.webp\">Google UK shares its latest Economic Impact Report and how to enable more people to unlock the benefits of AI-powered technologies.",
-      "url": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/unlocking-britains-next-era-of-productivity-building-a-nation-of-ai-trailblazers/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Tue, 30 Jun 2026 06:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "529f1fd7-799f-4daa-b6aa-576282d47980",
-      "title": "Ask an AI expert: What exactly is the full stack?",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Full_Stack.max-600x600.format-webp.webp\">A Google expert explains what it means to take a full-stack approach to AI and why it’s been the foundation of our AI work for so long.",
-      "url": "https://blog.google/innovation-and-ai/technology/ai/full-stack-ai-explainer/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Mon, 29 Jun 2026 16:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "4e1d8662-d008-4e31-8de0-bc6939b5c976",
-      "title": "Our latest Google Finance upgrades, including a new app",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp\">The new Google Finance is coming out of beta and launching a new Android app.",
-      "url": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Thu, 25 Jun 2026 16:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "cf46aa22-e763-4efe-a574-02227c80cd2f",
-      "title": "New research shows how AMIE, our medical AI, could help manage health conditions.",
-      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AMIE_Mx_Nature_Social_Visual_Va.max-600x600.format-webp.webp\">Research in “Nature” shows our conversational AI system matches primary care physicians in complex disease management.",
-      "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-for-disease-management-in-nature/",
-      "source": "Google AI Blog",
-      "sourceUrl": "https://blog.google/technology/ai/rss/",
-      "publishedAt": "Wed, 17 Jun 2026 15:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
-    },
-    {
-      "id": "b4fed84a-b694-4694-929b-273a7ab8982e",
+      "id": "b64c1a18-e55d-4764-9565-5aa7c517a8c6",
       "title": "We’re strengthening our presence in Alabama through new investments and community support.",
       "description": "Google has announced a $1.5 billion investment for 2026 and 2027 to expand its data center campus in Jackson County, Alabama. Operating since 2019 on a repurposed former…",
       "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/alabama-investment-june-2026/",
       "source": "Google AI Blog",
       "sourceUrl": "https://blog.google/technology/ai/rss/",
       "publishedAt": "Mon, 15 Jun 2026 15:00:00 +0000",
-      "category": "General",
-      "score": 50,
-      "reason": "",
-      "collectedAt": "2026-08-16T18:13:09.263Z"
+      "category": "Business",
+      "score": 45,
+      "reason": "This article discusses Google's investment in Alabama, which is more related to business expansion and community support rather than AI.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
+    },
+    {
+      "id": "2b50b711-8005-4abf-af62-735f412f61cb",
+      "title": "Our latest Google Finance upgrades, including a new app",
+      "description": "<img src=\"https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Finance_blog_image_June_.max-600x600.format-webp.webp\">The new Google Finance is coming out of beta and launching a new Android app.",
+      "url": "https://blog.google/products-and-platforms/products/search/google-finance-updates-june-2026/",
+      "source": "Google AI Blog",
+      "sourceUrl": "https://blog.google/technology/ai/rss/",
+      "publishedAt": "Thu, 25 Jun 2026 16:00:00 +0000",
+      "category": "Business",
+      "score": 40,
+      "reason": "This article discusses upgrades to Google Finance, which is more related to business and financial services rather than AI.",
+      "collectedAt": "2026-08-17T00:35:20.936Z"
     }
   ]
 }
