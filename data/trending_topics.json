@@ -1,9 +1,13 @@
 {
-  "updatedAt": "2026-10-01T18:06:55.612Z",
+  "updatedAt": "2026-10-02T02:58:28.609Z",
   "topics": [
     {
       "topic": "model",
-      "weight": 43
+      "weight": 42
+    },
+    {
+      "topic": "google",
+      "weight": 40
     },
     {
       "topic": "webp",
@@ -11,19 +15,15 @@
     },
     {
       "topic": "agents",
-      "weight": 36
-    },
-    {
-      "topic": "google",
-      "weight": 36
+      "weight": 35
     },
     {
       "topic": "agent",
-      "weight": 33
+      "weight": 32
     },
     {
       "topic": "models",
-      "weight": 32
+      "weight": 31
     },
     {
       "topic": "2609",
@@ -58,16 +58,12 @@
       "weight": 30
     },
     {
+      "topic": "openai",
+      "weight": 24
+    },
+    {
       "topic": "search",
       "weight": 23
-    },
-    {
-      "topic": "openai",
-      "weight": 22
-    },
-    {
-      "topic": "storage",
-      "weight": 21
     },
     {
       "topic": "language",
@@ -79,6 +75,10 @@
     },
     {
       "topic": "meta",
+      "weight": 20
+    },
+    {
+      "topic": "images",
       "weight": 20
     }
   ]
