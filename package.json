@@ -21,7 +21,8 @@
     "test:all": "npm run typecheck && npm run test:unit && npm run test:api && npm run test:e2e",
     "qa:trace": "node scripts/qa/check-traceability.mjs",
     "qa:prompt": "node scripts/qa/build-test-prompt.mjs",
-    "qa:report": "playwright show-report"
+    "qa:report": "playwright show-report",
+    "build:pages": "node scripts/pages/build-static.mjs"
   },
   "dependencies": {
     "next": "14.2.35",
