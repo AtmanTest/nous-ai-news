@@ -1,92 +1,93 @@
-# QA Test Strategy — Nous AI News
+# Stratégie de test
 
-## Objectif
+## 1. Objectifs
 
-Garantir que Nous AI News reste utilisable en production, sans fake UX, sans route cassée, sans 500 client après hydration, et avec des tests de non-régression avant chaque commit.
+1. **Réduire le risque** de mise en production d'un défaut sur les fonctions à forte valeur ou forte exposition : recherche, saisie de données (newsletter), accessibilité, sécurité des entrées.
+2. **Fournir un retour rapide** : un défaut de logique doit être signalé en secondes (unitaire), pas en minutes (E2E).
+3. **Rendre la qualité démontrable** : chaque exigence est reliée à des tests, chaque test à une technique de conception, chaque défaut à un test de confirmation.
+4. **Permettre l'évolution** : suites déterministes, données maîtrisées, organisées par modules.
 
-## Périmètre
+## 2. Les sept principes ISTQB appliqués au projet
 
-- Next.js 14 App Router : pages, layouts, middleware, server/client components.
-- Supabase : articles, auth, bookmarks, ingestion, push/newsletter selon features actives.
-- Ingestion RSS + enrichissement + ranking + re-scoring.
-- Widgets live : HuggingFace Trending Models, Auto Evolve, DeepMind / IA Auto News.
-- SEO : metadata, feed.xml, sitemap.xml, robots.txt.
-- PWA : manifest, service worker, offline/update/install.
-- Déploiement Vercel : production `https://nous-daily.vercel.app`.
+| # | Principe | Décision concrète dans ce dépôt |
+|---|---|---|
+| 1 | Les tests montrent la présence de défauts, pas leur absence | Un journal de défauts est tenu ([defect-management.md](defect-management.md)) ; une suite verte n'est jamais présentée comme une preuve d'absence de défaut. |
+| 2 | Les tests exhaustifs sont impossibles | Priorisation par le risque ([risk-analysis.md](risk-analysis.md)) et techniques de réduction (partitions d'équivalence, valeurs limites) plutôt qu'énumération. |
+| 3 | Tester tôt | Analyse statique (lint, typage) et tests unitaires des validateurs avant tout E2E ; exigences formulées de façon testable dès le départ. |
+| 4 | Regroupement des défauts | Les défauts trouvés se concentrent dans la **validation des entrées** et le **tri** : ces zones reçoivent le plus de cas (hostile payloads, bornes). |
+| 5 | Paradoxe du pesticide | Données uniques par test (`uniqueEmail`), listes de charges hostiles variées, charters exploratoires à rejouer, revue des tests à chaque évolution du produit. |
+| 6 | Le test dépend du contexte | Site d'information sans enjeu vital : accent sur l'accessibilité, la sécurité des entrées, le SEO de base et la robustesse côté navigateur. |
+| 7 | Illusion de l'absence d'erreurs | Les tests passants ne valident pas l'utilité du produit : l'accessibilité (axe) et les parcours utilisateur complètent la vérification fonctionnelle. |
 
-## Niveaux de test
+## 3. Processus de test (ISTQB)
 
-1. Unit — Vitest : utils, hooks, composants, scoring, routes API mockées.
-2. Integration — Vitest : API routes, Supabase query contracts, cache/fallback behavior.
-3. E2E smoke — Playwright : parcours utilisateur P0 contre local ou prod.
-4. Exploratory QA — navigateur réel : console, responsive, data quality, fake UX.
-5. Release smoke — post-déploiement sur l’URL cible.
+| Activité | Réalisation |
+|---|---|
+| Planification | [test-plan.md](test-plan.md), critères d'entrée/sortie ci-dessous |
+| Suivi et pilotage | Rapports Playwright (HTML, JUnit), couverture Vitest, matrice de traçabilité en CI |
+| Analyse | Exigences testables ([requirements.json](requirements.json)) + analyse de risques |
+| Conception | [Techniques ISTQB](test-design-techniques.md), cas nommés `MOD-NIVEAU-NNN` |
+| Implémentation | Vitest + Playwright, données et helpers dans `tests/support/` |
+| Exécution | Locale par module, CI complète sur chaque push / pull request |
+| Achèvement | Porte qualité, journal des défauts, mise à jour de la matrice |
 
-## Stratégie TDD / bug fix
+## 4. Niveaux de test
 
-1. Reproduire le bug.
-2. Écrire un test qui échoue pour ce bug.
-3. Corriger le code.
-4. Vérifier le test ciblé vert.
-5. Lancer `npm run tnr` complet.
-6. Seulement ensuite commit/push/déploiement.
+| Niveau ISTQB | Mise en œuvre | Cible |
+|---|---|---|
+| **Composant** | Vitest, `tests/unit/` | Fonctions pures : validation, recherche, pagination, stockage, formatage |
+| **Intégration** | Playwright `api`, `tests/api/` | Routes `/api/*` + modules, via un vrai serveur HTTP (contrat, statuts, formats d'erreur) |
+| **Système** | Playwright `e2e-desktop` / `e2e-mobile`, `tests/e2e/` | Parcours utilisateur de bout en bout dans un navigateur réel |
+| **Acceptation** | Tag `@smoke` (porte de livraison) | Parcours critiques rejoués sur desktop **et** mobile. La recette utilisateur (UAT) humaine reste hors périmètre automatisé. |
 
-## Commandes obligatoires
+## 5. Types de test
 
-```bash
-npm run tnr
-```
+| Type | Couverture |
+|---|---|
+| Fonctionnel | Tous les modules, voir la matrice de traçabilité |
+| Non fonctionnel — accessibilité | axe-core (WCAG 2.1 A/AA) sur 11 pages ; focus visible ; lien d'évitement ; champs nommés |
+| Non fonctionnel — sécurité (de base) | En-têtes HTTP, charges hostiles (XSS, injection, traversal), mass assignment, absence de fuite de pile |
+| Non fonctionnel — performance (de base) | Budget de réponse API (3 s) — ce n'est **pas** un test de charge |
+| Non fonctionnel — compatibilité | Chromium desktop et émulation mobile (Pixel 7) |
+| Structurel (boîte blanche) | Couverture instructions/fonctions ≥ 90 %, branches ≥ 85 % sur `src/modules` et `src/lib` |
+| Lié aux changements | Test de **confirmation** (le test qui a révélé le défaut est conservé) et de **non-régression** (suite complète en CI) |
 
-Production smoke :
+## 6. Critères
 
-```bash
-E2E_BASE_URL=https://nous-daily.vercel.app npx playwright test tests/e2e/smoke-critical.spec.ts --project=chromium --reporter=line
-```
+**Critères d'entrée** (démarrer l'exécution des tests système) : le build réussit ; lint et typage sans erreur ; chaque exigence est référencée par au moins un test.
 
-Build local si nécessaire :
+**Critères de sortie / porte qualité** (livrer) :
 
-```bash
-npm run build
-```
+- 0 test en échec, 0 test marqué `only` (`forbidOnly` en CI) ;
+- 100 % des tests `@smoke` passent sur desktop et mobile ;
+- seuils de couverture unitaire respectés (90 / 90 / 90 / 85 %) ;
+- 22/22 exigences couvertes ; toute exigence à risque ÉLEVÉ couverte sur ≥ 2 niveaux (ou exemption motivée) ;
+- 0 violation d'accessibilité `serious` / `critical` ;
+- 0 défaut ouvert de sévérité Critique ou Majeure.
 
-## Priorités
+## 7. Environnements et données
 
-### P0 — Bloquant, 100% obligatoire
+- **Environnement de test** : serveur Next.js de production (`next build` + `next start`, port 3100), identique en local et en CI.
+- **Données** : jeu de démonstration **fictif** versionné (`src/modules/articles/data.ts`). Les constantes de test (`tests/support/seed.ts`) sont **vérifiées par un test** contre ce jeu : toute dérive est détectée.
+- **Isolation** : chaque test E2E obtient un contexte navigateur neuf (localStorage vide) ; les tests d'inscription utilisent des adresses uniques plutôt que de réinitialiser l'état serveur.
+- **Aucune donnée personnelle réelle** n'est utilisée ni stockée.
 
-- Homepage : HTTP < 400, pas de 500 visuel, pas d’erreur console.
-- Navigation : aucun lien interne principal en 404/500.
-- Article : parcours homepage → article réel.
-- Feed/search/trending/daily/bookmarks/settings/topics : route réelle et utilisable.
-- Widgets clés : pas de données fake ou périmées sans fallback explicite.
-- SEO public : feed.xml, sitemap.xml, robots.txt OK.
+## 8. Politique de fiabilité des tests (anti-flakiness)
 
-### P1 — Important, 100% avant release
+- Aucune attente temporelle arbitraire : on attend un **état observable** (ex. `data-hydrated="true"` sur les composants clients).
+- Sélecteurs sémantiques (`getByRole`, `getByLabel`) en priorité, `data-testid` pour les zones sans rôle explicite.
+- En CI, 2 reprises automatiques servent à **détecter** l'instabilité : un test qui n'échoue qu'avant reprise est signalé « flaky » dans le rapport et doit être corrigé, pas toléré.
+- Les tests sont indépendants entre eux et exécutables en parallèle, dans n'importe quel ordre.
 
-- Pagination, filters, auth, bookmarks logged-in, theme, PWA, newsletter/push si activés.
-- API endpoints critiques avec schémas valides.
-- Responsive desktop/mobile.
+## 9. Métriques suivies
 
-### P2 — Edge, ≥80% avant release
+Taux de réussite par niveau et par module · couverture de code · couverture des exigences · tests instables · durée de la suite · défauts par module et par sévérité · échappements (défauts trouvés après livraison).
 
-- Empty states, timeouts externes, Supabase/HF indisponible, bad RSS, images nulles, dates futures.
+## 10. Limites connues (transparence)
 
-## Entry criteria avant commit
-
-- Test ciblé du changement vert.
-- `npm run tnr` vert.
-- Pas de fichier oublié (`git status`).
-- Si bug fixé : nouveau test dans `tests/` ou cas documenté dans `tests/test-cases/`.
-
-## Exit criteria avant livraison
-
-- P0 automatisé vert sur cible ou bug clairement identifié comme KO.
-- Browser check réel : pas de 500 client, pas d’erreur console.
-- Résultat communiqué avec pass/fail exact.
-- URL live fournie : `https://nous-daily.vercel.app`.
-
-## Référentiel
-
-- Cas vitaux : `tests/test-cases/p0-vital.md`.
-- Smoke mensuel : `tests/test-cases/smoke-monthly.md`.
-- Matrice de régression : `tests/test-cases/regression-matrix.md`.
-- Tests automatisés P0 : `tests/e2e/smoke-critical.spec.ts`.
+- Navigateurs : Chromium uniquement (pas de Firefox ni WebKit).
+- Pas de test de charge ni de test de sécurité dynamique approfondi (pentest).
+- Le validateur d'e-mail est volontairement pragmatique : sous-ensemble strict de la RFC 5322, ASCII uniquement (adresses internationalisées et formes entre guillemets refusées).
+- Les favoris sont stockés dans le navigateur : pas de test API, la vérification est E2E + unitaire.
+- Le store de la newsletter est en mémoire (démonstration) : aucune persistance, aucun e-mail envoyé.
+- La revue humaine des tests générés avec assistance IA reste à réaliser par le mainteneur ([ai-assistance-log.md](ai-assistance-log.md)).

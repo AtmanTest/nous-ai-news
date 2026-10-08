@@ -1,62 +1,67 @@
-# Nous AI News — Global AI Coverage
+# Nous AI News
 
-Premium international AI news platform covering models, research, business, policy, open source, startups, hardware, and AI agents.
+Site d'actualités sur l'intelligence artificielle, en français. Refonte complète (v2) : application Next.js minimale et un **workflow QA complet** — ISTQB Foundation + IA générative en test.
 
-**Live:** [nous-daily.vercel.app](https://nous-daily.vercel.app)
+> Le contenu des articles est **entièrement fictif** (jeu de données de démonstration).
 
----
+## Stack
 
-## About
+Next.js 14 (App Router) · TypeScript strict · Tailwind CSS · Vitest · Playwright (API + E2E) · axe-core.
 
-**Nous AI News** est un agrégateur d'actualités IA temps réel développé en tant que projet open-source personnel. Il ingère, catégorise et classe automatiquement des centaines d'articles provenant de sources globales.
+## Démarrage
 
-### Stack principale
-- **Frontend :** Next.js 14 (App Router), TypeScript strict, Tailwind CSS + shadcn/ui
-- **Backend :** API Routes Next.js, Supabase (PostgreSQL + Auth + Edge Functions)
-- **Tests :** 465+ tests unitaires + E2E (Playwright)
-- **CI/CD :** GitHub Actions (lint, tests, build, déploiement Vercel automatique)
-- **Déploiement :** Vercel (auto-deploy on push to `main`)
+```bash
+nvm use            # Node 20
+npm ci
+npm run dev        # http://localhost:3000
+```
 
-### Pipeline de données
-1. **Ingestion** — 86+ flux RSS + HN + Reddit via `/api/cron/ingest`
-2. **Normalisation** — extraction titre, résumé, image, auteurs, entités (organisations, personnes, modèles)
-3. **Scoring** — classement par pertinence (score, trending, breaking)
-4. **Catégorisation** — LLM (GPT-5 nano) pour classification thématique
-5. **Déduplication** — détection et fusion des doublons
+## Fonctionnalités (modules)
 
-### Moteur d'auto-amélioration continue
-- **Re-scoring** — ajustement dynamique des scores articles
-- **RLHF** — boucles de feedback humain pour affiner la pertinence
-- **Optimisation de prompts** — prompts auto pour amélioration continue
-- Exécution automatique via GitHub Actions
+| Module | Contenu |
+|---|---|
+| `articles` | Liste paginée, filtre par thématique, tri, page détail, flux `/feed.xml` |
+| `search` | Recherche plein texte (ET, insensible à la casse et aux accents, pondérée) |
+| `topics` | 6 thématiques et pages dédiées |
+| `bookmarks` | Favoris persistés dans le navigateur |
+| `newsletter` | Inscription validée (e-mail, consentement, thématiques), idempotente |
+| `platform` | Santé, en-têtes de sécurité, 404/erreurs, accessibilité, responsive |
 
----
+API : `GET /api/health`, `/api/articles`, `/api/articles/[slug]`, `/api/search`, `/api/topics`, `POST /api/newsletter/subscribe`.
 
-## Architecture
+## Scripts
 
-### Routes clés
-| Route | Type | Description |
-|-------|------|-------------|
-| `/` | Dynamic | Homepage — hero, trending, infinite latest feed |
-| `/article/[id]` | Dynamic | Article detail page with JSON-LD |
-| `/search` | Dynamic | Full-text search with filters (category, sort) |
-| `/topics/[slug]` | Dynamic | Topic landing pages |
-| `/entities/[slug]` | Dynamic | Entity pages (OpenAI, Anthropic, etc.) |
-| `/feed.xml` | Static | RSS output feed |
+| Commande | Rôle |
+|---|---|
+| `npm run lint` / `typecheck` | Analyse statique |
+| `npm run test:unit:cov` | Unitaires + seuils de couverture (90 % lignes, 85 % branches) |
+| `npm run test:api` | Tests API Playwright |
+| `npm run test:e2e` | E2E desktop + mobile |
+| `npm run test:smoke` | Parcours critiques `@smoke` |
+| `npm run test:module -- <module>` | Tous les niveaux d'un module |
+| `npm run test:all` | Tout |
+| `npm run qa:trace` | Vérifie la traçabilité exigences → tests |
+| `npm run qa:prompt -- --req <ID> --technique <t>` | Génère un prompt de conception de tests |
 
-### Qualité & Tests
-- **Vitest** — 465+ tests unitaires
-- **Playwright** — smoke tests E2E critiques
-- **Couverture** — seuil 75% par branche (TNR)
-- **Linting** — TSR + Prettier pré-commit
+## Workflow QA
 
----
+Exigences (`docs/qa/requirements.json`) → analyse de risques → conception (PE, AVL, tables de décision, transitions, devinette d'erreurs) → implémentation par niveau → CI → porte qualité. L'IA propose, l'humain relit et décide.
 
-## Tech Stack
+Documentation : [docs/qa](docs/qa/README.md) (stratégie, plan, risques, techniques, GenAI, défauts, matrice de traçabilité). Conventions de test : [tests/README.md](tests/README.md).
+
+## CI
+
+`.github/workflows/qa.yml` : statique + traçabilité → unitaire/couverture → API → E2E (desktop, mobile) → porte qualité.
+
+## Structure
 
 ```
-TypeScript, Next.js 14, React 18, Tailwind CSS
-Supabase (PostgreSQL, Auth, Storage)
-OpenAI GPT-5 nano, Playwright, Vitest
-GitHub Actions, Vercel
+src/app        pages et routes API        src/modules   logique métier par module
+src/components UI                         src/lib       utilitaires transverses
+tests/{unit,api,e2e,support}              scripts/qa    outillage QA
+docs/qa        documentation QA
 ```
+
+## Note de migration
+
+Les anciens workflows (déploiement Vercel, veille automatique par cron) ont été supprimés avec l'ancien code. À reconfigurer séparément si nécessaire.

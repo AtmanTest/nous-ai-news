@@ -1,76 +1,77 @@
-# Test Plan — Nous AI News
+# Plan de test
 
-## Environnements
+## 1. Périmètre
 
-- Local : `http://localhost:3000`
-- Production Vercel : `https://nous-daily.vercel.app`
-- Supabase : projet `wlxtulibsipesxpwkhyz`
+**Dans le périmètre** : le site Nous AI News (pages publiques, routes `/api/*`, flux RSS), son jeu de données de démonstration et son pipeline CI.
 
-## Jeux de données
+**Hors périmètre** : tests de charge et de pénétration, navigateurs autres que Chromium, délivrabilité d'e-mails (aucun e-mail n'est envoyé), recette utilisateur humaine.
 
-- Articles Supabase publiés sur les 7 derniers jours.
-- Sources RSS AI configurées dans `lib/content/sources.ts`.
-- Utilisateur guest par défaut.
-- Utilisateur authentifié de test uniquement quand requis.
+## 2. Éléments testés
 
-## Suites automatisées
+| Élément | Fichiers principaux |
+|---|---|
+| Logique métier | `src/modules/{articles,search,topics,newsletter,bookmarks}` |
+| Utilitaires | `src/lib/*` |
+| Routes HTTP | `src/app/api/**`, `src/app/feed.xml/route.ts` |
+| Pages et composants | `src/app/**/page.tsx`, `src/components/*` |
+| Configuration | `next.config.mjs` (en-têtes de sécurité) |
 
-| Suite | Commande | Objectif |
+## 3. Approche par module
+
+| Module | Techniques principales | Points d'attention |
 |---|---|---|
-| TNR unit/integration | `npm run tnr` | Non-régression obligatoire avant commit |
-| P0 production smoke | `E2E_BASE_URL=https://nous-daily.vercel.app npx playwright test tests/e2e/smoke-critical.spec.ts --project=chromium --reporter=line` | Routes vitales, 500 client, console errors, fake links |
-| E2E complet local/prod | `npx playwright test` ou `E2E_BASE_URL=... npx playwright test` | Parcours complets par module |
-| Build | `npm run build` | Validation Next.js production |
+| `articles` | Valeurs limites (page, pageSize), partitions d'équivalence (category, sort), cohérence liste ↔ détail | Tri déterministe, jamais de `body` dans les listes, 404 HTTP réel |
+| `search` | Partitions (casse, accents, ET), valeurs limites (longueur de `q`, `limit`), devinette d'erreurs (charges hostiles) | XSS réfléchi, pondération de pertinence, absence de résultat ≠ erreur |
+| `topics` | Conservation (somme des compteurs = total), cohérence UI ↔ API | Compteurs dérivés des données, jamais figés |
+| `newsletter` | **Table de décision**, valeurs limites (254/64), transitions d'état, concurrence | Données personnelles, validation stricte, idempotence |
+| `bookmarks` | **Transitions d'état**, devinette d'erreurs (stockage corrompu / inaccessible), synchronisation entre onglets | Résilience, dégradation silencieuse |
+| `platform` | Tests non fonctionnels : accessibilité, en-têtes, RSS, responsive, navigation | Aucune erreur console, 404 corrects, pas de fuite d'information |
 
-## Couverture des cas de test
+## 4. Outillage
 
-| Zone | P0 | P1 | P2 | Auto actuel |
-|---|---:|---:|---:|---|
-| Homepage / app shell | 3 | 2 | 2 | Oui |
-| Navigation / fake UX | 2 | 2 | 1 | Oui |
-| Article detail | 2 | 2 | 2 | Oui |
-| Feed / daily / trending | 4 | 4 | 4 | Oui |
-| Search / topics | 3 | 3 | 2 | Oui |
-| Bookmarks / auth | 2 | 4 | 3 | Partiel |
-| Settings | 1 | 3 | 2 | Oui |
-| Widgets live | 2 | 3 | 2 | Partiel |
-| API / SEO | 3 | 4 | 2 | Partiel |
-| PWA / responsive | 1 | 4 | 4 | Partiel |
-| Data quality RSS | 1 | 3 | 4 | À renforcer |
+| Besoin | Outil |
+|---|---|
+| Tests unitaires + couverture | Vitest + `@vitest/coverage-v8` |
+| Tests API et E2E | Playwright (`api`, `e2e-desktop`, `e2e-mobile`) |
+| Accessibilité | `@axe-core/playwright` |
+| Analyse statique | ESLint (`next/core-web-vitals`), TypeScript strict (`noUncheckedIndexedAccess`) |
+| Traçabilité | `scripts/qa/check-traceability.mjs` |
+| Exécution par module | `scripts/qa/test-module.mjs` |
+| Assistance GenAI | `scripts/qa/build-test-prompt.mjs`, [bibliothèque de prompts](prompts/prompt-library.md) |
+| CI | GitHub Actions — [`.github/workflows/qa.yml`](../../.github/workflows/qa.yml) |
 
-## Cas P0 vitaux
+## 5. Conventions
 
-Voir `tests/test-cases/p0-vital.md`.
+- **Identifiants** : `MOD-NIVEAU-NNN` — `ART-API-011`, `NEW-E2E-006`. Plages : `0xx` cas nominaux, `1xx` détail/variantes, `2xx+` cas spécifiques du module.
+- **Tags dans les titres** : `@smoke` (parcours critique), `@mobile` (rejoué sur mobile), `@REQ-XXX-NN` (traçabilité). Les tests Vitest utilisent `[REQ-XXX-NN]` dans le titre du bloc `describe`.
+- **Un test = une intention** ; le titre dit le comportement attendu, pas l'implémentation.
+- **Données de test** centralisées dans `tests/support/` ; les tests ne dupliquent jamais une constante du jeu de données.
 
-Résumé :
+## 6. Exécution
 
-- P0-HOME-001 : homepage sans crash applicatif.
-- P0-NAV-001 : liens internes réels.
-- P0-ARTICLE-001 : article depuis homepage.
-- P0-FEED-001 : feed principal.
-- P0-DAILY-001 : daily feed.
-- P0-TRENDING-001 : trending.
-- P0-SEARCH-001 : recherche.
-- P0-BOOKMARKS-001 : bookmarks guest.
-- P0-SETTINGS-001 : settings.
-- P0-AUTOEVOLVE-001 : Auto Evolve.
-- P0-DEEPMIND-001 : IA Auto News.
-- P0-TOPICS-001 : pages topics.
-- P0-API-001 : endpoints publics.
-- P0-QUALITY-001 : contenu RSS nettoyé.
+| Contexte | Déclencheur | Contenu | Durée visée |
+|---|---|---|---|
+| Développement | `npm run test:module -- <module>` | Un module, tous niveaux | < 1 min |
+| Avant commit | `npm run test:unit && npm run typecheck` | Retour rapide | < 10 s |
+| Pull request / push `main` | GitHub Actions | Pipeline complet (voir ci-dessous) | < 10 min |
 
-## Procédure bug
+```
+ static ──┐
+          ├──► api ──────────┐
+ unit ────┤                  ├──► quality-gate
+          └──► e2e (desktop) ┤
+               e2e (mobile) ─┘
+```
 
-Pour chaque bug détecté :
+## 7. Livrables
 
-1. Créer ou mettre à jour un cas dans `tests/test-cases/`.
-2. Ajouter un test automatique si faisable immédiatement.
-3. Lancer le test ciblé et vérifier l’échec attendu.
-4. Corriger.
-5. Relancer test ciblé + `npm run tnr`.
-6. Browser smoke sur la route impactée.
+Rapports HTML et JUnit Playwright, rapport de couverture (artefacts CI), matrice de traçabilité générée, journal des défauts, ce plan et la stratégie.
 
-## Statut baseline
+## 8. Risques projet et parades
 
-- Baseline TNR du 2026-06-22 : 430/430 tests OK avant ajout des nouveaux cas.
-- Bug production détecté : curl retourne 200 sur `/`, mais navigateur réel affiche une page 500 dans `main` après hydration. Le nouveau smoke P0 le détecte.
+| Risque projet | Parade |
+|---|---|
+| Dérive entre données et constantes de test | Test d'intégrité des données (`REQ-PLT-07`) |
+| Tests instables | Politique anti-flakiness, reprises CI utilisées comme détecteur |
+| Tests générés par IA non relus | Checklist de revue, journal d'assistance, tests de confirmation sur chaque défaut |
+| Documentation de traçabilité périmée | Matrice générée et comparée par la CI (`git diff --exit-code`) |
