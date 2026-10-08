@@ -26,7 +26,7 @@ export default function TopicPage({ params }: PageProps) {
     <div className="space-y-6">
       <header>
         <h1 className="text-3xl font-bold tracking-tight">{topic.label}</h1>
-        <p className="mt-1 text-gray-700">{topic.description}</p>
+        <p className="mt-1 text-muted">{topic.description}</p>
       </header>
       <div data-testid="topic-articles" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {items.map((article) => (

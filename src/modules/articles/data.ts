@@ -1,3 +1,4 @@
+import ingested from '../../../content/ingested.json';
 import type { Article } from './types';
 
 /**
@@ -5,7 +6,7 @@ import type { Article } from './types';
  * dates toutes distinctes (tri déterministe). Les tests s'appuient sur ces invariants
  * (voir tests/support/seed.ts et tests/unit/data/integrity.test.ts).
  */
-export const ARTICLES: readonly Article[] = [
+export const SEED_ARTICLES: readonly Article[] = [
   // ───────────── Modèles ─────────────
   {
     id: 'art-001',
@@ -305,3 +306,19 @@ export const ARTICLES: readonly Article[] = [
     readingMinutes: 4,
   },
 ];
+
+/**
+ * Contenu servi par le site. Par défaut : articles ingérés automatiquement (content/ingested.json, alimenté par le cron).
+ * `NOUS_CONTENT=seed` force le jeu de démonstration fictif et déterministe, utilisé par tous les tests.
+ * Tant que rien n'a été ingéré, le site retombe sur le jeu de démonstration.
+ */
+const LIVE_ARTICLES = ingested as unknown as readonly Article[];
+
+export function resolveArticles(mode: string | undefined, live: readonly Article[]): readonly Article[] {
+  return mode === 'seed' || live.length === 0 ? SEED_ARTICLES : live;
+}
+
+export const ARTICLES: readonly Article[] = resolveArticles(process.env.NOUS_CONTENT, LIVE_ARTICLES);
+
+/** `true` lorsque le site sert le jeu de démonstration fictif (et non du contenu ingéré). */
+export const IS_DEMO_CONTENT: boolean = ARTICLES === SEED_ARTICLES;

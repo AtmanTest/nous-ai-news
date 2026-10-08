@@ -23,7 +23,7 @@ Les scores sont les valeurs de [requirements.json](requirements.json) ; la couve
 | MOYEN | ≥ 1 niveau, nominaux + principaux cas d'erreur | Partitions, transitions d'état |
 | FAIBLE | 1 niveau suffit, cas nominal + cohérence | Test de cohérence, conservation |
 
-Cette règle est **appliquée automatiquement** : `scripts/qa/check-traceability.mjs` fait échouer la CI si une exigence ÉLEVÉE n'est couverte que sur un seul niveau sans exemption documentée (`exemptLevels`). Seule PLT-04 (accessibilité) est exemptée : elle ne se vérifie de façon fiable qu'au niveau navigateur.
+Cette règle est **appliquée automatiquement** : `scripts/qa/check-traceability.mjs` fait échouer la CI si une exigence ÉLEVÉE n'est couverte que sur un seul niveau sans exemption documentée (`exemptLevels`). Deux exemptions motivées : PLT-04 (accessibilité, vérifiable seulement au niveau navigateur) et ING-03 (fusion/ingestion : logique pure hors serveur, tests d'intégration volontairement figés sur le jeu de démonstration).
 
 ## 3. Principaux scénarios de risque et parades
 

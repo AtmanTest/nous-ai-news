@@ -10,17 +10,23 @@ const NAV_ITEMS = [
 
 export function Header() {
   return (
-    <header data-testid="site-header" className="border-b border-gray-200 bg-white">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-4">
-        <Link href="/" className="text-xl font-bold tracking-tight text-ink">
+    <header data-testid="site-header" className="sticky top-0 z-20 border-b border-line bg-surface/80 backdrop-blur-md">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-6 gap-y-3 px-4 py-3">
+        <Link href="/" className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-fg">
+          <span
+            aria-hidden="true"
+            className="grid h-8 w-8 place-items-center rounded-xl bg-gradient-to-br from-indigo-500 via-violet-500 to-pink-500 text-sm font-black text-white shadow-card"
+          >
+            N
+          </span>
           {SITE_NAME}
         </Link>
 
         <nav aria-label="Navigation principale">
-          <ul className="flex flex-wrap gap-x-4 gap-y-1 text-sm font-medium">
+          <ul className="flex flex-wrap gap-1 text-sm font-medium">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="text-gray-800 underline-offset-4 hover:text-accent hover:underline">
+                <Link href={item.href} className="rounded-lg px-3 py-1.5 text-fg transition hover:bg-surface-2 hover:text-accent">
                   {item.label}
                 </Link>
               </li>
@@ -38,11 +44,11 @@ export function Header() {
             type="search"
             placeholder="Rechercher…"
             autoComplete="off"
-            className="min-w-0 flex-1 rounded border border-gray-400 px-3 py-1.5 text-sm sm:w-56 sm:flex-none"
+            className="min-w-0 flex-1 rounded-xl border border-line-strong bg-surface px-3.5 py-2 text-sm text-fg placeholder:text-muted sm:w-60 sm:flex-none"
           />
           <button
             type="submit"
-            className="rounded bg-accent px-3 py-1.5 text-sm font-medium text-white hover:bg-accent-dark"
+            className="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-on-accent transition hover:bg-accent-dark"
           >
             Rechercher
           </button>

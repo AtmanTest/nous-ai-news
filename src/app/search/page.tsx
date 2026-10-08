@@ -23,7 +23,7 @@ export default function SearchPage({ searchParams }: { searchParams: RawParams }
 function SearchBody({ rawQuery }: { rawQuery: string | undefined }) {
   if (rawQuery === undefined) {
     return (
-      <p data-testid="search-prompt" className="text-gray-700">
+      <p data-testid="search-prompt" className="text-muted">
         Saisissez au moins {MIN_QUERY_LENGTH} caractères dans la barre de recherche pour trouver un article.
       </p>
     );
@@ -42,16 +42,16 @@ function SearchBody({ rawQuery }: { rawQuery: string | undefined }) {
 
   if (total === 0) {
     return (
-      <div data-testid="search-empty" className="rounded-lg border border-dashed border-gray-400 bg-white p-8 text-center">
+      <div data-testid="search-empty" className="rounded-2xl border border-dashed border-line-strong bg-surface p-8 text-center">
         <p className="font-medium">Aucun résultat pour « {parsed.value.q} ».</p>
-        <p className="mt-2 text-sm text-gray-700">Essayez un autre mot-clé ou vérifiez l’orthographe.</p>
+        <p className="mt-2 text-sm text-muted">Essayez un autre mot-clé ou vérifiez l’orthographe.</p>
       </div>
     );
   }
 
   return (
     <div className="space-y-4">
-      <p data-testid="search-count" className="text-gray-700" aria-live="polite">
+      <p data-testid="search-count" className="text-muted" aria-live="polite">
         {pluralize(total, 'résultat')} pour « {parsed.value.q} »
       </p>
       <div data-testid="search-results" className="grid gap-4 sm:grid-cols-2">

@@ -27,7 +27,7 @@ export function Pagination({ page, totalPages, basePath }: PaginationProps) {
           </Link>
         )}
       </div>
-      <p data-testid="pagination-status" className="text-gray-700">
+      <p data-testid="pagination-status" className="text-muted">
         Page {page} sur {totalPages}
       </p>
       <div className="w-32 text-right">

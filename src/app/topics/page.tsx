@@ -15,14 +15,14 @@ export default function TopicsPage() {
       <h1 className="text-3xl font-bold tracking-tight">Thématiques</h1>
       <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {topics.map((topic) => (
-          <li key={topic.slug} data-testid="topic-card" data-topic={topic.slug} className="rounded-lg border border-gray-200 bg-white p-4">
+          <li key={topic.slug} data-testid="topic-card" data-topic={topic.slug} className="rounded-2xl border border-line bg-surface p-4">
             <h2 className="text-lg font-semibold">
               <Link href={`/topics/${topic.slug}`} className="hover:text-accent hover:underline">
                 {topic.label}
               </Link>
             </h2>
-            <p className="mt-1 text-sm text-gray-700">{topic.description}</p>
-            <p data-testid="topic-count" className="mt-3 text-xs font-medium text-gray-800">
+            <p className="mt-1 text-sm text-muted">{topic.description}</p>
+            <p data-testid="topic-count" className="mt-3 text-xs font-medium text-fg">
               {pluralize(topic.count, 'article')}
             </p>
           </li>

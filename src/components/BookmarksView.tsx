@@ -11,7 +11,7 @@ export function BookmarksView({ articles }: { articles: ArticleSummary[] }) {
 
   if (!ready) {
     return (
-      <p data-testid="bookmarks-loading" className="text-gray-700">
+      <p data-testid="bookmarks-loading" className="text-muted">
         Chargement de vos favoris…
       </p>
     );
@@ -26,9 +26,9 @@ export function BookmarksView({ articles }: { articles: ArticleSummary[] }) {
 
   if (bookmarked.length === 0) {
     return (
-      <div data-testid="bookmarks-empty" className="rounded-lg border border-dashed border-gray-400 bg-white p-8 text-center">
+      <div data-testid="bookmarks-empty" className="rounded-2xl border border-dashed border-line-strong bg-surface p-8 text-center">
         <p className="font-medium">Vous n’avez aucun favori pour l’instant.</p>
-        <p className="mt-2 text-sm text-gray-700">
+        <p className="mt-2 text-sm text-muted">
           Ouvrez un article et utilisez « Ajouter aux favoris », ou{' '}
           <Link href="/" className="text-accent underline underline-offset-4">
             parcourez les dernières actualités
@@ -41,7 +41,7 @@ export function BookmarksView({ articles }: { articles: ArticleSummary[] }) {
 
   return (
     <div>
-      <p data-testid="bookmarks-count" className="mb-4 text-sm text-gray-700">
+      <p data-testid="bookmarks-count" className="mb-4 text-sm text-muted">
         {pluralize(bookmarked.length, 'favori')}
       </p>
       <ul className="space-y-3">
@@ -49,22 +49,22 @@ export function BookmarksView({ articles }: { articles: ArticleSummary[] }) {
           <li
             key={article.slug}
             data-testid="bookmark-item"
-            className="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white p-4"
+            className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-line bg-surface p-4"
           >
             <div>
-              <p className="text-xs font-semibold text-blue-900">{getTopicLabel(article.category)}</p>
+              <p className="text-xs font-semibold text-accent">{getTopicLabel(article.category)}</p>
               <h2 className="text-base font-semibold">
                 <Link href={`/articles/${article.slug}`} className="hover:text-accent hover:underline">
                   {article.title}
                 </Link>
               </h2>
-              <p className="text-xs text-gray-700">{formatDateFr(article.publishedAt)}</p>
+              <p className="text-xs text-muted">{formatDateFr(article.publishedAt)}</p>
             </div>
             <button
               type="button"
               data-testid="bookmark-remove"
               onClick={() => toggle(article.slug)}
-              className="rounded border border-gray-500 px-3 py-1.5 text-sm hover:bg-gray-100"
+              className="rounded border border-line-strong px-3 py-1.5 text-sm hover:bg-surface-2"
             >
               Retirer<span className="sr-only"> {article.title} des favoris</span>
             </button>

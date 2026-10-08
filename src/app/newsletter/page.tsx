@@ -8,7 +8,7 @@ export default function NewsletterPage() {
     <div className="mx-auto max-w-xl space-y-6">
       <header className="space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">Newsletter</h1>
-        <p className="text-gray-700">
+        <p className="text-muted">
           Recevez une sélection des actualités IA. Démonstration : aucune adresse n’est conservée au-delà du processus
           serveur et aucun e-mail n’est envoyé.
         </p>

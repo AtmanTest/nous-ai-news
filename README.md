@@ -1,8 +1,8 @@
 # Nous AI News
 
-Site d'actualités sur l'intelligence artificielle, en français. Refonte complète (v2) : application Next.js minimale et un **workflow QA complet** — ISTQB Foundation + IA générative en test.
+Site de veille sur l'intelligence artificielle, alimenté automatiquement. Refonte complète (v2) : design moderne (thème clair/sombre), crons d'ingestion et un **workflow QA complet** — ISTQB Foundation + IA générative en test.
 
-> Le contenu des articles est **entièrement fictif** (jeu de données de démonstration).
+> En production : contenu réel ingéré par cron. En test : jeu de données fictif et déterministe.
 
 ## Stack
 
@@ -49,6 +49,20 @@ Exigences (`docs/qa/requirements.json`) → analyse de risques → conception (P
 
 Documentation : [docs/qa](docs/qa/README.md) (stratégie, plan, risques, techniques, GenAI, défauts, matrice de traçabilité). Conventions de test : [tests/README.md](tests/README.md).
 
+## Contenu automatique et crons
+
+Le site affiche de vraies actualités IA ingérées depuis des flux RSS (`content/sources.json`) : titre, court extrait et lien vers la source.
+
+| Workflow | Fréquence | Rôle |
+|---|---|---|
+| `cron-ingest.yml` | toutes les 3 h | Ingestion des flux, commit de `content/ingested.json` → redéploiement Vercel |
+| `cron-links.yml` | chaque jour | Retire les articles dont le lien source est mort (404/410) |
+| `cron-health.yml` | toutes les 30 min | Contrôle le site en production, ouvre une issue en cas d'échec |
+| `cron-nightly-qa.yml` | chaque nuit | Suite complète + audit des dépendances, issue si rouge |
+| Dependabot | chaque semaine | Mises à jour npm et Actions |
+
+Les tests tournent sur le jeu de démonstration fictif (`NOUS_CONTENT=seed`) pour rester déterministes. Lancer l'ingestion à la main : `npm run cron:ingest`.
+
 ## CI
 
 `.github/workflows/qa.yml` : statique + traçabilité → unitaire/couverture → API → E2E (desktop, mobile) → porte qualité.
@@ -62,6 +76,6 @@ tests/{unit,api,e2e,support}              scripts/qa    outillage QA
 docs/qa        documentation QA
 ```
 
-## Note de migration
+## Déploiement
 
-Les anciens workflows (déploiement Vercel, veille automatique par cron) ont été supprimés avec l'ancien code. À reconfigurer séparément si nécessaire.
+Vercel, relié au dépôt : chaque push sur `main` (y compris les commits des crons) redéploie le site.

@@ -82,7 +82,7 @@ export function NewsletterForm() {
           autoComplete="email"
           aria-invalid={fieldErrors.email ? true : undefined}
           aria-describedby={fieldErrors.email ? 'newsletter-email-error' : undefined}
-          className="mt-1 w-full rounded border border-gray-400 px-3 py-2"
+          className="mt-1 w-full rounded-xl border border-line-strong bg-surface px-3 py-2"
         />
         {fieldErrors.email && (
           <p id="newsletter-email-error" role="alert" data-testid="newsletter-error-email" className="mt-1 text-sm text-red-800">
@@ -129,7 +129,7 @@ export function NewsletterForm() {
       <button
         type="submit"
         disabled={status.kind === 'pending'}
-        className="rounded bg-accent px-5 py-2 text-sm font-medium text-white hover:bg-accent-dark disabled:opacity-60"
+        className="rounded bg-accent px-5 py-2 text-sm font-medium text-on-accent hover:bg-accent-dark disabled:opacity-60"
       >
         {status.kind === 'pending' ? 'Envoi…' : 'S’inscrire'}
       </button>

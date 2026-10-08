@@ -91,3 +91,7 @@ Taux de réussite par niveau et par module · couverture de code · couverture d
 - Les favoris sont stockés dans le navigateur : pas de test API, la vérification est E2E + unitaire.
 - Le store de la newsletter est en mémoire (démonstration) : aucune persistance, aucun e-mail envoyé.
 - La revue humaine des tests générés avec assistance IA reste à réaliser par le mainteneur ([ai-assistance-log.md](ai-assistance-log.md)).
+
+## Contenu en production vs contenu de test
+
+Le site sert en production des articles **ingérés automatiquement** (`content/ingested.json`, alimenté par `cron-ingest.yml`). Tous les tests (unitaire, API, E2E) s'exécutent avec `NOUS_CONTENT=seed`, qui force le jeu de démonstration fictif et déterministe : le contenu réel change à chaque cron, ce qui rendrait les assertions instables. L'ingestion (analyse de flux, normalisation, fusion) est testée en unitaire avec des flux de test ; la santé du site réel est surveillée par `cron-health.yml` (toutes les 30 min) et `cron-nightly-qa.yml` (chaque nuit).

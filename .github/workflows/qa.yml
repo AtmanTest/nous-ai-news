@@ -3,7 +3,9 @@ name: QA
 on:
   push:
     branches: [main]
+    paths-ignore: ['content/**']
   pull_request:
+  workflow_dispatch:
 
 concurrency:
   group: qa-${{ github.ref }}

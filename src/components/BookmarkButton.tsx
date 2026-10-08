@@ -14,7 +14,7 @@ export function BookmarkButton({ slug }: { slug: string }) {
       aria-pressed={bookmarked}
       disabled={!ready}
       onClick={() => toggle(slug)}
-      className="rounded border border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-blue-50 disabled:opacity-60 aria-pressed:bg-accent aria-pressed:text-white"
+      className="rounded border border-accent px-4 py-2 text-sm font-medium text-accent hover:bg-accent-soft disabled:opacity-60 aria-pressed:bg-accent aria-pressed:text-on-accent"
     >
       {bookmarked ? 'Retirer des favoris' : 'Ajouter aux favoris'}
     </button>

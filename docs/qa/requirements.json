@@ -1,32 +1,182 @@
 {
   "$comment": "Référentiel d'exigences testables. Probabilité (likelihood) et impact : échelle 1–3. Score = probabilité × impact ; ≥ 6 → risque ÉLEVÉ, 3–5 → MOYEN, ≤ 2 → FAIBLE. Utilisé par scripts/qa/check-traceability.mjs et scripts/qa/build-test-prompt.mjs.",
   "requirements": [
-    { "id": "ART-01", "module": "articles", "title": "La liste d'articles est paginée (page ≥ 1, pageSize 1–50, défaut 9), triée par date décroissante par défaut (ou croissante), et n'expose jamais le corps des articles.", "likelihood": 2, "impact": 3 },
-    { "id": "ART-02", "module": "articles", "title": "La liste peut être filtrée par thématique ; une thématique inconnue est rejetée.", "likelihood": 2, "impact": 2 },
-    { "id": "ART-03", "module": "articles", "title": "Le détail d'un article est accessible par son slug (corps complet) ; un slug inconnu renvoie 404 (API et page).", "likelihood": 2, "impact": 3 },
-    { "id": "ART-04", "module": "articles", "title": "La page article affiche titre, thématique, source, date longue, durée de lecture, tags, corps et jusqu'à deux articles liés de la même thématique.", "likelihood": 2, "impact": 2 },
-
-    { "id": "SRC-01", "module": "search", "title": "La recherche plein texte (titre, tags, résumé, corps) est insensible à la casse et aux accents, en sémantique ET entre les termes, avec filtre de thématique et limite.", "likelihood": 3, "impact": 3 },
-    { "id": "SRC-02", "module": "search", "title": "La requête est validée (2–100 caractères après trim, limit 1–50, thématique connue) ; toute saisie est traitée comme du texte (aucune injection, aucun HTML interprété).", "likelihood": 2, "impact": 3 },
-    { "id": "SRC-03", "module": "search", "title": "Les résultats sont triés par pertinence décroissante (titre > tags > résumé > corps), puis par date, puis par slug.", "likelihood": 2, "impact": 2 },
-
-    { "id": "TOP-01", "module": "topics", "title": "La liste des thématiques expose libellé, description et nombre d'articles ; la somme des compteurs égale le total d'articles.", "likelihood": 1, "impact": 2 },
-    { "id": "TOP-02", "module": "topics", "title": "La page d'une thématique n'affiche que ses articles, du plus récent au plus ancien ; une thématique inconnue renvoie 404.", "likelihood": 1, "impact": 2 },
-
-    { "id": "NEW-01", "module": "newsletter", "title": "Un visiteur peut s'inscrire à la newsletter avec une adresse valide et son consentement ; le formulaire confirme l'inscription.", "likelihood": 2, "impact": 3 },
-    { "id": "NEW-02", "module": "newsletter", "title": "L'inscription est validée (format e-mail, longueurs 254/64, consentement booléen explicite, thématiques connues) avec toutes les erreurs retournées ; aucune donnée hostile n'est acceptée ni interprétée.", "likelihood": 3, "impact": 3 },
-    { "id": "NEW-03", "module": "newsletter", "title": "L'inscription est idempotente : une adresse déjà inscrite (casse et espaces ignorés) reçoit « already_subscribed » sans doublon, y compris en soumissions concurrentes.", "likelihood": 2, "impact": 2 },
-
-    { "id": "BKM-01", "module": "bookmarks", "title": "Un favori s'ajoute et se retire depuis l'article et depuis la page Favoris ; l'état persiste après rechargement et se synchronise entre onglets.", "likelihood": 2, "impact": 2 },
-    { "id": "BKM-02", "module": "bookmarks", "title": "La page Favoris liste les articles mis en favori (le plus récent d'abord) avec leur compteur, ou un état vide explicite.", "likelihood": 1, "impact": 2 },
-    { "id": "BKM-03", "module": "bookmarks", "title": "Les favoris résistent à un stockage corrompu, non conforme, saturé ou inaccessible : aucune exception, dégradation silencieuse.", "likelihood": 2, "impact": 2 },
-
-    { "id": "PLT-01", "module": "platform", "title": "GET /api/health renvoie l'état du service (status, version, volume de données, horodatage) sans mise en cache.", "likelihood": 1, "impact": 2 },
-    { "id": "PLT-02", "module": "platform", "title": "Le flux RSS /feed.xml est valide, trié, correctement échappé, avec des liens absolus ; il est annoncé par auto-découverte.", "likelihood": 1, "impact": 2 },
-    { "id": "PLT-03", "module": "platform", "title": "La navigation globale fonctionne ; chaque page a un titre propre et un unique <h1> ; toute URL inconnue affiche une page 404 avec statut HTTP 404 ; aucune erreur console.", "likelihood": 2, "impact": 2 },
-    { "id": "PLT-04", "module": "platform", "title": "Le site est accessible (WCAG 2.1 A/AA) : aucune violation axe « serious/critical », lien d'évitement, focus visible, champs nommés.", "likelihood": 2, "impact": 3, "exemptLevels": "L'accessibilité ne se vérifie de façon fiable qu'au niveau navigateur (rendu, focus, contrastes) ; pas d'équivalent unitaire pertinent." },
-    { "id": "PLT-05", "module": "platform", "title": "Le site est utilisable sur mobile : pas de défilement horizontal, navigation et recherche visibles, balise viewport.", "likelihood": 2, "impact": 2 },
-    { "id": "PLT-06", "module": "platform", "title": "Les en-têtes de sécurité de base sont envoyés (nosniff, X-Frame-Options, Referrer-Policy, Permissions-Policy) ; la pile technique et les traces d'erreur ne fuient pas.", "likelihood": 2, "impact": 3 },
-    { "id": "PLT-07", "module": "platform", "title": "Le jeu de données de démonstration est cohérent : identifiants et slugs uniques, champs obligatoires, dates valides et distinctes, répartition par thématique.", "likelihood": 1, "impact": 3 }
+    {
+      "id": "ART-01",
+      "module": "articles",
+      "title": "La liste d'articles est paginée (page ≥ 1, pageSize 1–50, défaut 9), triée par date décroissante par défaut (ou croissante), et n'expose jamais le corps des articles.",
+      "likelihood": 2,
+      "impact": 3
+    },
+    {
+      "id": "ART-02",
+      "module": "articles",
+      "title": "La liste peut être filtrée par thématique ; une thématique inconnue est rejetée.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "ART-03",
+      "module": "articles",
+      "title": "Le détail d'un article est accessible par son slug (corps complet) ; un slug inconnu renvoie 404 (API et page).",
+      "likelihood": 2,
+      "impact": 3
+    },
+    {
+      "id": "ART-04",
+      "module": "articles",
+      "title": "La page article affiche titre, thématique, source, date longue, durée de lecture, tags, corps et jusqu'à deux articles liés de la même thématique.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "SRC-01",
+      "module": "search",
+      "title": "La recherche plein texte (titre, tags, résumé, corps) est insensible à la casse et aux accents, en sémantique ET entre les termes, avec filtre de thématique et limite.",
+      "likelihood": 3,
+      "impact": 3
+    },
+    {
+      "id": "SRC-02",
+      "module": "search",
+      "title": "La requête est validée (2–100 caractères après trim, limit 1–50, thématique connue) ; toute saisie est traitée comme du texte (aucune injection, aucun HTML interprété).",
+      "likelihood": 2,
+      "impact": 3
+    },
+    {
+      "id": "SRC-03",
+      "module": "search",
+      "title": "Les résultats sont triés par pertinence décroissante (titre > tags > résumé > corps), puis par date, puis par slug.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "TOP-01",
+      "module": "topics",
+      "title": "La liste des thématiques expose libellé, description et nombre d'articles ; la somme des compteurs égale le total d'articles.",
+      "likelihood": 1,
+      "impact": 2
+    },
+    {
+      "id": "TOP-02",
+      "module": "topics",
+      "title": "La page d'une thématique n'affiche que ses articles, du plus récent au plus ancien ; une thématique inconnue renvoie 404.",
+      "likelihood": 1,
+      "impact": 2
+    },
+    {
+      "id": "NEW-01",
+      "module": "newsletter",
+      "title": "Un visiteur peut s'inscrire à la newsletter avec une adresse valide et son consentement ; le formulaire confirme l'inscription.",
+      "likelihood": 2,
+      "impact": 3
+    },
+    {
+      "id": "NEW-02",
+      "module": "newsletter",
+      "title": "L'inscription est validée (format e-mail, longueurs 254/64, consentement booléen explicite, thématiques connues) avec toutes les erreurs retournées ; aucune donnée hostile n'est acceptée ni interprétée.",
+      "likelihood": 3,
+      "impact": 3
+    },
+    {
+      "id": "NEW-03",
+      "module": "newsletter",
+      "title": "L'inscription est idempotente : une adresse déjà inscrite (casse et espaces ignorés) reçoit « already_subscribed » sans doublon, y compris en soumissions concurrentes.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "BKM-01",
+      "module": "bookmarks",
+      "title": "Un favori s'ajoute et se retire depuis l'article et depuis la page Favoris ; l'état persiste après rechargement et se synchronise entre onglets.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "BKM-02",
+      "module": "bookmarks",
+      "title": "La page Favoris liste les articles mis en favori (le plus récent d'abord) avec leur compteur, ou un état vide explicite.",
+      "likelihood": 1,
+      "impact": 2
+    },
+    {
+      "id": "BKM-03",
+      "module": "bookmarks",
+      "title": "Les favoris résistent à un stockage corrompu, non conforme, saturé ou inaccessible : aucune exception, dégradation silencieuse.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "PLT-01",
+      "module": "platform",
+      "title": "GET /api/health renvoie l'état du service (status, version, volume de données, horodatage) sans mise en cache.",
+      "likelihood": 1,
+      "impact": 2
+    },
+    {
+      "id": "PLT-02",
+      "module": "platform",
+      "title": "Le flux RSS /feed.xml est valide, trié, correctement échappé, avec des liens absolus ; il est annoncé par auto-découverte.",
+      "likelihood": 1,
+      "impact": 2
+    },
+    {
+      "id": "PLT-03",
+      "module": "platform",
+      "title": "La navigation globale fonctionne ; chaque page a un titre propre et un unique <h1> ; toute URL inconnue affiche une page 404 avec statut HTTP 404 ; aucune erreur console.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "PLT-04",
+      "module": "platform",
+      "title": "Le site est accessible (WCAG 2.1 A/AA) : aucune violation axe « serious/critical », lien d'évitement, focus visible, champs nommés.",
+      "likelihood": 2,
+      "impact": 3,
+      "exemptLevels": "L'accessibilité ne se vérifie de façon fiable qu'au niveau navigateur (rendu, focus, contrastes) ; pas d'équivalent unitaire pertinent."
+    },
+    {
+      "id": "PLT-05",
+      "module": "platform",
+      "title": "Le site est utilisable sur mobile : pas de défilement horizontal, navigation et recherche visibles, balise viewport.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "PLT-06",
+      "module": "platform",
+      "title": "Les en-têtes de sécurité de base sont envoyés (nosniff, X-Frame-Options, Referrer-Policy, Permissions-Policy) ; la pile technique et les traces d'erreur ne fuient pas.",
+      "likelihood": 2,
+      "impact": 3
+    },
+    {
+      "id": "PLT-07",
+      "module": "platform",
+      "title": "Le jeu de données de démonstration est cohérent : identifiants et slugs uniques, champs obligatoires, dates valides et distinctes, répartition par thématique.",
+      "likelihood": 1,
+      "impact": 3
+    },
+    {
+      "id": "ING-01",
+      "module": "ingest",
+      "title": "Les flux RSS 2.0 et Atom sont analysés de façon tolérante (CDATA, entités, HTML dans l'extrait) ; un flux invalide ne produit aucun élément.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "ING-02",
+      "module": "ingest",
+      "title": "Un élément de flux devient un article valide (URL canonique sans suivi, date ISO non future, extrait ≤ 300 caractères, thématique connue) ou est rejeté ; les flux généralistes sont filtrés sur le sujet IA.",
+      "likelihood": 2,
+      "impact": 2
+    },
+    {
+      "id": "ING-03",
+      "module": "ingest",
+      "title": "La fusion dédoublonne par URL et par titre, purge les articles trop anciens, trie du plus récent au plus ancien et plafonne le volume ; le site retombe sur le jeu de démonstration si rien n'est ingéré ou si NOUS_CONTENT=seed.",
+      "likelihood": 2,
+      "impact": 3,
+      "exemptLevels": "Logique pure sans surface HTTP : le cron s'exécute hors serveur et les tests API/E2E tournent volontairement sur le jeu de démonstration (NOUS_CONTENT=seed) pour rester déterministes. Le contrôle en production est assuré par le cron de surveillance (cron-health.yml)."
+    }
   ]
 }

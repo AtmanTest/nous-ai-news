@@ -9,6 +9,7 @@ export default defineConfig({
   },
   test: {
     environment: 'node',
+    env: { NOUS_CONTENT: 'seed' },
     include: ['tests/unit/**/*.test.ts'],
     coverage: {
       provider: 'v8',

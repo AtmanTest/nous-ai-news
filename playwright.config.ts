@@ -47,6 +47,7 @@ export default defineConfig({
   webServer: process.env.BASE_URL
     ? undefined
     : {
+        env: { NOUS_CONTENT: 'seed' },
         command: `npm run build && npm run start -- -p ${PORT}`,
         url: `${baseURL}/api/health`,
         timeout: 240_000,

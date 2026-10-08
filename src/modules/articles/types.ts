@@ -13,6 +13,8 @@ export interface Article {
   /** Date ISO 8601 (UTC). */
   publishedAt: string;
   readingMinutes: number;
+  /** Lien vers l'article original (contenu ingéré automatiquement). */
+  sourceUrl?: string;
 }
 
 export type ArticleSummary = Omit<Article, 'body'>;
